@@ -240,20 +240,46 @@ def save_detection_to_db(conn: psycopg.Connection, data: dict):
 if __name__ == "__main__":
     connection = initialize_database(connection_string)
 
-
+    # Khởi tạo SubscriberClient một lần duy nhất (hoặc bên trong vòng lặp nếu cần)
+    # Tốt nhất nên khởi tạo bên ngoài nếu client có thể tái sử dụng
     subscriber = pubsub_v1.SubscriberClient()
+    logging.info(f"Đã khởi tạo Subscriber Client.")
 
-    streaming_pull_future = subscriber.subscribe(SUBSCRIPTION_ID, callback=callback)
-    logging.info(f"Bắt đầu lắng nghe tin nhắn trên {SUBSCRIPTION_ID}..")
-
-    with subscriber:
+    # Bọc toàn bộ logic lắng nghe vào vòng lặp vô hạn
+    while True:
+        streaming_pull_future = None  # Khởi tạo lại biến trong mỗi lần lặp
         try:
-            streaming_pull_future.result(timeout=timeout)
-        except TimeoutError:
-            logging.info("Thời gian chờ kết thúc. Dừng Subscriber.")
-            streaming_pull_future.cancel()  # Trigger the shutdown.
-            streaming_pull_future.result()  # Block until the shutdown is complete.
-        except KeyboardInterrupt:
-            logging.info("Dừng Subscriber bằng tay.")
-            streaming_pull_future.cancel()
+            # Bắt đầu lắng nghe và trả về một đối tượng Future
+            streaming_pull_future = subscriber.subscribe(SUBSCRIPTION_ID, callback=callback)
+            logging.info(f"Bắt đầu lắng nghe tin nhắn liên tục trên {SUBSCRIPTION_ID}...")
+
             streaming_pull_future.result()
+
+        except KeyboardInterrupt:
+            # Xử lý dừng thủ công (Ctrl+C): THOÁT VÀ DỪNG CHƯƠNG TRÌNH
+            logging.info("Dừng Subscriber bằng tay (Ctrl+C). Thoát khỏi vòng lặp.")
+            if streaming_pull_future:
+                streaming_pull_future.cancel()
+                try:
+                    streaming_pull_future.result()
+                except Exception:
+                    pass
+            break
+
+        except Exception as e:
+            # Xử lý các lỗi nghiêm trọng (ví dụ: lỗi mạng, lỗi kết nối Pub/Sub, lỗi nội bộ)
+            logging.error(f"LỖI NGHIÊM TRỌNG TRONG LUỒNG SUBSCRIBER: {e}")
+            logging.warning("Đang chờ 5 giây trước khi khởi động lại...")
+
+            # Đảm bảo luồng lỗi được hủy sạch sẽ trước khi khởi động lại
+            if streaming_pull_future:
+                streaming_pull_future.cancel()
+                try:
+                    streaming_pull_future.result()
+                except Exception:
+                    pass
+
+            import time
+
+            time.sleep(5)  # Đợi 5 giây
+            # Sau 5 giây, vòng lặp 'while True' sẽ tự động khởi động lại luồng mới.

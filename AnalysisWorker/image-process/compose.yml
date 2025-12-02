@@ -3,13 +3,14 @@ version: '3.8'
 services:
   image-processor:
     image: image-processor:latest
-    container_name: image-processor-worker
+    container_name: image-processor-service
     restart: always
     env_file:
       - .env
 
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "100m"
-        max-file: "5"
+  camera-ingest:
+    image: camera-ingest:latest
+    container_name: camera-ingest-service
+    restart: always
+    env_file:
+      - .env
