@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  image-processor:
+    image: image-processor:latest
+    container_name: image-processor-worker
+    restart: always
+    env_file:
+      - .env
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
