@@ -1,17 +1,14 @@
-# Sử dụng image Python 3.10-slim để giảm kích thước (Khuyến nghị)
-FROM python:3.12-slim
+FROM python:3.12
 
-## Thiết lập thư mục làm việc trong container
 WORKDIR /app
-#
-## Sao chép các file yêu cầu (Đây là lớp cache tốt nhất)
-RUN apt-get update && apt-get install -y libgl1
+
+RUN apt-get update && apt-get install -y libgl1 && rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY best.pt .
-COPY main.py .
-COPY .env .
-COPY python-subscriber-key.json .
+COPY . .
+
 
 CMD ["python3", "main.py"]
