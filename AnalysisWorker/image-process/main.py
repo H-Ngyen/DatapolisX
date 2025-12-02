@@ -135,8 +135,16 @@ def callback(message: pubsub_v1.subscriber.message.Message) -> None:
         detection_data = image_process(minio_bucket, minio_key)
 
         if detection_data and detection_data.get('status') == 'success':
-            save_detection_to_db(connection, detection_data)
-            is_saved = True
+            minio_key = detection_data.get('minio_key')
+            existing_record = check_record(connection, minio_key)
+            if existing_record:
+                # Key đã tồn tại trong CSDL
+                print(f"INFO: minio_key '{minio_key}' đã tồn tại trong CSDL. Bỏ qua INSERT.")
+
+                message.ack()  # Xác nhận đã xử lý (và xóa) tin nhắn
+            else:
+                save_detection_to_db(connection, detection_data)
+                is_saved = True
         else:
             logging.warning(f"Không lưu CSDL vì xử lý ảnh thất bại cho key: {minio_key}")
 
@@ -152,6 +160,17 @@ def callback(message: pubsub_v1.subscriber.message.Message) -> None:
         # message.nack()
         pass
 
+def check_record(conn: psycopg.Connection, minio_key):
+    check_sql = "SELECT 1 FROM camera_detections WHERE minio_key = %s"
+
+    # Thực thi truy vấn kiểm tra
+    with conn.cursor() as cur:
+        cur.execute(check_sql, (minio_key,))
+
+        # Lấy kết quả
+        existing_record = cur.fetchone()
+
+    return existing_record
 
 def initialize_database(conn_string: str):
     conn = None
@@ -191,6 +210,7 @@ def save_detection_to_db(conn: psycopg.Connection, data: dict):
     """Sử dụng kết nối đã mở để lưu kết quả phát hiện."""
     try:
         with conn.cursor() as cur:
+
             sql = """
                   -- Thứ tự cột: minio_key, camera_id, detections, total_objects, created_at
                   INSERT INTO camera_detections (minio_key, camera_id, detections, total_objects, created_at) 
