@@ -1,3 +1,4 @@
 .env
 .idea
 python-subscriber-key.json
+clear-message.py

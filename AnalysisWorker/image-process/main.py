@@ -5,7 +5,6 @@ from minio import Minio
 from ultralytics import YOLO
 from PIL import Image
 from collections import Counter
-from concurrent.futures import TimeoutError
 from google.cloud import pubsub_v1
 import datetime
 import logging
@@ -160,6 +159,8 @@ def callback(message: pubsub_v1.subscriber.message.Message) -> None:
         # message.nack()
         pass
 
+
+
 def check_record(conn: psycopg.Connection, minio_key):
     check_sql = "SELECT 1 FROM camera_detections WHERE minio_key = %s"
 
@@ -240,8 +241,6 @@ def save_detection_to_db(conn: psycopg.Connection, data: dict):
 if __name__ == "__main__":
     connection = initialize_database(connection_string)
 
-    # Khởi tạo SubscriberClient một lần duy nhất (hoặc bên trong vòng lặp nếu cần)
-    # Tốt nhất nên khởi tạo bên ngoài nếu client có thể tái sử dụng
     subscriber = pubsub_v1.SubscriberClient()
     logging.info(f"Đã khởi tạo Subscriber Client.")
 
