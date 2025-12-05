@@ -11,8 +11,6 @@ services:
   camera-ingest:
     image: camera-ingest:latest
     container_name: camera-ingest-service
-    ports:
-      - '3000:3000'
     restart: always
     env_file:
       - camera-ingest/.env
