@@ -20,11 +20,11 @@ CAMERA_LIST = [
     '662b7ce71afb9c00172dc676',
 ]
 
-ACCESS_KEY = 'minioadmin'
-SECRET_KEY = 'minioadmin'
+ACCESS_KEY = os.getenv('MINIO_ACCESS_KEY')
+SECRET_KEY = os.getenv('MINIO_SECRET_KEY')
 AWS_REGION = 'us-east-1'
 BUCKET_NAME = 'images'
-ENDPOINT_URL = 'https://minio-api.devmindtan.uk'
+ENDPOINT_URL = os.getenv('ENDPOINT_URL')
 
 PUBSUB_TOPIC_ID = os.getenv('PUBSUB_TOPIC_ID')
 CONCURRENCY_LIMIT = 4
