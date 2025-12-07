@@ -178,10 +178,23 @@ export default function TrafficDashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <Clock className="w-16 h-16 text-gray-300 mx-auto mb-4 animate-pulse" />
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Đang tải dữ liệu...</h1>
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <div className="flex flex-col items-center p-8">
+          <div className="relative mb-8">
+            <div className="w-16 h-16 border-4 border-slate-200 border-t-blue-600 rounded-full animate-spin"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+            </div>
+          </div>
+          <h2 className="text-xl font-bold text-slate-800 tracking-tight">DatapolisX</h2>
+          <div className="flex items-center gap-1 mt-2">
+            <span className="text-slate-500 font-medium">Đang đồng bộ dữ liệu</span>
+            <span className="flex gap-1">
+              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce"></span>
+            </span>
+          </div>
         </div>
       </div>
     );
@@ -209,19 +222,21 @@ export default function TrafficDashboard() {
     <div className="min-h-screen bg-gray-50 font-sans text-slate-900 flex flex-col">
       
       {/* Navigation Header */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
-        <div className="max-w-4xl mx-auto px-4 py-3">
+      <div className="bg-slate-900 border-b border-slate-800">
+        <div className="max-w-4xl mx-auto px-4 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-6">
-              <h1 className="text-xl font-bold text-blue-900 cursor-pointer" onClick={() => window.location.href = '/'}>DatapolisX</h1>
-              <nav className="flex items-center gap-4">
-                <button className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-blue-700 bg-white/70 rounded-lg shadow-sm cursor-pointer">
+            <div className="flex items-center gap-8">
+              <h1 className="text-2xl font-bold text-white cursor-pointer tracking-tight flex items-center gap-3" onClick={() => window.location.href = '/'}>
+                DatapolisX
+              </h1>
+              <nav className="flex items-center gap-3">
+                <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600/20 border border-blue-500/30 rounded-lg shadow-sm cursor-pointer">
                   <Home className="w-4 h-4" />
                   Trang chủ
                 </button>
                 <button 
                   onClick={() => window.location.href = '/search'}
-                  className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 hover:bg-white/50 rounded-lg cursor-pointer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
                 >
                   <Search className="w-4 h-4" />
                   Tìm kiếm
@@ -326,17 +341,20 @@ export default function TrafficDashboard() {
       </main>
 
       {/* Copyright Footer */}
-      <footer className="mt-16 bg-white border-t border-slate-100">
+      <footer className="mt-16 bg-slate-900 border-t border-slate-800">
         <div className="max-w-4xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             
             {/* Left: Brand & Copyright */}
             <div className="text-center md:text-left">
               <div className="flex items-center gap-2 justify-center md:justify-start mb-1">
-                <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                <span className="font-bold text-slate-800 text-lg tracking-tight">DatapolisX</span>
+                <div className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span>
+                </div>
+                <span className="font-bold text-white text-lg tracking-tight">DatapolisX</span>
               </div>
-              <p className="text-xs text-slate-500 font-medium">
+              <p className="text-xs text-slate-400 font-medium">
                 © 2025 - Cuộc thi Phần mềm Nguồn mở - OLP 2025
               </p>
             </div>
@@ -347,7 +365,7 @@ export default function TrafficDashboard() {
                 href="https://github.com/H-Ngyen/DatapolisX" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 hover:text-slate-900 transition-colors p-2 hover:bg-slate-50 rounded-full"
+                className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full"
                 title="GitHub"
               >
                 <Github className="w-5 h-5" />

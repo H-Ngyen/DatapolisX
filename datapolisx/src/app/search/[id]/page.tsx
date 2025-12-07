@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { ArrowLeft, Home, Search, MapPin, Camera, Clock, Info, Github } from "lucide-react";
+import { ArrowLeft, Home, Search, MapPin, Camera, Clock, Info, Wind, Droplets, Github } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useApiCall } from "../../../hooks/useApiCall";
 import camInfo from "../../../assets/cam_info.json";
@@ -18,6 +18,30 @@ interface DashboardResponse {
   data: TrafficItem[];
 }
 
+interface WeatherData {
+  address: {
+    street: string;
+    old_3_level: {
+        ward: string;
+        district: string;
+        city: string;
+        full_string: string;
+    };
+    new_2_level: {
+        ward: string;
+        city: string;
+        full_string: string;
+    };
+  };
+  weather: {
+    temp: string;
+    condition: string;
+    humidity: string;
+    wind: string;
+    advice: string;
+  };
+}
+
 const getStatusConfig = (score: number) => {
   if (score > 120) return { text: "Kẹt cứng", color: "text-red-600" };
   if (score > 95) return { text: "Tắc nghẽn", color: "text-red-500" };
@@ -31,20 +55,108 @@ export default function CameraDetailPage() {
   const camId = params.id as string;
   const { data: dashboardData, loading, error, execute } = useApiCall<DashboardResponse>();
   
+  const [weatherData, setWeatherData] = React.useState<WeatherData | null>(null);
+  const [weatherLoading, setWeatherLoading] = React.useState(false);
+
   useEffect(() => {
     execute('/api/dashboard');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   const camera = camInfo.data_filtered_final.find(cam => cam.CamId === camId);
+  const weatherFetchedRef = React.useRef(false);
+  
+  // Real-time Clock State
+  const [currentTime, setCurrentTime] = React.useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    if (camera?.DisplayName && !weatherFetchedRef.current) {
+      weatherFetchedRef.current = true;
+      
+      const fetchWeather = async () => {
+        setWeatherLoading(true);
+        try {
+          const res = await fetch('/api/weather', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ location: camera.DisplayName })
+          });
+          const data = await res.json();
+          if (data.success) {
+            setWeatherData(data.data);
+          }
+        } catch (err) {
+          console.error('Weather fetch error:', err);
+        } finally {
+          setWeatherLoading(false);
+        }
+      };
+      
+      fetchWeather();
+    }
+  }, [camera]);
+
   const trafficInfo = dashboardData?.data?.find(item => item.id === camId);
+
+  // Format Date & Time for UI
+  const formattedTime = new Intl.DateTimeFormat('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(currentTime);
+  const formattedDate = new Intl.DateTimeFormat('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' }).format(currentTime);
+
+  const getWeatherBackground = () => {
+    if (!weatherData) return "bg-gradient-to-br from-blue-500 to-indigo-600";
+    
+    const condition = weatherData.weather.condition.toLowerCase();
+    const hour = currentTime.getHours();
+    const isNight = hour >= 18 || hour < 6;
+
+    // Mưa / Dông
+    if (condition.includes('mưa') || condition.includes('dông') || condition.includes('bão')) {
+        return "bg-gradient-to-br from-slate-700 via-slate-800 to-gray-900";
+    }
+    
+    // Ban đêm
+    if (isNight) {
+        return "bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900"; 
+    }
+
+    // Nắng / Trong xanh
+    if (condition.includes('nắng') || condition.includes('quang') || condition.includes('trong xanh')) {
+        return "bg-gradient-to-br from-orange-400 to-blue-500";
+    }
+
+    // Có mây / Âm u
+    if (condition.includes('mây') || condition.includes('âm u')) {
+        return "bg-gradient-to-br from-slate-400 to-blue-500";
+    }
+
+    // Default
+    return "bg-gradient-to-br from-blue-500 to-indigo-600";
+  };
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <Clock className="w-16 h-16 text-gray-300 mx-auto mb-4 animate-pulse" />
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Đang tải dữ liệu...</h1>
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <div className="flex flex-col items-center p-8">
+          <div className="relative mb-8">
+            <div className="w-16 h-16 border-4 border-slate-200 border-t-blue-600 rounded-full animate-spin"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+            </div>
+          </div>
+          <h2 className="text-xl font-bold text-slate-800 tracking-tight">DatapolisX</h2>
+          <div className="flex items-center gap-1 mt-2">
+            <span className="text-slate-500 font-medium">Đang đồng bộ dữ liệu</span>
+            <span className="flex gap-1">
+              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce"></span>
+            </span>
+          </div>
         </div>
       </div>
     );
@@ -89,22 +201,24 @@ export default function CameraDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-slate-900">
       {/* Navigation Header */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
-        <div className="max-w-4xl mx-auto px-4 py-3">
+      <div className="bg-slate-900 border-b border-slate-800">
+        <div className="max-w-4xl mx-auto px-4 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-6">
-              <h1 className="text-xl font-bold text-blue-900 cursor-pointer" onClick={() => window.location.href = '/'}>DatapolisX</h1>
-              <nav className="flex items-center gap-4">
+            <div className="flex items-center gap-8">
+              <h1 className="text-2xl font-bold text-white cursor-pointer tracking-tight flex items-center gap-3" onClick={() => window.location.href = '/'}>
+                DatapolisX
+              </h1>
+              <nav className="flex items-center gap-3">
                 <button 
                   onClick={() => window.location.href = '/'}
-                  className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 hover:bg-white/50 rounded-lg cursor-pointer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
                 >
                   <Home className="w-4 h-4" />
                   Trang chủ
                 </button>
                 <button 
                   onClick={() => window.location.href = '/search'}
-                  className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-blue-700 bg-white/70 rounded-lg shadow-sm cursor-pointer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
                 >
                   <Search className="w-4 h-4" />
                   Tìm kiếm
@@ -120,9 +234,9 @@ export default function CameraDetailPage() {
         {/* Back Button */}
         <button 
           onClick={() => window.history.back()}
-          className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6 cursor-pointer"
+          className="group flex items-center gap-2 px-5 py-2.5 bg-white text-blue-600 font-semibold rounded-full shadow-sm border border-blue-100 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition-all duration-300 mb-8 cursor-pointer"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
           Quay lại
         </button>
 
@@ -171,7 +285,7 @@ export default function CameraDetailPage() {
         </div>
 
         {/* Traffic Status */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-8">
           <div className="p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Thông tin Giao thông</h2>
             {trafficInfo ? (
@@ -204,38 +318,174 @@ export default function CameraDetailPage() {
             )}
           </div>
         </div>
-      </main>
-            {/* Copyright Footer */}
-      <footer className="mt-16 bg-white border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            
-            {/* Left: Brand & Copyright */}
-            <div className="text-center md:text-left">
-              <div className="flex items-center gap-2 justify-center md:justify-start mb-1">
-                <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                <span className="font-bold text-slate-800 text-lg tracking-tight">DatapolisX</span>
+
+        {/* Weather & Location Info (Redesigned) */}
+        <div className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+
+            {/* Left: Weather App Style Widget */}
+            <div className={`${getWeatherBackground()} p-8 text-white relative overflow-hidden transition-all duration-1000 ease-in-out`}>
+              {/* Decorative circles */}
+              <div className="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-white/10 blur-2xl"></div>
+              <div className="absolute bottom-0 left-0 -ml-8 -mb-8 w-24 h-24 rounded-full bg-white/10 blur-xl"></div>
+
+              <div className="flex flex-col relative z-10 mb-8">
+                <div>
+                    <div className="flex items-center gap-2 text-blue-100 mb-1">
+                      <MapPin className="w-4 h-4" />
+                      <span className="text-sm font-medium">Khu vực hiện tại</span>
+                    </div>
+                    <h3 className="text-2xl font-bold leading-tight">{weatherData ? camera?.DisplayName : 'Đang tải...'}</h3>
+                </div>
               </div>
-              <p className="text-xs text-slate-500 font-medium">
-                © 2025 - Cuộc thi Phần mềm Nguồn mở - OLP 2025
-              </p>
+
+              {weatherLoading ? (
+                 <div className="h-40 flex items-center justify-center">
+                    <Clock className="w-10 h-10 animate-spin text-white/50" />
+                 </div>
+              ) : weatherData ? (
+                <>
+                  <div className="flex items-center gap-6 mb-8 relative z-10">
+                      <span className="text-6xl font-bold tracking-tighter">{weatherData.weather.temp}</span>
+                      <div>
+                        <div className="text-xl font-medium">{weatherData.weather.condition}</div>
+                        <div className="text-blue-100 text-sm opacity-90 mt-1 flex flex-col">
+                            <span className="font-semibold text-white">{formattedTime}</span>
+                            <span className="text-xs capitalize">{formattedDate}</span>
+                        </div>
+                      </div>
+                  </div>
+
+                  {/* Stats Grid */}
+                  <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10 relative z-10">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2.5 bg-white/10 rounded-xl backdrop-blur-sm">
+                            <Droplets className="w-5 h-5 text-blue-200" />
+                        </div>
+                        <div>
+                            <div className="text-xs text-blue-200 font-medium uppercase tracking-wide">Độ ẩm</div>
+                            <div className="font-semibold text-lg">{weatherData.weather.humidity}</div>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="p-2.5 bg-white/10 rounded-xl backdrop-blur-sm">
+                            <Wind className="w-5 h-5 text-blue-200" />
+                        </div>
+                        <div>
+                            <div className="text-xs text-blue-200 font-medium uppercase tracking-wide">Gió</div>
+                            <div className="font-semibold text-lg">{weatherData.weather.wind}</div>
+                        </div>
+                      </div>
+                  </div>
+                </>
+              ) : (
+                <div className="h-40 flex items-center justify-center text-white/50">
+                  Không có dữ liệu
+                </div>
+              )}
+
+               <div className="absolute bottom-4 right-4 px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[10px] font-bold border border-white/10 z-20 text-blue-50 tracking-wider">
+                    AI WEATHER
+                </div>
             </div>
 
-            {/* Right: Socials & Links */}
-            <div className="flex items-center gap-6">
-              <a 
-                href="https://github.com/H-Ngyen/DatapolisX" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-slate-900 transition-colors p-2 hover:bg-slate-50 rounded-full"
-                title="GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
+            {/* Right: Location Details */}
+            <div className="p-8 bg-slate-50">
+              <h3 className="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                  <Info className="w-5 h-5 text-indigo-500" />
+                  Địa chỉ cung đường
+              </h3>
+
+              {weatherLoading ? (
+                 <div className="space-y-4 animate-pulse">
+                    <div className="h-20 bg-slate-200 rounded-xl"></div>
+                    <div className="h-20 bg-slate-200 rounded-xl"></div>
+                 </div>
+              ) : weatherData ? (
+                <>
+                  <div className="space-y-6">
+                      {/* Item 1: New Standard */}
+                      <div className="relative pl-6 border-l-2 border-green-500">
+                        <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-100 border-2 border-green-500 box-content"></span>
+                        <p className="text-xs font-bold text-green-600 uppercase tracking-wider mb-2">Địa chỉ hiện tại</p>
+                        <div className="text-slate-800 font-semibold text-lg leading-snug mb-2">
+                            {weatherData.address.new_2_level.full_string}
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                            <span className="px-2.5 py-1 bg-white text-slate-600 text-xs font-medium rounded-md border border-slate-200 shadow-sm">
+                              P: {weatherData.address.new_2_level.ward}
+                            </span>
+                            <span className="px-2.5 py-1 bg-white text-slate-600 text-xs font-medium rounded-md border border-slate-200 shadow-sm">
+                              TP: {weatherData.address.new_2_level.city}
+                            </span>
+                        </div>
+                      </div>
+
+                      {/* Item 2: Old Standard */}
+                      <div className="relative pl-6 border-l-2 border-slate-300">
+                        <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-100 border-2 border-slate-300 box-content"></span>
+                        <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Địa chỉ cũ (3 cấp)</p>
+                        <div className="text-slate-600 font-medium">
+                            {weatherData.address.old_3_level.full_string}
+                        </div>
+                      </div>
+                  </div>
+                  
+                  {/* Advice Box */}
+                  <div className="mt-8 p-4 bg-indigo-50 rounded-xl border border-indigo-100 flex gap-3 shadow-sm">
+                      <div className="shrink-0 mt-1">
+                        <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></div>
+                      </div>
+                      <p className="text-sm text-indigo-800 italic leading-relaxed font-medium">
+                        &ldquo;{weatherData.weather.advice}&rdquo;
+                      </p>
+                  </div>
+                </>
+              ) : (
+                <div className="text-center py-10 text-slate-400">
+                  Chưa tải được thông tin địa điểm
+                </div>
+              )}
             </div>
+
           </div>
         </div>
-      </footer>
+      </main>
+
+            {/* Copyright Footer */}
+            <footer className="mt-16 bg-slate-900 border-t border-slate-800">
+              <div className="max-w-4xl mx-auto px-4 py-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                  
+                  {/* Left: Brand & Copyright */}
+                  <div className="text-center md:text-left">
+                    <div className="flex items-center gap-2 justify-center md:justify-start mb-1">
+                      <div className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span>
+                      </div>
+                      <span className="font-bold text-white text-lg tracking-tight">DatapolisX</span>
+                    </div>
+                    <p className="text-xs text-slate-400 font-medium">
+                      © 2025 - Cuộc thi Phần mềm Nguồn mở - OLP 2025
+                    </p>
+                  </div>
+      
+                  {/* Right: Socials & Links */}
+                  <div className="flex items-center gap-6">
+                    <a 
+                      href="https://github.com/H-Ngyen/DatapolisX" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full"
+                      title="GitHub"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </footer>
     </div>
   );
 }
