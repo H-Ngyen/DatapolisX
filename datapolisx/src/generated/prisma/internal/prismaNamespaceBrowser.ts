@@ -51,8 +51,8 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  User: 'User',
-  Post: 'Post'
+  camera_detections: 'camera_detections',
+  camera_predictions: 'camera_predictions'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -71,24 +71,34 @@ export const TransactionIsolationLevel = {
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-export const UserScalarFieldEnum = {
+export const Camera_detectionsScalarFieldEnum = {
   id: 'id',
-  email: 'email',
-  name: 'name'
+  minio_key: 'minio_key',
+  camera_id: 'camera_id',
+  detections: 'detections',
+  total_objects: 'total_objects',
+  created_at: 'created_at'
 } as const
 
-export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+export type Camera_detectionsScalarFieldEnum = (typeof Camera_detectionsScalarFieldEnum)[keyof typeof Camera_detectionsScalarFieldEnum]
 
 
-export const PostScalarFieldEnum = {
+export const Camera_predictionsScalarFieldEnum = {
   id: 'id',
-  title: 'title',
-  content: 'content',
-  published: 'published',
-  authorId: 'authorId'
+  camera_id: 'camera_id',
+  forecast_timestamp: 'forecast_timestamp',
+  predicted_total_objects: 'predicted_total_objects',
+  minutes_resample: 'minutes_resample',
+  prediction_time: 'prediction_time',
+  forecast_hour: 'forecast_hour',
+  forecast_dayofweek: 'forecast_dayofweek',
+  forecast_is_weekend: 'forecast_is_weekend',
+  forecast_dayofyear: 'forecast_dayofyear',
+  forecast_weekofyear: 'forecast_weekofyear',
+  forecast_month: 'forecast_month'
 } as const
 
-export type PostScalarFieldEnum = (typeof PostScalarFieldEnum)[keyof typeof PostScalarFieldEnum]
+export type Camera_predictionsScalarFieldEnum = (typeof Camera_predictionsScalarFieldEnum)[keyof typeof Camera_predictionsScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -99,12 +109,29 @@ export const SortOrder = {
 export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
 
 
+export const NullableJsonNullValueInput = {
+  DbNull: 'DbNull',
+  JsonNull: 'JsonNull'
+} as const
+
+export type NullableJsonNullValueInput = (typeof NullableJsonNullValueInput)[keyof typeof NullableJsonNullValueInput]
+
+
 export const QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 } as const
 
 export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+export const JsonNullValueFilter = {
+  DbNull: 'DbNull',
+  JsonNull: 'JsonNull',
+  AnyNull: 'AnyNull'
+} as const
+
+export type JsonNullValueFilter = (typeof JsonNullValueFilter)[keyof typeof JsonNullValueFilter]
 
 
 export const NullsOrder = {
