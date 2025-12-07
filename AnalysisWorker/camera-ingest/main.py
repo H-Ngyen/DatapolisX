@@ -18,16 +18,32 @@ CAMERA_LIST = [
     '5a6065c58576340017d06615',
     '6623f4df6f998a001b2528eb',
     '662b7ce71afb9c00172dc676',
+    "649da77ea6068200171a6dd4",
+    "662b857b1afb9c00172dd106",
+    "5d9ddd49766c880017188c94",
+    "5d9ddec9766c880017188c9c",
+    "5a8256315058170011f6eac9",
+    "58b5510817139d0010f35d4e",
+    "5d8cd653766c88001718894c",
+    "5d9ddf0f766c880017188c9e",
+    "5d9dde1f766c880017188c98",
+    "587ee0ecb807da0011e33d50",
+    "5a8253615058170011f6eabf",
+    "6623df636f998a001b251e92",
+    "58e49e3dd9d6200011e0b9d1",
+    "5a8241105058170011f6eaa6",
+    "662b7f9f1afb9c00172dca50",
+    "587ed91db807da0011e33d4e",
 ]
 
 ACCESS_KEY = os.getenv('MINIO_ACCESS_KEY')
 SECRET_KEY = os.getenv('MINIO_SECRET_KEY')
 AWS_REGION = 'us-east-1'
 BUCKET_NAME = 'images'
-ENDPOINT_URL = os.getenv('ENDPOINT_URL')
+ENDPOINT_URL = os.getenv('MINIO_ENDPOINT')
 
 PUBSUB_TOPIC_ID = os.getenv('PUBSUB_TOPIC_ID')
-CONCURRENCY_LIMIT = 4
+CONCURRENCY_LIMIT = 20
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)

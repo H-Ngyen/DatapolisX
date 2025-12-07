@@ -13,4 +13,4 @@ services:
     container_name: camera-ingest-service
     restart: always
     env_file:
-      - camera-ingest/.env
+      - camera-ingest/.env.example
