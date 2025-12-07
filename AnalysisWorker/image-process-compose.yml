@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  image-process:
+    image: image-process:latest
+    #container_name: image-process-service
+    restart: always
+    env_file:
+      - image-process/.env
+
+  camera-ingest:
+    image: camera-ingest:latest
+    container_name: camera-ingest-service
+    restart: always
+    env_file:
+      - camera-ingest/.env
