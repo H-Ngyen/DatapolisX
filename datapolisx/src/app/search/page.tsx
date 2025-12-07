@@ -1,8 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
-import { Search, Home, MapPin } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Search, Home, MapPin, Clock, Info, Github } from "lucide-react";
+import { useApiCall } from "../../hooks/useApiCall";
 import camInfo from "../../assets/cam_info.json";
+
+
+
+interface TrafficItem {
+  id: string;
+  si_score: number;
+  composition: { primary: string };
+  change_percent: number;
+}
+
+interface DashboardResponse {
+  success: boolean;
+  data: TrafficItem[];
+}
 
 interface Camera {
   CamId: string;
@@ -15,21 +30,67 @@ export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<Camera[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
+  const { data: dashboardData, loading, error, execute } = useApiCall<DashboardResponse>();
+
+  useEffect(() => {
+    execute('/api/dashboard');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   
-  const allCameras = camInfo.data_filtered_final.slice(0, 20) as Camera[];
+  // Get unique camera IDs from API and create camera objects with lookup, sorted by Code
+  const allCameras = dashboardData?.data
+    ? dashboardData.data.map(item => {
+        const cam = camInfo.data_filtered_final.find(c => c.CamId === item.id);
+        return cam ? {
+          CamId: cam.CamId,
+          Code: cam.Code,
+          DisplayName: cam.DisplayName,
+          Name: cam.Name
+        } : null;
+      }).filter(Boolean).sort((a, b) => a!.Code.localeCompare(b!.Code)) as Camera[]
+    : [];
 
   const handleSearch = () => {
     setHasSearched(true);
     if (searchQuery.trim()) {
-      const results = camInfo.data_filtered_final.filter(cam =>
+      const results = allCameras.filter(cam =>
         cam.DisplayName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         cam.Code.toLowerCase().includes(searchQuery.toLowerCase())
-      ).slice(0, 10) as Camera[];
+      ).slice(0, 10);
       setSearchResults(results);
     } else {
-      setSearchResults([]);
+      setSearchResults(allCameras);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <Clock className="w-16 h-16 text-gray-300 mx-auto mb-4 animate-pulse" />
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Đang tải dữ liệu...</h1>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <Info className="w-16 h-16 text-red-300 mx-auto mb-4" />
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Lỗi tải dữ liệu</h1>
+          <p className="text-gray-600 mb-4">Không thể kết nối đến server</p>
+          <button 
+            onClick={() => execute('/api/dashboard')}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          >
+            Thử lại
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-slate-900">
@@ -114,7 +175,7 @@ export default function SearchPage() {
           </div>
         )}
 
-        {hasSearched && searchQuery && searchResults.length === 0 && (
+        {hasSearched && searchQuery.trim() && searchResults.length === 0 && (
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center mb-6">
             <Search className="w-12 h-12 text-gray-300 mx-auto mb-4" />
             <h3 className="text-lg font-medium text-gray-900 mb-2">Không tìm thấy kết quả</h3>
@@ -148,6 +209,37 @@ export default function SearchPage() {
           </div>
         )}
       </main>
+            {/* Copyright Footer */}
+      <footer className="mt-16 bg-white border-t border-slate-100">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            {/* Left: Brand & Copyright */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center gap-2 justify-center md:justify-start mb-1">
+                <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                <span className="font-bold text-slate-800 text-lg tracking-tight">DatapolisX</span>
+              </div>
+              <p className="text-xs text-slate-500 font-medium">
+                © 2025 - Cuộc thi Phần mềm Nguồn mở - OLP 2025
+              </p>
+            </div>
+
+            {/* Right: Socials & Links */}
+            <div className="flex items-center gap-6">
+              <a 
+                href="https://github.com/H-Ngyen/DatapolisX" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-slate-900 transition-colors p-2 hover:bg-slate-50 rounded-full"
+                title="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

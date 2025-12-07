@@ -12,6 +12,7 @@ import {
   Search,
   Github
 } from "lucide-react";
+import { useApiCall } from "../hooks/useApiCall";
 import camInfo from "../assets/cam_info.json";
 
 // --- Camera Location Helper ---
@@ -20,42 +21,19 @@ const getLocationByCamId = (camId: string): string => {
   return cam?.DisplayName || "Không xác định";
 };
 
-// --- Mock Data ---
-const rawTrafficData = [
-  {
-    id: "662b86c41afb9c00172dd31c",
-    si_score: 145,
-    composition: { primary: "truck" },
-    change_percent: 15,
-  },
-  {
-    id: "5a6065c58576340017d06615",
-    si_score: 98,
-    composition: { primary: "car" },
-    change_percent: -8,
-  },
-  {
-    id: "6623f4df6f998a001b2528eb",
-    si_score: 45,
-    composition: { primary: "car" },
-    change_percent: 22,
-  },
-  {
-    id: "662b7ce71afb9c00172dc676",
-    si_score: 30,
-    composition: { primary: "motorbike" },
-    change_percent: 0,
-  },
-];
+interface TrafficItem {
+  id: string;
+  si_score: number;
+  composition: { primary: string };
+  change_percent: number;
+  rank?: number;
+  location?: string;
+}
 
-// Sort by si_score descending and add rank with location
-const trafficData = rawTrafficData
-  .sort((a, b) => b.si_score - a.si_score)
-  .map((item, index) => ({ 
-    ...item, 
-    rank: index + 1,
-    location: getLocationByCamId(item.id)
-  }));
+interface DashboardResponse {
+  success: boolean;
+  data: TrafficItem[];
+}
 
 // --- Helper Functions ---
 
@@ -72,15 +50,13 @@ const getStatusConfig = (score: number) => {
 const getVehicleIcon = (primary: string) => {
   switch (primary) {
     case "truck":
-      return { icon: <Truck className="w-3.5 h-3.5" />, text: "Nhiều xe tải", color: "text-amber-600" };
+      return { icon: <Truck className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy xe tải", color: "text-amber-600" };
     case "car":
-      return { icon: <Car className="w-3.5 h-3.5" />, text: "Đông ô tô", color: "text-blue-600" };
+      return { icon: <Car className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy ô tô", color: "text-blue-600" };
     case "bus":
-      return { icon: <Bus className="w-3.5 h-3.5" />, text: "Nhiều xe BUS", color: "text-green-600" };
-    case "pickup-van":
-      return { icon: <Truck className="w-3.5 h-3.5" />, text: "Nhiều xe bán tải", color: "text-orange-600" };
-    case "microbus":
-      return { icon: <Bus className="w-3.5 h-3.5" />, text: "Nhiều xe đa dụng", color: "text-teal-600" };
+      return { icon: <Bus className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy xe BUS", color: "text-green-600" };
+    case "bigcar":
+      return { icon: <Truck className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy xe lớn", color: "text-orange-600" };
     default:
       return { icon: <Bike className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy", color: "text-purple-600" };
   }
@@ -112,6 +88,8 @@ const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentD
               <span className="font-bold text-gray-500">{currentTime}</span>
               <span className="text-gray-400">•</span>
               <span className="text-gray-500">{currentDate}</span>
+              <span className="text-gray-400">•</span>
+              <span className="text-gray-500">TP. Hồ Chí Minh</span>
             </div>
           </div>
 
@@ -138,7 +116,7 @@ const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentD
   );
 };
 
-const StatusBadge = ({ data }: { data: typeof rawTrafficData[0] & { rank: number } }) => {
+const StatusBadge = ({ data }: { data: TrafficItem & { rank: number } }) => {
   const config = getStatusConfig(data.si_score);
 
   return (
@@ -165,6 +143,12 @@ const StatusBadge = ({ data }: { data: typeof rawTrafficData[0] & { rank: number
 export default function TrafficDashboard() {
   const [currentTime, setCurrentTime] = useState('');
   const [currentDate, setCurrentDate] = useState('');
+  const { data: dashboardData, loading, error, execute } = useApiCall<DashboardResponse>();
+
+  useEffect(() => {
+    execute('/api/dashboard');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const updateTime = () => {
@@ -180,6 +164,46 @@ export default function TrafficDashboard() {
     const interval = setInterval(updateTime, Number(process.env.NEXT_PUBLIC_TIME_UPDATE_INTERVAL));
     return () => clearInterval(interval);
   }, []);
+
+  // Process API data: sort by si_score and add rank + location
+  const trafficData = dashboardData?.data
+    ? dashboardData.data
+        .sort((a, b) => b.si_score - a.si_score)
+        .map((item, index) => ({
+          ...item,
+          rank: index + 1,
+          location: getLocationByCamId(item.id)
+        }))
+    : [];
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <Clock className="w-16 h-16 text-gray-300 mx-auto mb-4 animate-pulse" />
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Đang tải dữ liệu...</h1>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <Info className="w-16 h-16 text-red-300 mx-auto mb-4" />
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Lỗi tải dữ liệu</h1>
+          <p className="text-gray-600 mb-4">Không thể kết nối đến server</p>
+          <button 
+            onClick={() => execute('/api/dashboard')}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          >
+            Thử lại
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-slate-900 flex flex-col">
@@ -329,7 +353,6 @@ export default function TrafficDashboard() {
                 <Github className="w-5 h-5" />
               </a>
             </div>
-
           </div>
         </div>
       </footer>
