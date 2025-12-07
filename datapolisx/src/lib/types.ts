@@ -35,3 +35,12 @@ export interface ApiCallState<T> {
     body?: object | null 
   ) => Promise<void>; 
 }
+
+export interface DetectionData {
+  motorbike?: number;
+  car?: number;
+  truck?: number;
+  bus?: number;
+  container?: number;
+  [key: string]: any;
+}
