@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   Truck,
   Car,
@@ -50,13 +51,13 @@ const getStatusConfig = (score: number) => {
 const getVehicleIcon = (primary: string) => {
   switch (primary) {
     case "truck":
-      return { icon: <Truck className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy xe tải", color: "text-amber-600" };
+      return { icon: <Truck className="w-3.5 h-3.5" />, text: "Chủ yếu xe tải", color: "text-amber-600" };
     case "car":
-      return { icon: <Car className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy ô tô", color: "text-blue-600" };
+      return { icon: <Car className="w-3.5 h-3.5" />, text: "Chủ yếu xe ô tô", color: "text-blue-600" };
     case "bus":
-      return { icon: <Bus className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy xe BUS", color: "text-green-600" };
+      return { icon: <Bus className="w-3.5 h-3.5" />, text: "Chủ yếu xe BUS", color: "text-green-600" };
     case "bigcar":
-      return { icon: <Truck className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy xe lớn", color: "text-orange-600" };
+      return { icon: <Truck className="w-3.5 h-3.5" />, text: "Chủ yếu xe lớn", color: "text-orange-600" };
     default:
       return { icon: <Bike className="w-3.5 h-3.5" />, text: "Chủ yếu xe máy", color: "text-purple-600" };
   }
@@ -360,7 +361,16 @@ export default function TrafficDashboard() {
             </div>
 
             {/* Right: Socials & Links */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <a 
+                href="https://www.vlu.edu.vn/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full"
+                title="Van Lang University"
+              >
+                <Image src="/logo-van-lang.png" alt="VLU Logo" width={24} height={24} className="object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              </a>
               <a 
                 href="https://github.com/H-Ngyen/DatapolisX" 
                 target="_blank"

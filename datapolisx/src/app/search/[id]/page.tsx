@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Image from "next/image";
 import { ArrowLeft, Home, Search, MapPin, Camera, Clock, Info, Wind, Droplets, Github } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useApiCall } from "../../../hooks/useApiCall";
@@ -488,7 +489,16 @@ export default function CameraDetailPage() {
                   </div>
       
                   {/* Right: Socials & Links */}
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <a 
+                      href="https://www.vlu.edu.vn/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full"
+                      title="Van Lang University"
+                    >
+                      <Image src="/logo-van-lang.png" alt="VLU Logo" width={24} height={24} className="object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                    </a>
                     <a 
                       href="https://github.com/H-Ngyen/DatapolisX" 
                       target="_blank"

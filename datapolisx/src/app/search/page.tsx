@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Search, Home, MapPin, Clock, Info, Github } from "lucide-react";
+import Image from "next/image";
+import { Search, Home, MapPin, Info, Github } from "lucide-react";
 import { useApiCall } from "../../hooks/useApiCall";
 import camInfo from "../../assets/cam_info.json";
 
@@ -244,7 +245,16 @@ export default function SearchPage() {
             </div>
 
             {/* Right: Socials & Links */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <a 
+                href="https://www.vlu.edu.vn/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full"
+                title="Van Lang University"
+              >
+                <Image src="/logo-van-lang.png" alt="VLU Logo" width={24} height={24} className="object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              </a>
               <a 
                 href="https://github.com/H-Ngyen/DatapolisX" 
                 target="_blank"

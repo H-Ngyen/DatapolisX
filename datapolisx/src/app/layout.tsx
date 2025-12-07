@@ -11,6 +11,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "DatapolisX",
   description: "Hệ thống giám sát giao thông thông minh",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
