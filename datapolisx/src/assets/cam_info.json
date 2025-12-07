@@ -1,0 +1,4702 @@
+{
+  "data_filtered_final": [
+    {
+      "Code": "TTH 406",
+      "CamId": "662b86c41afb9c00172dd31c",
+      "Name": "TTH 406",
+      "DisplayName": "Trần Quang Khải - Trần Khắc Chân"
+    },
+    {
+      "Code": "TTH 21.84",
+      "CamId": "5a6065c58576340017d06615",
+      "Name": "TTH 21.84",
+      "DisplayName": "Tô Ngọc Vân – TX25"
+    },
+    {
+      "Code": "TTH 300",
+      "CamId": "6623f4df6f998a001b2528eb",
+      "Name": "TTH 300",
+      "DisplayName": "Quốc Lộ 13 - cầu Ông Dầu"
+    },
+    {
+      "Code": "TTH 374",
+      "CamId": "662b7ce71afb9c00172dc676",
+      "Name": "TTH 374",
+      "DisplayName": "Cách Mạng Tháng Tám - Bùi Thị Xuân"
+    },
+    {
+      "Code": "TTH 22.7",
+      "CamId": "583f969161cfea0012cf68f7",
+      "Name": "TTH 22.7",
+      "DisplayName": "Nguyễn Thị Định - Đường D"
+    },
+    {
+      "Code": "IDICO-QL1 29",
+      "CamId": "59ca317602eb490011a0a408",
+      "Name": "IDICO-QL1 29",
+      "DisplayName": "QL1 - Tỉnh lộ 10 B (2)"
+    },
+    {
+      "Code": "TTH 273",
+      "CamId": "6623e8da6f998a001b2524a6",
+      "Name": "TTH 273",
+      "DisplayName": "Phan Đăng Lưu - Thích Quảng Đức"
+    },
+    {
+      "Code": "TTH 18.2",
+      "CamId": "56de42f611f398ec0c481299",
+      "Name": "TTH 18.2",
+      "DisplayName": "Võ Văn Kiệt - An Dương Vương 2"
+    },
+    {
+      "Code": "TTH 419",
+      "CamId": "66b1c426779f74001867415e",
+      "Name": "TTH 419",
+      "DisplayName": "Điện Biên Phủ - Nguyễn Gia Trí"
+    },
+    {
+      "Code": "TTH 21.59",
+      "CamId": "595dc29c3dcfc400106f2894",
+      "Name": "TTH 21.59",
+      "DisplayName": "Quốc lộ 1 - Rạch Láng Le 1"
+    },
+    {
+      "Code": "TTH 292",
+      "CamId": "6623f1046f998a001b2527db",
+      "Name": "TTH 292",
+      "DisplayName": "Lũy Bán Bích - Thoại Ngọc Hầu"
+    },
+    {
+      "Code": "TTH 1.8",
+      "CamId": "5d9de4de766c880017188cbb",
+      "Name": "TTH 1.8",
+      "DisplayName": "Cao tốc LTDG - Võ Chí Công"
+    },
+    {
+      "Code": "TTH 299.1",
+      "CamId": "6623f44f6f998a001b2528aa",
+      "Name": "TTH 299.1",
+      "DisplayName": "Võ Nguyên Giáp - Đỗ Xuân Hợp (1)"
+    },
+    {
+      "Code": "TTH 308",
+      "CamId": "662a881a1afb9c00172d2559",
+      "Name": "TTH 308",
+      "DisplayName": "Kinh Dương Vương - Tên Lửa"
+    },
+    {
+      "Code": "TTH 24.4",
+      "CamId": "5a605f828576340017d06608",
+      "Name": "TTH 24.4",
+      "DisplayName": "Nguyễn Thái Sơn - Nguyễn Văn Nghi 1"
+    },
+    {
+      "Code": "TTH 423",
+      "CamId": "6818833d6dfb4b0018f8ee9d",
+      "Name": "TTH 423",
+      "DisplayName": "Mai Bá Hương - Kênh 4"
+    },
+    {
+      "Code": "TTH 457",
+      "CamId": "68188fe36dfb4b0018f90520",
+      "Name": "TTH 457",
+      "DisplayName": "Trần Văn Giàu - đường Kênh 1"
+    },
+    {
+      "Code": "TTH 335",
+      "CamId": "662b4ecb1afb9c00172d8692",
+      "Name": "TTH 335",
+      "DisplayName": "Nguyễn Chí Thanh - Thuận Kiều"
+    },
+    {
+      "Code": "ITS 8.2",
+      "CamId": "5deb576d1dc17d7c5515ad15",
+      "Name": "ITS 8.2",
+      "DisplayName": "Lý Tự Trọng - Chu Mạnh Trinh"
+    },
+    {
+      "Code": "TTH 29.4",
+      "CamId": "5b8b2323ca057700116405d0",
+      "Name": "TTH 29.4",
+      "DisplayName": "Trường Sơn - Ga Quốc Nội 2"
+    },
+    {
+      "Code": "TTH 442",
+      "CamId": "68188a226dfb4b0018f8f70a",
+      "Name": "TTH 442",
+      "DisplayName": "Trần Đại Nghĩa - Võ Trần Chí"
+    },
+    {
+      "Code": "TTH 440",
+      "CamId": "681889a96dfb4b0018f8f67e",
+      "Name": "TTH 440",
+      "DisplayName": "Trần Văn Giàu - cầu Tân Tạo"
+    },
+    {
+      "Code": "TTH 197",
+      "CamId": "63ae7a50bfd3d90017e8f2b2",
+      "Name": "TTH 197",
+      "DisplayName": "Ba Tháng Hai – Sư Vạn Hạnh"
+    },
+    {
+      "Code": "TTH 44.4",
+      "CamId": "587ee0ecb807da0011e33d50",
+      "Name": "TTH 44.4",
+      "DisplayName": "Phan Đăng Lưu - Lê Văn Duyệt"
+    },
+    {
+      "Code": "TTH 11.1",
+      "CamId": "56de42f611f398ec0c48128f",
+      "Name": "TTH 11.1",
+      "DisplayName": "Võ Văn Kiệt - Huỳnh Mẫn Đạt"
+    },
+    {
+      "Code": "TTH 22.4",
+      "CamId": "56de42f611f398ec0c4812a2",
+      "Name": "TTH 22.4",
+      "DisplayName": "Nút giao Mỹ Thủy 2"
+    },
+    {
+      "Code": "TTH 34.11",
+      "CamId": "58b571c817139d0010f35d5d",
+      "Name": "TTH 34.11",
+      "DisplayName": "Nguyễn Văn Trỗi - Trần Huy Liệu"
+    },
+    {
+      "Code": "TTH 245",
+      "CamId": "63bd1f21bfd3d90017ec3d04",
+      "Name": "TTH 245",
+      "DisplayName": "Huỳnh Tấn Phát - Phạm Hữu Lầu"
+    },
+    {
+      "Code": "TTH 26.4",
+      "CamId": "58df4d95dc195800111e04b9",
+      "Name": "TTH 26.4",
+      "DisplayName": "Phổ Quang - Hoàng Minh Giám"
+    },
+    {
+      "Code": "TTH 21.3",
+      "CamId": "586e28a0f9fab7001111b0b3",
+      "Name": "TTH 21.3",
+      "DisplayName": "Quốc lộ 1 - KCX Linh Trung 1"
+    },
+    {
+      "Code": "TTH 21.69",
+      "CamId": "595dd8463dcfc400106f28b2",
+      "Name": "TTH 21.69",
+      "DisplayName": "Quốc lộ 1 - Đường Lê Thị Riêng 2"
+    },
+    {
+      "Code": "TTH 145",
+      "CamId": "5d8cd4ee766c880017188946",
+      "Name": "TTH 145",
+      "DisplayName": "Lê Văn Sỹ - Huỳnh Văn Bánh"
+    },
+    {
+      "Code": "TTH 385",
+      "CamId": "662b81721afb9c00172dcc44",
+      "Name": "TTH 385",
+      "DisplayName": "Đinh Tiên Hoàng - Trần Quang Khải"
+    },
+    {
+      "Code": "TTH 22.6.1",
+      "CamId": "67e217c43215f90017863bc8",
+      "Name": "TTH 22.6.1",
+      "DisplayName": "Nguyễn Thị Định - Đường C (20-1)"
+    },
+    {
+      "Code": "TTH 417",
+      "CamId": "66b1c3c2779f740018674125",
+      "Name": "TTH 417",
+      "DisplayName": "Vòng xoay Mũi Tàu Phú Lâm"
+    },
+    {
+      "Code": "TTH 124.1",
+      "CamId": "5a8269c45058170011f6eae4",
+      "Name": "TTH 124.1",
+      "DisplayName": "Nguyễn Văn Quỳ - Cầu Phú Mỹ"
+    },
+    {
+      "Code": "TTH 13.2",
+      "CamId": "56de42f611f398ec0c481297",
+      "Name": "TTH 13.2",
+      "DisplayName": "Võ Văn Kiệt - Nguyễn Tri Phương 2"
+    },
+    {
+      "Code": "TTH 10.1",
+      "CamId": "5822adbbedeb6c0012a2d65f",
+      "Name": "TTH 10.1",
+      "DisplayName": "Võ Văn Kiệt - Cầu Chữ Y 1"
+    },
+    {
+      "Code": "ITS 3.1",
+      "CamId": "5deb576d1dc17d7c5515ad00",
+      "Name": "ITS 3.1",
+      "DisplayName": "Điện Biên Phủ - Hai Bà Trưng"
+    },
+    {
+      "Code": "TTH 259",
+      "CamId": "6623e43e6f998a001b2522cb",
+      "Name": "TTH 259",
+      "DisplayName": "Nguyễn Thị Minh Khai - Bà Huyện Thanh Quan"
+    },
+    {
+      "Code": "TTH 102.1",
+      "CamId": "5a823e425058170011f6eaa4",
+      "Name": "TTH 102.1",
+      "DisplayName": "Đinh Tiên Hoàng - Võ Thị Sáu 1"
+    },
+    {
+      "Code": "TTH 247",
+      "CamId": "649da72ca6068200171a6dbb",
+      "Name": "TTH 247",
+      "DisplayName": "Tôn Đức Thắng - Hàm Nghi"
+    },
+    {
+      "Code": "IDICO-QL1 36",
+      "CamId": "5a6088218576340017d06693",
+      "Name": "IDICO-QL1 36",
+      "DisplayName": "QL1 - Nút giao An Lạc 2"
+    },
+    {
+      "Code": "TTH 237",
+      "CamId": "63b65fd8bfd3d90017eaa461",
+      "Name": "TTH 237",
+      "DisplayName": "Lê Văn Duyệt - Vũ Huy Tấn"
+    },
+    {
+      "Code": "ITS 6.2",
+      "CamId": "5deb576d1dc17d7c5515ad08",
+      "Name": "ITS 6.2",
+      "DisplayName": "Cộng Hòa - Tân Kỳ Tân Quý"
+    },
+    {
+      "Code": "TTH 21.62",
+      "CamId": "595dc70d3dcfc400106f289a",
+      "Name": "TTH 21.62",
+      "DisplayName": "Quốc lộ 1 - Ngã 4 Ga"
+    },
+    {
+      "Code": "TTH 40.3",
+      "CamId": "587c79e9b807da0011e33d3d",
+      "Name": "TTH 40.3",
+      "DisplayName": "Điện Biên Phủ - Nguyễn Văn Thương 2"
+    },
+    {
+      "Code": "TTH 233.1",
+      "CamId": "63b65ebebfd3d90017eaa3ae",
+      "Name": "TTH 233.1",
+      "DisplayName": "Nguyễn Hữu Cảnh - Ngô Tất Tố 2 (Dạ cầu Thủ Thiêm 1)"
+    },
+    {
+      "Code": "TTH 38.3",
+      "CamId": "5874769eb807da0011e33cec",
+      "Name": "TTH 38.3",
+      "DisplayName": "Cộng Hòa - Út Tịch 2"
+    },
+    {
+      "Code": "TTH 242.2",
+      "CamId": "63b660f8bfd3d90017eaa4ea",
+      "Name": "TTH 242.2",
+      "DisplayName": "Cầu Tân Thuận 2 - Q7 (Q7-Q4)"
+    },
+    {
+      "Code": "TTH 36.1",
+      "CamId": "58af994abd82540010390c37",
+      "Name": "TTH 36.1",
+      "DisplayName": "Nguyễn Hữu Cảnh - Tôn Đức Thắng"
+    },
+    {
+      "Code": "TTH 23",
+      "CamId": "56df8108c062921100c143db",
+      "Name": "TTH 23",
+      "DisplayName": "Hoàng Minh Giám - Hồng Hà"
+    },
+    {
+      "Code": "TTH 191",
+      "CamId": "63ae7903bfd3d90017e8f211",
+      "Name": "TTH 191",
+      "DisplayName": "Hậu Giang - Hẻm 491"
+    },
+    {
+      "Code": "TTH 186.2",
+      "CamId": "63ae7727bfd3d90017e8f14a",
+      "Name": "TTH 186.2",
+      "DisplayName": "Hoàng Diệu - Đoàn Văn Bơ 2"
+    },
+    {
+      "Code": "TTH 297.2",
+      "CamId": "6623f36e6f998a001b252878",
+      "Name": "TTH 297.2",
+      "DisplayName": "Phạm Văn Đồng - Kha Vạn Cân 2"
+    },
+    {
+      "Code": "TTH 173",
+      "CamId": "5d9ddec9766c880017188c9c",
+      "Name": "TTH 173",
+      "DisplayName": "Nút giao Hàng Xanh 5 (Hàng Xanh - Bạch Đằng)"
+    },
+    {
+      "Code": "ITS 3.4",
+      "CamId": "5deb576d1dc17d7c5515ad02",
+      "Name": "ITS 3.4",
+      "DisplayName": "Điện Biên Phủ - Pasteur"
+    },
+    {
+      "Code": "TTH 430",
+      "CamId": "681885ff6dfb4b0018f8f1ee",
+      "Name": "TTH 430",
+      "DisplayName": "Trần Đại Nghĩa - Kênh A"
+    },
+    {
+      "Code": "TTH 195",
+      "CamId": "63ae79aabfd3d90017e8f26a",
+      "Name": "TTH 195",
+      "DisplayName": "Cách Mạng Tháng Tám - Trường Sơn"
+    },
+    {
+      "Code": "TTH 152",
+      "CamId": "5d8cd7fb766c880017188954",
+      "Name": "TTH 152",
+      "DisplayName": "Phạm Văn Đồng - Đường 20 (hướng đi Sân bay)"
+    },
+    {
+      "Code": "TTH 14.1",
+      "CamId": "56de42f611f398ec0c481293",
+      "Name": "TTH 14.1",
+      "DisplayName": "Võ Văn Kiệt - Hải Thượng Lãn Ông 1"
+    },
+    {
+      "Code": "TTH 241",
+      "CamId": "63b66089bfd3d90017eaa4bd",
+      "Name": "TTH 241",
+      "DisplayName": "Nơ Trang Long - Chu Văn An"
+    },
+    {
+      "Code": "TTH 194",
+      "CamId": "63ae798abfd3d90017e8f255",
+      "Name": "TTH 194",
+      "DisplayName": "Cách Mạng Tháng Tám - Bắc Hải"
+    },
+    {
+      "Code": "TTH 314.2",
+      "CamId": "662a89f51afb9c00172d26ef",
+      "Name": "TTH 314.2",
+      "DisplayName": "Nguyễn Văn Linh - Trịnh Quang Nghị 2"
+    },
+    {
+      "Code": "TTH 176.2",
+      "CamId": "6318287ec9eae60017a19f36",
+      "Name": "TTH 176.2",
+      "DisplayName": "Nguyễn Thị Minh Khai - Đinh Tiên Hoàng 2"
+    },
+    {
+      "Code": "TTH 0009",
+      "CamId": "6792f3058c5ed4001b27f58e",
+      "Name": "TTH 0009",
+      "DisplayName": "Trần Văn Giàu - Cầu Đôi"
+    },
+    {
+      "Code": "TTH 38.4",
+      "CamId": "587476e3b807da0011e33cee",
+      "Name": "TTH 38.4",
+      "DisplayName": "Cộng Hòa - Út Tịch 1"
+    },
+    {
+      "Code": "TTH 99",
+      "CamId": "597bf277faa7ea0011c7c29f",
+      "Name": "TTH 99",
+      "DisplayName": "Cầu Phú Hữu 2"
+    },
+    {
+      "Code": "TTH 1.7",
+      "CamId": "5d9de49d766c880017188cb9",
+      "Name": "TTH 1.7",
+      "DisplayName": "Cao tốc LTDG - Đỗ Xuân Hợp 2"
+    },
+    {
+      "Code": "TTH 175",
+      "CamId": "5d9ddf49766c880017188ca0",
+      "Name": "TTH 175",
+      "DisplayName": "Nút giao Hàng Xanh 7 (Hàng Xanh - Cầu Văn Thánh)"
+    },
+    {
+      "Code": "TTH 182",
+      "CamId": "63ae763bbfd3d90017e8f0c4",
+      "Name": "TTH 182",
+      "DisplayName": "Lý Thái Tổ - Nguyễn Đình Chiểu"
+    },
+    {
+      "Code": "TTH 158",
+      "CamId": "5d8cda6a766c880017188960",
+      "Name": "TTH 158",
+      "DisplayName": "Phạm Văn Đồng - Kha Vạn Cân (hướng đi Sân bay)"
+    },
+    {
+      "Code": "TTH 383",
+      "CamId": "662b80e81afb9c00172dcbec",
+      "Name": "TTH 383",
+      "DisplayName": "Cách Mạng Tháng Tám - Sương Nguyệt Anh"
+    },
+    {
+      "Code": "TTH 422",
+      "CamId": "681826506dfb4b0018f83e64",
+      "Name": "TTH 422",
+      "DisplayName": "Mai Bá Hương - Kênh 3"
+    },
+    {
+      "Code": "TTH 24.2",
+      "CamId": "56df84abc062921100c143e5",
+      "Name": "TTH 24.2",
+      "DisplayName": "Nút giao Nguyễn Thái Sơn 3 (Phạm Văn Đồng)"
+    },
+    {
+      "Code": "TTH 304",
+      "CamId": "662a86a11afb9c00172d2410",
+      "Name": "TTH 304",
+      "DisplayName": "Tùng Thiện Vương - Cao Xuân Dục"
+    },
+    {
+      "Code": "IDICO-QL1 17",
+      "CamId": "5a6083198576340017d0667a",
+      "Name": "IDICO-QL1 17",
+      "DisplayName": "QL1 - Tân Kỳ Tân Quý 1"
+    },
+    {
+      "Code": "TTH 9.1",
+      "CamId": "56de42f611f398ec0c48128b",
+      "Name": "TTH 9.1",
+      "DisplayName": "Võ Văn Kiệt - Nguyễn Văn Cừ 1"
+    },
+    {
+      "Code": "TTH 35.2",
+      "CamId": "58e49ff8d9d6200011e0b9d4",
+      "Name": "TTH 35.2",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Trần Quốc Toản"
+    },
+    {
+      "Code": "TTH 429",
+      "CamId": "681885a26dfb4b0018f8f176",
+      "Name": "TTH 429",
+      "DisplayName": "Lê Đình Chi - Kênh 4"
+    },
+    {
+      "Code": "TTH 102.2",
+      "CamId": "5a8241105058170011f6eaa6",
+      "Name": "TTH 102.2",
+      "DisplayName": "Đinh Tiên Hoàng - Võ Thị Sáu 2"
+    },
+    {
+      "Code": "TTH 250",
+      "CamId": "65e054fb6b18080018db6632",
+      "Name": "TTH 250",
+      "DisplayName": "Lê Duẩn - Mạc Đĩnh Chi"
+    },
+    {
+      "Code": "TTH 118.2",
+      "CamId": "5a825ded5058170011f6ead7",
+      "Name": "TTH 118.2",
+      "DisplayName": "Quốc lộ 50 - Cầu Ông Thìn (2)"
+    },
+    {
+      "Code": "TTH 160",
+      "CamId": "5d8cdb0a766c880017188964",
+      "Name": "TTH 160",
+      "DisplayName": "Trường Chinh - Xuân Hồng"
+    },
+    {
+      "Code": "TTH 446",
+      "CamId": "68188bb96dfb4b0018f8fdbf",
+      "Name": "TTH 446",
+      "DisplayName": "Vĩnh Lộc - Trần Hải Phụng"
+    },
+    {
+      "Code": "TTH 25.2",
+      "CamId": "56df833ac062921100c143e1",
+      "Name": "TTH 25.2",
+      "DisplayName": "Nguyễn Hữu Thọ - Nguyễn Thị Thập 2"
+    },
+    {
+      "Code": "IDICO-QL1 16",
+      "CamId": "5a6082698576340017d06678",
+      "Name": "IDICO-QL1 16",
+      "DisplayName": "QL1 - Trạm thu phí AS-AL 2"
+    },
+    {
+      "Code": "TTH 0002",
+      "CamId": "6792efe48c5ed4001b27f336",
+      "Name": "TTH 0002",
+      "DisplayName": "Xa Lộ Hà Nội - Cổng ĐH An ninh"
+    },
+    {
+      "Code": "TTH 231.3",
+      "CamId": "63b5503bbfd3d90017ea7ccc",
+      "Name": "TTH 231.3",
+      "DisplayName": "Nút giao Mỹ Thủy (7)"
+    },
+    {
+      "Code": "TTH 305.1",
+      "CamId": "662a873b1afb9c00172d2483",
+      "Name": "TTH 305.1",
+      "DisplayName": "Võ Trần Chí - Trần Văn Giàu 1"
+    },
+    {
+      "Code": "TTH 418",
+      "CamId": "66b1c3fa779f740018674146",
+      "Name": "TTH 418",
+      "DisplayName": "Nguyễn Hữu Cảnh - Ung Văn Khiêm"
+    },
+    {
+      "Code": "TTH 101.2",
+      "CamId": "5ad0621c98d8fc001102e268",
+      "Name": "TTH 101.2",
+      "DisplayName": "Lý Tự Trọng - Hai Bà Trưng 2"
+    },
+    {
+      "Code": "TTH 414",
+      "CamId": "66b1c34d779f74001867409e",
+      "Name": "TTH 414",
+      "DisplayName": "Ba Tháng Hai - Thành Thái"
+    },
+    {
+      "Code": "TTH 21.77",
+      "CamId": "595f89323dcfc400106f28ee",
+      "Name": "TTH 21.77",
+      "DisplayName": "Quốc lộ 1 - BQB Cầu vượt Quang Trung A (hướng An Sương)"
+    },
+    {
+      "Code": "TTH 9.2",
+      "CamId": "56de42f611f398ec0c48128c",
+      "Name": "TTH 9.2",
+      "DisplayName": "Võ Văn Kiệt - Nguyễn Văn Cừ 2"
+    },
+    {
+      "Code": "TTH 354",
+      "CamId": "662b558c1afb9c00172d8ed2",
+      "Name": "TTH 354",
+      "DisplayName": "625 Quang Trung"
+    },
+    {
+      "Code": "TTH 299.2",
+      "CamId": "6623f4836f998a001b2528bf",
+      "Name": "TTH 299.2",
+      "DisplayName": "Võ Nguyên Giáp - Đỗ Xuân Hợp (2)"
+    },
+    {
+      "Code": "TTH 401",
+      "CamId": "662b85bf1afb9c00172dd149",
+      "Name": "TTH 401",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Hàm Nghi"
+    },
+    {
+      "Code": "TTH 21.52",
+      "CamId": "595d98fc3dcfc400106f287b",
+      "Name": "TTH 21.52",
+      "DisplayName": "Quốc lộ 1 - An Phú Đông 13 (2)"
+    },
+    {
+      "Code": "TTH 10a",
+      "CamId": "63b3c274bfd3d90017e9ab93",
+      "Name": "TTH 10a",
+      "DisplayName": "Hồng Bàng - Phù Đổng Thiên Vương"
+    },
+    {
+      "Code": "TTH 438",
+      "CamId": "6818887f6dfb4b0018f8f54c",
+      "Name": "TTH 438",
+      "DisplayName": "Trần Văn Giàu - Võ Văn Vân"
+    },
+    {
+      "Code": "TTH 222",
+      "CamId": "63b54bcdbfd3d90017ea7a82",
+      "Name": "TTH 222",
+      "DisplayName": "Tỉnh lộ 43 - KCX Linh Trung 2"
+    },
+    {
+      "Code": "BD 1.2",
+      "CamId": "68eddd0a230ee50017d040b2",
+      "Name": "BD 1.2",
+      "DisplayName": "Mỹ Phước Tân Vạn - Phạm Ngọc Thạch (2)"
+    },
+    {
+      "Code": "TTH 460.1",
+      "CamId": "68a587d54e89b100173b6021",
+      "Name": "TTH 460.1",
+      "DisplayName": "Tỉnh Lộ 8 - Tỉnh Lộ 15 (1)"
+    },
+    {
+      "Code": "TTH 15.2",
+      "CamId": "5b5995a3fd4edb0019c7d9ab",
+      "Name": "TTH 15.2",
+      "DisplayName": "Võ Văn Kiệt - Cầu Chà Và 2 (trên cầu)"
+    },
+    {
+      "Code": "TTH 386",
+      "CamId": "662b81a31afb9c00172dcc65",
+      "Name": "TTH 386",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Võ Văn Tần"
+    },
+    {
+      "Code": "TTH 200.3",
+      "CamId": "63ae7b3cbfd3d90017e8f34d",
+      "Name": "TTH 200.3",
+      "DisplayName": "Ba Tháng Hai - Lý Thường Kiệt 3"
+    },
+    {
+      "Code": "TTH 176.1",
+      "CamId": "6318283cc9eae60017a19f0c",
+      "Name": "TTH 176.1",
+      "DisplayName": "Nguyễn Thị Minh Khai - Đinh Tiên Hoàng 1"
+    },
+    {
+      "Code": "ITS 1.4-1",
+      "CamId": "5deb576d1dc17d7c5515acf6",
+      "Name": "ITS 1.4-1",
+      "DisplayName": "Nút giao Ngã sáu Cộng Hòa"
+    },
+    {
+      "Code": "TTH 21.10",
+      "CamId": "58746488b807da0011e33cd7",
+      "Name": "TTH 21.10",
+      "DisplayName": "Cầu vượt Sóng Thần 2"
+    },
+    {
+      "Code": "TTH 392",
+      "CamId": "662b83381afb9c00172dcf88",
+      "Name": "TTH 392",
+      "DisplayName": "Hai Bà Trưng - Nguyễn Đình Chiểu"
+    },
+    {
+      "Code": "TTH 5.1",
+      "CamId": "5822b5ededeb6c0012a2d66a",
+      "Name": "TTH 5.1",
+      "DisplayName": "Mai Chí Thọ - Nguyễn Cơ Thạch 1"
+    },
+    {
+      "Code": "TTH 242.1",
+      "CamId": "63b660d8bfd3d90017eaa4d5",
+      "Name": "TTH 242.1",
+      "DisplayName": "Cầu Tân Thuận 2 - Q7 (Q4-Q7)"
+    },
+    {
+      "Code": "TTH 201.1",
+      "CamId": "63ae7be0bfd3d90017e8f3a8",
+      "Name": "TTH 201.1",
+      "DisplayName": "Ba Tháng Hai - Lê Đại Hành 1"
+    },
+    {
+      "Code": "TTH 216",
+      "CamId": "63b54a04bfd3d90017ea783e",
+      "Name": "TTH 216",
+      "DisplayName": "Lê Văn Việt - Hoàng Hữu Nam"
+    },
+    {
+      "Code": "TTH 49.10",
+      "CamId": "63b54f70bfd3d90017ea7c86",
+      "Name": "TTH 49.10",
+      "DisplayName": "Cầu Sài Gòn (10)"
+    },
+    {
+      "Code": "TTH 123.1",
+      "CamId": "5a8267fe5058170011f6eae1",
+      "Name": "TTH 123.1",
+      "DisplayName": "Lê Văn Lương - Cầu Rạch Đĩa"
+    },
+    {
+      "Code": "TTH 21.51",
+      "CamId": "595d984b3dcfc400106f2879",
+      "Name": "TTH 21.51",
+      "DisplayName": "Quốc lộ 1 - An Phú Đông 13 (1)"
+    },
+    {
+      "Code": "TTH 21.2",
+      "CamId": "58746122b807da0011e33cc5",
+      "Name": "TTH 21.2",
+      "DisplayName": "Quốc lộ 1 - ĐH Nông Lâm 2"
+    },
+    {
+      "Code": "TTH 130",
+      "CamId": "5b25a268f13cba001124e713",
+      "Name": "TTH 130",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Lê Thánh Tôn"
+    },
+    {
+      "Code": "TTH 378",
+      "CamId": "662b7f651afb9c00172dc992",
+      "Name": "TTH 378",
+      "DisplayName": "11B Nguyễn Bỉnh Khiêm"
+    },
+    {
+      "Code": "TTH 183.2",
+      "CamId": "63ae768dbfd3d90017e8f0f1",
+      "Name": "TTH 183.2",
+      "DisplayName": "Khánh Hội - Vĩnh Hội"
+    },
+    {
+      "Code": "TTH 437",
+      "CamId": "6818884f6dfb4b0018f8f50f",
+      "Name": "TTH 437",
+      "DisplayName": "Trần Đại Nghĩa - Kênh C"
+    },
+    {
+      "Code": "TTH 314.1",
+      "CamId": "662a89ae1afb9c00172d26ad",
+      "Name": "TTH 314.1",
+      "DisplayName": "Nguyễn Văn Linh - Trịnh Quang Nghị"
+    },
+    {
+      "Code": "TTH 218",
+      "CamId": "63b54a70bfd3d90017ea7862",
+      "Name": "TTH 218",
+      "DisplayName": "Lã Xuân Oai - Đường D2"
+    },
+    {
+      "Code": "TTH 28.10",
+      "CamId": "58e49783d9d6200011e0b9ce",
+      "Name": "TTH 28.10",
+      "DisplayName": "Trường Chinh - Phan Văn Hớn 2 (HM-Q12)"
+    },
+    {
+      "Code": "ITS 7.2",
+      "CamId": "5deb576d1dc17d7c5515ad0c",
+      "Name": "ITS 7.2",
+      "DisplayName": "Nút giao Ngã sáu Phù Đổng 1"
+    },
+    {
+      "Code": "TTH 287",
+      "CamId": "6623ef776f998a001b252768",
+      "Name": "TTH 287",
+      "DisplayName": "Quốc Lộ 22 - Nguyễn Thị Sóc"
+    },
+    {
+      "Code": "TTH 21.46",
+      "CamId": "58d7bbf2c1e33c00112b3216",
+      "Name": "TTH 21.46",
+      "DisplayName": "Quốc lộ 1 - Đinh Đức Thiện 2"
+    },
+    {
+      "Code": "TTH 348",
+      "CamId": "662b51d21afb9c00172d89bf",
+      "Name": "TTH 348",
+      "DisplayName": "Tên Lửa - Đường số 7"
+    },
+    {
+      "Code": "TTH 21.5",
+      "CamId": "58746295b807da0011e33ccb",
+      "Name": "TTH 21.5",
+      "DisplayName": "Quốc lộ 1 - Bình Đường"
+    },
+    {
+      "Code": "TTH 37.4",
+      "CamId": "585b2baec3f96200127dc508",
+      "Name": "TTH 37.4",
+      "DisplayName": "Nguyễn Văn Linh - Huỳnh Tấn Phát 2"
+    },
+    {
+      "Code": "TTH 44.10",
+      "CamId": "5a606cd08576340017d06628",
+      "Name": "TTH 44.10",
+      "DisplayName": "BX Miền Đông - Đinh Bộ Lĩnh 2"
+    },
+    {
+      "Code": "TTH 380",
+      "CamId": "662b80051afb9c00172dcaf6",
+      "Name": "TTH 380",
+      "DisplayName": "Nguyễn Trãi - Nguyễn Cư Trinh"
+    },
+    {
+      "Code": "TTH 49.2",
+      "CamId": "589d0bceb3bf7600110283d6",
+      "Name": "TTH 49.2",
+      "DisplayName": "Cầu Sài Gòn 2 (dạ cầu)"
+    },
+    {
+      "Code": "TTH 139",
+      "CamId": "5d8cd253766c88001718893a",
+      "Name": "TTH 139",
+      "DisplayName": "Nguyễn Tri Phương - Hùng Vương"
+    },
+    {
+      "Code": "TTH 44.1",
+      "CamId": "587ee2aeb807da0011e33d52",
+      "Name": "TTH 44.1",
+      "DisplayName": "Phan Đăng Lưu - Phan Xích Long"
+    },
+    {
+      "Code": "TTH 370",
+      "CamId": "662b5bc31afb9c00172d92e2",
+      "Name": "TTH 370",
+      "DisplayName": "Lê Trọng Tấn - Đường Kênh 19/5"
+    },
+    {
+      "Code": "TTH 360",
+      "CamId": "662b58401afb9c00172d90f5",
+      "Name": "TTH 360",
+      "DisplayName": "Hoàng Văn Thụ - Bùi Thị Xuân"
+    },
+    {
+      "Code": "TTH 21.9",
+      "CamId": "5874644cb807da0011e33cd5",
+      "Name": "TTH 21.9",
+      "DisplayName": "Cầu vượt Sóng Thần 1"
+    },
+    {
+      "Code": "TTH 405",
+      "CamId": "662b867b1afb9c00172dd250",
+      "Name": "TTH 405",
+      "DisplayName": "Trần Hưng Đạo - Ký Con"
+    },
+    {
+      "Code": "TTH 98",
+      "CamId": "597bf0b8faa7ea0011c7c293",
+      "Name": "TTH 98",
+      "DisplayName": "Cầu Phú Hữu 1"
+    },
+    {
+      "Code": "TTH 59.1",
+      "CamId": "5a10c79f02eb490011a0b0dd",
+      "Name": "TTH 59.1",
+      "DisplayName": "Mai Chí Thọ - Tố Hữu (C6)"
+    },
+    {
+      "Code": "TTH 444.1",
+      "CamId": "68188af96dfb4b0018f8f8e4",
+      "Name": "TTH 444.1",
+      "DisplayName": "Võ Trần Chí - Kênh 10 (1)"
+    },
+    {
+      "Code": "TTH 394",
+      "CamId": "662b83ff1afb9c00172dcffb",
+      "Name": "TTH 394",
+      "DisplayName": "Lê Duẩn - Phạm Ngọc Thạch"
+    },
+    {
+      "Code": "ITS 8.7",
+      "CamId": "5deb576d1dc17d7c5515ad19",
+      "Name": "ITS 8.7",
+      "DisplayName": "Nguyễn Thị Minh Khai - Mạc Đĩnh Chi"
+    },
+    {
+      "Code": "TTH 132",
+      "CamId": "5b6329fdfd4edb0019c7dc0b",
+      "Name": "TTH 132",
+      "DisplayName": "Nguyễn Trãi - Nguyễn Văn Cừ"
+    },
+    {
+      "Code": "TTH 46.2",
+      "CamId": "589add0fb3bf7600110283ae",
+      "Name": "TTH 46.2",
+      "DisplayName": "Tô Ký (Tỉnh lộ 15) - Đông Bắc"
+    },
+    {
+      "Code": "ITS 3.2",
+      "CamId": "5deb576d1dc17d7c5515ad01",
+      "Name": "ITS 3.2",
+      "DisplayName": "Võ Thị Sáu - Hai Bà Trưng"
+    },
+    {
+      "Code": "TTH 49.9",
+      "CamId": "58abbf72bd82540010390ba4",
+      "Name": "TTH 49.9",
+      "DisplayName": "Cầu Sài Gòn 9 (Bình Thạnh - Thủ Đức)"
+    },
+    {
+      "Code": "TTH 295",
+      "CamId": "6623f1f16f998a001b25281f",
+      "Name": "TTH 295",
+      "DisplayName": "Phạm Văn Đồng - Đào Trinh Nhất"
+    },
+    {
+      "Code": "TTH 34.9",
+      "CamId": "58ad6961bd82540010390be5",
+      "Name": "TTH 34.9",
+      "DisplayName": "Nút giao Phú Nhuận 1 (Phan Đình Phùng)"
+    },
+    {
+      "Code": "IDICO-QL1 19",
+      "CamId": "59ca2fa302eb490011a0a3fd",
+      "Name": "IDICO-QL1 19",
+      "DisplayName": "QL1 - cầu Bình Thuận"
+    },
+    {
+      "Code": "TTH 111",
+      "CamId": "5a8257e25058170011f6eacd",
+      "Name": "TTH 111",
+      "DisplayName": "Hoàng Hữu Nam - Đường D400"
+    },
+    {
+      "Code": "TTH 40.4",
+      "CamId": "5a606dbc8576340017d0662b",
+      "Name": "TTH 40.4",
+      "DisplayName": "Điện Biên Phủ - Nguyễn Hữu Cảnh"
+    },
+    {
+      "Code": "TTH 350",
+      "CamId": "662b52a31afb9c00172d8b01",
+      "Name": "TTH 350",
+      "DisplayName": "Lê Đức Thọ - Hẻm 688"
+    },
+    {
+      "Code": "TTH 49.5",
+      "CamId": "58abbee5bd82540010390ba2",
+      "Name": "TTH 49.5",
+      "DisplayName": "Cầu Sài Gòn 5 (dạ cầu Thủ Đức)"
+    },
+    {
+      "Code": "TTH 325",
+      "CamId": "662a8ef41afb9c00172d2af2",
+      "Name": "TTH 325",
+      "DisplayName": "Lê Văn Lương - Đường số 15"
+    },
+    {
+      "Code": "TTH 302.2",
+      "CamId": "6623f5b56f998a001b25292f",
+      "Name": "TTH 302.2",
+      "DisplayName": "Võ Nguyên Giáp - quay đầu An Phú (2)"
+    },
+    {
+      "Code": "TTH 416",
+      "CamId": "66b1c398779f7400186740e3",
+      "Name": "TTH 416",
+      "DisplayName": "Ba Tháng Hai - Tạ Uyên"
+    },
+    {
+      "Code": "TTH 21.49",
+      "CamId": "58d7b756c1e33c00112b320d",
+      "Name": "TTH 21.49",
+      "DisplayName": "Nút giao Chợ Đệm 2 (CT Trung Lương - Bùi Thanh Khiết)"
+    },
+    {
+      "Code": "TTH 255",
+      "CamId": "6623e31e6f998a001b252250",
+      "Name": "TTH 255",
+      "DisplayName": "Kỳ Đồng - Bà Huyện Thanh Quan"
+    },
+    {
+      "Code": "ITS 2.8",
+      "CamId": "5deb576d1dc17d7c5515acfe",
+      "Name": "ITS 2.8",
+      "DisplayName": "Lý Chính Thắng - Trương Định"
+    },
+    {
+      "Code": "TTH 0010",
+      "CamId": "6792f3cf8c5ed4001b27f61e",
+      "Name": "TTH 0010",
+      "DisplayName": "Tỉnh Lộ 8 - Cầu Phú Cường"
+    },
+    {
+      "Code": "TTH 26.5",
+      "CamId": "58df4e22dc195800111e04bb",
+      "Name": "TTH 26.5",
+      "DisplayName": "Yên Thế - Bạch Đằng"
+    },
+    {
+      "Code": "TTH 21.47",
+      "CamId": "58d7b3e8c1e33c00112b3207",
+      "Name": "TTH 21.47",
+      "DisplayName": "Quốc lộ 1 - Nguyễn Văn Linh"
+    },
+    {
+      "Code": "TTH 35.1",
+      "CamId": "58e49e3dd9d6200011e0b9d1",
+      "Name": "TTH 35.1",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Lý Chính Thắng"
+    },
+    {
+      "Code": "TTH 165",
+      "CamId": "5d8cdc57766c88001718896e",
+      "Name": "TTH 165",
+      "DisplayName": "Lý Thường Kiệt - Lạc Long Quân"
+    },
+    {
+      "Code": "TTH 265.2",
+      "CamId": "66f1266f538c780017c93579",
+      "Name": "TTH 265.2",
+      "DisplayName": "Hùng Vương - Nguyễn Chí Thanh"
+    },
+    {
+      "Code": "TTH 105.3",
+      "CamId": "5ad0679598d8fc001102e274",
+      "Name": "TTH 105.3",
+      "DisplayName": "Lê Văn Việt - Man Thiện"
+    },
+    {
+      "Code": "TTH 104.1",
+      "CamId": "5a824b6c5058170011f6eaab",
+      "Name": "TTH 104.1",
+      "DisplayName": "Nút giao Bốn Xã 3 (Lê Văn Quới)"
+    },
+    {
+      "Code": "TTH 3.1",
+      "CamId": "58175ac4edeb6c0012a2d5bb",
+      "Name": "TTH 3.1",
+      "DisplayName": "Mai Chí Thọ - Đồng Văn Cống 1"
+    },
+    {
+      "Code": "TTH 290",
+      "CamId": "6623f0576f998a001b2527ac",
+      "Name": "TTH 290",
+      "DisplayName": "Âu Cơ - Thoại Ngọc Hầu"
+    },
+    {
+      "Code": "TTH 268.3",
+      "CamId": "62da3e840637a10017d7073d",
+      "Name": "TTH 268.3",
+      "DisplayName": "Quốc Lộ 13 - Đinh Thị Thi 3"
+    },
+    {
+      "Code": "TTH 7.1",
+      "CamId": "56de42f611f398ec0c481288",
+      "Name": "TTH 7.1",
+      "DisplayName": "Võ Văn Kiệt - Cầu Ông Lãnh 1"
+    },
+    {
+      "Code": "TTH 147",
+      "CamId": "5d8cd614766c88001718894a",
+      "Name": "TTH 147",
+      "DisplayName": "Lê Quang Định - Nơ Trang Long"
+    },
+    {
+      "Code": "TTH 116.2",
+      "CamId": "5a824f975058170011f6eab8",
+      "Name": "TTH 116.2",
+      "DisplayName": "Nguyễn Oanh - Phan Văn Trị (2)"
+    },
+    {
+      "Code": "TTH 104.2",
+      "CamId": "5a824c3e5058170011f6eaae",
+      "Name": "TTH 104.2",
+      "DisplayName": "Nút giao Bốn Xã 1 (Bình Long)"
+    },
+    {
+      "Code": "ITS 2.1-1",
+      "CamId": "5deb576d1dc17d7c5515acf9",
+      "Name": "ITS 2.1-1",
+      "DisplayName": "Nút giao Công Trường Dân Chủ"
+    },
+    {
+      "Code": "TTH 40.2",
+      "CamId": "587470c2b807da0011e33ce4",
+      "Name": "TTH 40.2",
+      "DisplayName": "Nguyễn Hữu Cảnh - Ngô Tất Tố (Cầu Thủ Thiêm 1)"
+    },
+    {
+      "Code": "TTH 451",
+      "CamId": "68188cbf6dfb4b0018f900e9",
+      "Name": "TTH 451",
+      "DisplayName": "Võ Văn Vân - Liên Ấp 123"
+    },
+    {
+      "Code": "TTH 22.6.2",
+      "CamId": "67e217ea3215f90017863bf1",
+      "Name": "TTH 22.6.2",
+      "DisplayName": "Nguyễn Thị Định - Đường C (20-2)"
+    },
+    {
+      "Code": "BD 7.1",
+      "CamId": "68ede6d0230ee50017d04d4c",
+      "Name": "BD 7.1",
+      "DisplayName": "Đại lộ Bình Dương - ngã tư chợ Đình (1)"
+    },
+    {
+      "Code": "TTH 21.37",
+      "CamId": "584e734a61cfea0012cf694f",
+      "Name": "TTH 21.37",
+      "DisplayName": "Quốc lộ 1 - Lê Trọng Tấn"
+    },
+    {
+      "Code": "TTH 377",
+      "CamId": "662b7f251afb9c00172dc8bc",
+      "Name": "TTH 377",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Nguyễn Du"
+    },
+    {
+      "Code": "TTH 279",
+      "CamId": "6623ec826f998a001b252686",
+      "Name": "TTH 279",
+      "DisplayName": "Nguyễn Oanh - Lê Đức Thọ"
+    },
+    {
+      "Code": "ITS 10.3",
+      "CamId": "5deb576d1dc17d7c5515ad23",
+      "Name": "ITS 10.3",
+      "DisplayName": "Ba Tháng Hai - Lý Thường Kiệt"
+    },
+    {
+      "Code": "TTH 21.54",
+      "CamId": "595d9ba43dcfc400106f2880",
+      "Name": "TTH 21.54",
+      "DisplayName": "Quốc lộ 1 - An Phú Đông 12 (2)"
+    },
+    {
+      "Code": "ITS 7.3",
+      "CamId": "5deb576d1dc17d7c5515ad0d",
+      "Name": "ITS 7.3",
+      "DisplayName": "Lê Lợi - Pasteur"
+    },
+    {
+      "Code": "TTH 45.2",
+      "CamId": "587efb60b807da0011e33d5d",
+      "Name": "TTH 45.2",
+      "DisplayName": "Phạm Văn Đồng - Lê Quang Định 1"
+    },
+    {
+      "Code": "TTH 431",
+      "CamId": "6818863c6dfb4b0018f8f235",
+      "Name": "TTH 431",
+      "DisplayName": "Trần Đại Nghĩa - Mai Bá Hương"
+    },
+    {
+      "Code": "TTH 46.1",
+      "CamId": "589ad89eb3bf7600110283ac",
+      "Name": "TTH 46.1",
+      "DisplayName": "Tô Ký (Tỉnh lộ 15) - Hẻm 146"
+    },
+    {
+      "Code": "TTH 366.1",
+      "CamId": "662b5adc1afb9c00172d925b",
+      "Name": "TTH 366.1",
+      "DisplayName": "Trường Chinh - Phan Huy Ích 1"
+    },
+    {
+      "Code": "TTH 1a",
+      "CamId": "5701e22bc4350a1100e26f6c",
+      "Name": "TTH 1a",
+      "DisplayName": "Nguyễn Công Trứ - Calmette 1"
+    },
+    {
+      "Code": "TTH 60.4",
+      "CamId": "5b87c386ca057700116404a6",
+      "Name": "TTH 60.4",
+      "DisplayName": "Đường hầm (Đầu hầm Tp Thủ Đức)"
+    },
+    {
+      "Code": "TTH 146",
+      "CamId": "5d8cd542766c880017188948",
+      "Name": "TTH 146",
+      "DisplayName": "Võ Văn Ngân - Đặng Văn Bi"
+    },
+    {
+      "Code": "TTH 271",
+      "CamId": "6623e8406f998a001b252465",
+      "Name": "TTH 271",
+      "DisplayName": "Phan Đăng Lưu - Hoàng Hoa Thám"
+    },
+    {
+      "Code": "TTH 28.6",
+      "CamId": "5875cef0b807da0011e33d14",
+      "Name": "TTH 28.6",
+      "DisplayName": "Trường Chinh - Phạm Văn Bạch 2"
+    },
+    {
+      "Code": "TTH 443.1",
+      "CamId": "68188a816dfb4b0018f8f769",
+      "Name": "TTH 443.1",
+      "DisplayName": "Võ Trần Chí - Thế Lữ 1"
+    },
+    {
+      "Code": "TTH 101.1",
+      "CamId": "5a823d555058170011f6eaa2",
+      "Name": "TTH 101.1",
+      "DisplayName": "Lý Tự Trọng - Hai Bà Trưng 1"
+    },
+    {
+      "Code": "TTH 21.55",
+      "CamId": "595da2853dcfc400106f2883",
+      "Name": "TTH 21.55",
+      "DisplayName": "Quốc lộ 1 - Đường 15 (1)"
+    },
+    {
+      "Code": "TTH 27.2",
+      "CamId": "587c8183b807da0011e33d3f",
+      "Name": "TTH 27.2",
+      "DisplayName": "Hoàng Văn Thụ - Trần Quốc Hoàn"
+    },
+    {
+      "Code": "TTH 131",
+      "CamId": "5b632950fd4edb0019c7dc07",
+      "Name": "TTH 131",
+      "DisplayName": "Nguyễn Văn Cừ - Trần Hưng Đạo 3"
+    },
+    {
+      "Code": "ITS 4.2",
+      "CamId": "5deb576d1dc17d7c5515ad06",
+      "Name": "ITS 4.2",
+      "DisplayName": "Đinh Tiên Hoàng - Nguyễn Đình Chiểu"
+    },
+    {
+      "Code": "TTH 351",
+      "CamId": "662b54711afb9c00172d8d4f",
+      "Name": "TTH 351",
+      "DisplayName": "90 Nguyễn Thái Sơn"
+    },
+    {
+      "Code": "TTH 122.2",
+      "CamId": "5a8279865058170011f6eaef",
+      "Name": "TTH 122.2",
+      "DisplayName": "Nguyễn Văn Linh - Phạm Hùng 2"
+    },
+    {
+      "Code": "TTH 339",
+      "CamId": "662b4faa1afb9c00172d875e",
+      "Name": "TTH 339",
+      "DisplayName": "Tháp Mười - Phạm Đình Hổ"
+    },
+    {
+      "Code": "TTH 305.2",
+      "CamId": "662a87641afb9c00172d24b0",
+      "Name": "TTH 305.2",
+      "DisplayName": "Võ Trần Chí - Trần Văn Giàu 2"
+    },
+    {
+      "Code": "TTH 22.3",
+      "CamId": "56de42f611f398ec0c4812a1",
+      "Name": "TTH 22.3",
+      "DisplayName": "Nút giao Mỹ Thủy 1"
+    },
+    {
+      "Code": "TTH 183.1",
+      "CamId": "63ae7669bfd3d90017e8f0d9",
+      "Name": "TTH 183.1",
+      "DisplayName": "Khánh Hội - Cầu Kênh Tẻ"
+    },
+    {
+      "Code": "TTH 232",
+      "CamId": "63b65e6abfd3d90017eaa361",
+      "Name": "TTH 232",
+      "DisplayName": "Nguyễn Thị Định - Thân Văn Nhiếp"
+    },
+    {
+      "Code": "TTH 328",
+      "CamId": "662a8fd41afb9c00172d2bac",
+      "Name": "TTH 328",
+      "DisplayName": "Nguyễn Lương Bằng - Phạm Hữu Lầu"
+    },
+    {
+      "Code": "TTH 31",
+      "CamId": "56f11afc3ac17b11001c504e",
+      "Name": "TTH 31",
+      "DisplayName": "Trường Sơn - Phan Đình Giót"
+    },
+    {
+      "Code": "TTH 37.3",
+      "CamId": "585b2b1ec3f96200127dc505",
+      "Name": "TTH 37.3",
+      "DisplayName": "Nguyễn Văn Linh - Huỳnh Tấn Phát 1"
+    },
+    {
+      "Code": "TTH 117.3",
+      "CamId": "5a825b7d5058170011f6ead4",
+      "Name": "TTH 117.3",
+      "DisplayName": "Nguyễn Văn Linh - Nguyễn Hữu Thọ (3)"
+    },
+    {
+      "Code": "TTH 44.6",
+      "CamId": "5a6069238576340017d0661c",
+      "Name": "TTH 44.6",
+      "DisplayName": "Bạch Đằng - Lê Quang Định"
+    },
+    {
+      "Code": "TTH 400",
+      "CamId": "662b857b1afb9c00172dd106",
+      "Name": "TTH 400",
+      "DisplayName": "Điện Biên Phủ - Nguyễn Bỉnh Khiêm"
+    },
+    {
+      "Code": "TTH 18.1",
+      "CamId": "56de42f611f398ec0c481298",
+      "Name": "TTH 18.1",
+      "DisplayName": "Võ Văn Kiệt - An Dương Vương 1"
+    },
+    {
+      "Code": "TTH 181.2",
+      "CamId": "63ae75f9bfd3d90017e8f097",
+      "Name": "TTH 181.2",
+      "DisplayName": "Cao Thắng – Võ Văn Tần 2"
+    },
+    {
+      "Code": "TTH 188.2",
+      "CamId": "63ae7829bfd3d90017e8f1ac",
+      "Name": "TTH 188.2",
+      "DisplayName": "Nguyễn Tất Thành - Cầu Tân Thuận 1"
+    },
+    {
+      "Code": "TTH 252",
+      "CamId": "65e0556b6b18080018db665e",
+      "Name": "TTH 252",
+      "DisplayName": "Nguyễn Thái Học - Phạm Ngũ Lão"
+    },
+    {
+      "Code": "TTH 387",
+      "CamId": "662b81eb1afb9c00172dcc85",
+      "Name": "TTH 387",
+      "DisplayName": "Nguyễn Thị Minh Khai - Nguyễn Bỉnh Khiêm 2"
+    },
+    {
+      "Code": "TTH 21.70",
+      "CamId": "595dd9ac3dcfc400106f28b4",
+      "Name": "TTH 21.70",
+      "DisplayName": "Quốc lộ 1 - BQB Trước UBND Q12 (hướng đi An Sương)"
+    },
+    {
+      "Code": "TTH 226",
+      "CamId": "63b54d27bfd3d90017ea7ae5",
+      "Name": "TTH 226",
+      "DisplayName": "Xa lộ Hà Nội - Đường D1"
+    },
+    {
+      "Code": "TTH 320",
+      "CamId": "662a8cc51afb9c00172d2938",
+      "Name": "TTH 320",
+      "DisplayName": "Huỳnh Tấn Phát - Phú Thuận"
+    },
+    {
+      "Code": "TTH 22.12",
+      "CamId": "587654d3b807da0011e33d36",
+      "Name": "TTH 22.12",
+      "DisplayName": "Võ Chí Công - Đường số 2"
+    },
+    {
+      "Code": "TTH 60.2",
+      "CamId": "5990ffdbbec3b90016d2ad2d",
+      "Name": "TTH 60.2",
+      "DisplayName": "Đường hầm (Đầu hầm Tp Thủ Đức)"
+    },
+    {
+      "Code": "TTH 117.1",
+      "CamId": "5a8259035058170011f6eacf",
+      "Name": "TTH 117.1",
+      "DisplayName": "Nguyễn Văn Linh - Nguyễn Hữu Thọ (1)"
+    },
+    {
+      "Code": "TTH 43.1",
+      "CamId": "58744f1fb807da0011e33cbd",
+      "Name": "TTH 43.1",
+      "DisplayName": "Hưng Phú - Chánh Hưng 1"
+    },
+    {
+      "Code": "TTH 225",
+      "CamId": "63b54cffbfd3d90017ea7ad0",
+      "Name": "TTH 225",
+      "DisplayName": "Tỉnh lộ 43 - Chân cầu Gò Dưa"
+    },
+    {
+      "Code": "TTH 48.1",
+      "CamId": "589b4644b3bf7600110283ce",
+      "Name": "TTH 48.1",
+      "DisplayName": "Hà Huy Giáp - Cầu Phú Long 1"
+    },
+    {
+      "Code": "TTH 154",
+      "CamId": "5d8cd8e2766c880017188958",
+      "Name": "TTH 154",
+      "DisplayName": "Phạm Văn Đồng - Hiệp Bình (hướng đi Sân bay)"
+    },
+    {
+      "Code": "TTH 231.1",
+      "CamId": "63b54fe4bfd3d90017ea7ca2",
+      "Name": "TTH 231.1",
+      "DisplayName": "Nút giao Mỹ Thủy (5)"
+    },
+    {
+      "Code": "TTH 212",
+      "CamId": "63b54938bfd3d90017ea77f6",
+      "Name": "TTH 212",
+      "DisplayName": "Nguyễn Duy Trinh - Lã Xuân Oai"
+    },
+    {
+      "Code": "TTH 277",
+      "CamId": "6623ebd76f998a001b25264d",
+      "Name": "TTH 277",
+      "DisplayName": "Quốc Lộ 1 - Tô Ký"
+    },
+    {
+      "Code": "IDICO-QL1 30",
+      "CamId": "5a6086e88576340017d0668a",
+      "Name": "IDICO-QL1 30",
+      "DisplayName": "QL1-Cty Pouyuen (1)"
+    },
+    {
+      "Code": "TTH 439",
+      "CamId": "681888b66dfb4b0018f8f58c",
+      "Name": "TTH 439",
+      "DisplayName": "VX Trần Văn Giàu - Tỉnh Lộ 10"
+    },
+    {
+      "Code": "TTH 135.2",
+      "CamId": "5b6c15b8ca0577001163fe39",
+      "Name": "TTH 135.2",
+      "DisplayName": "Nguyễn Hữu Cảnh 3 (Hầm chui)"
+    },
+    {
+      "Code": "TTH 40.1",
+      "CamId": "586e2995f9fab7001111b0b5",
+      "Name": "TTH 40.1",
+      "DisplayName": "Ung Văn Khiêm - Nguyễn Gia Trí (D2)"
+    },
+    {
+      "Code": "TTH 155",
+      "CamId": "5d8cd98d766c88001718895a",
+      "Name": "TTH 155",
+      "DisplayName": "Phạm Văn Đồng - Tô Ngọc Vân (hướng đi Bình Dương)"
+    },
+    {
+      "Code": "TTH 284",
+      "CamId": "6623ee666f998a001b252726",
+      "Name": "TTH 284",
+      "DisplayName": "Quang Trung - Phan Huy Ích"
+    },
+    {
+      "Code": "TTH 397",
+      "CamId": "662b84c11afb9c00172dd0b5",
+      "Name": "TTH 397",
+      "DisplayName": "Nguyễn Thị Minh Khai - Phạm Ngọc Thạch"
+    },
+    {
+      "Code": "TTH 345",
+      "CamId": "662b51201afb9c00172d889a",
+      "Name": "TTH 345",
+      "DisplayName": "Hương Lộ 2 - Mã Lò"
+    },
+    {
+      "Code": "TTH 32.3",
+      "CamId": "56df8198c062921100c143dd",
+      "Name": "TTH 32.3",
+      "DisplayName": "Nút giao Thủ Đức (Võ Văn Ngân)"
+    },
+    {
+      "Code": "TTH 3.2",
+      "CamId": "56de42f611f398ec0c481282",
+      "Name": "TTH 3.2",
+      "DisplayName": "Mai Chí Thọ - Đồng Văn Cống 2"
+    },
+    {
+      "Code": "TTH 26.3",
+      "CamId": "58df4c2bdc195800111e04b7",
+      "Name": "TTH 26.3",
+      "DisplayName": "Thăng Long - Phan Thúc Duyện"
+    },
+    {
+      "Code": "TTH 21.85",
+      "CamId": "5a6066608576340017d06617",
+      "Name": "TTH 21.85",
+      "DisplayName": "Quang Trung - Tân Sơn"
+    },
+    {
+      "Code": "TTH 275",
+      "CamId": "6623ea416f998a001b25260a",
+      "Name": "TTH 275",
+      "DisplayName": "Phan Đình Phùng - Nguyễn Trọng Tuyển"
+    },
+    {
+      "Code": "TTH 407",
+      "CamId": "662b872d1afb9c00172dd36a",
+      "Name": "TTH 407",
+      "DisplayName": "Lê Văn Sỹ - Trần Quang Diệu"
+    },
+    {
+      "Code": "TTH 260",
+      "CamId": "6623e4b06f998a001b2522f1",
+      "Name": "TTH 260",
+      "DisplayName": "Nguyễn Thị Minh Khai - Nguyễn Thượng Hiền"
+    },
+    {
+      "Code": "TTH 1.2",
+      "CamId": "56de42f611f398ec0c48127e",
+      "Name": "TTH 1.2",
+      "DisplayName": "Mai Chí Thọ - Võ Nguyên Giáp (Cát Lái cầu B)"
+    },
+    {
+      "Code": "TTH 21.64",
+      "CamId": "595dd3a63dcfc400106f28a7",
+      "Name": "TTH 21.64",
+      "DisplayName": "Quốc lộ 1 - Đường Tô Ngọc Vân 1"
+    },
+    {
+      "Code": "TTH 29.2",
+      "CamId": "56f8d743025e9511002786c5",
+      "Name": "TTH 29.2",
+      "DisplayName": "Trường Sơn - Ga Quốc Nội 1"
+    },
+    {
+      "Code": "BD 6.1",
+      "CamId": "68ede5d4230ee50017d04c24",
+      "Name": "BD 6.1",
+      "DisplayName": "Đại lộ Bình Dương - ngã 5 Phước Kiến (1)"
+    },
+    {
+      "Code": "TTH 121.2",
+      "CamId": "5a8266105058170011f6eadf",
+      "Name": "TTH 121.2",
+      "DisplayName": "Nguyễn Văn Linh - Quốc lộ 50 (2)"
+    },
+    {
+      "Code": "TTH 366.2",
+      "CamId": "662b5afe1afb9c00172d9284",
+      "Name": "TTH 366.2",
+      "DisplayName": "Trường Chinh - Phan Huy Ích 2"
+    },
+    {
+      "Code": "TTH 119.1",
+      "CamId": "5a82602c5058170011f6ead9",
+      "Name": "TTH 119.1",
+      "DisplayName": "Vĩnh Lộc - Nguyễn Thị Tú 1"
+    },
+    {
+      "Code": "TTH 37.2",
+      "CamId": "585b2980c3f96200127dc502",
+      "Name": "TTH 37.2",
+      "DisplayName": "Huỳnh Tấn Phát - Lưu Trọng Lư 2"
+    },
+    {
+      "Code": "TTH 5a",
+      "CamId": "56de42f611f398ec0c481284",
+      "Name": "TTH 5a",
+      "DisplayName": "Nguyễn Thị Minh Khai - Nguyễn Thiện Thuật"
+    },
+    {
+      "Code": "TTH 355",
+      "CamId": "662b56c51afb9c00172d9071",
+      "Name": "TTH 355",
+      "DisplayName": "Bạch Đằng - Đặng Văn Sâm"
+    },
+    {
+      "Code": "TTH 196.1",
+      "CamId": "63ae7a08bfd3d90017e8f285",
+      "Name": "TTH 196.1",
+      "DisplayName": "Ba Tháng Hai - Lê Hồng Phong 1"
+    },
+    {
+      "Code": "TTH 316",
+      "CamId": "662a8b061afb9c00172d27d7",
+      "Name": "TTH 316",
+      "DisplayName": "Nguyễn Văn Linh - đường số 1"
+    },
+    {
+      "Code": "TTH 44.2",
+      "CamId": "587ee7d7b807da0011e33d55",
+      "Name": "TTH 44.2",
+      "DisplayName": "Phan Đăng Lưu - Nơ Trang Long"
+    },
+    {
+      "Code": "ITS 7.51",
+      "CamId": "5deb576d1dc17d7c5515ad12",
+      "Name": "ITS 7.51",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Lê Lợi"
+    },
+    {
+      "Code": "ITS 8.5",
+      "CamId": "5deb576d1dc17d7c5515ad17",
+      "Name": "ITS 8.5",
+      "DisplayName": "Nguyễn Thị Minh Khai - Hai Bà Trưng"
+    },
+    {
+      "Code": "TTH 347",
+      "CamId": "662b51a41afb9c00172d8926",
+      "Name": "TTH 347",
+      "DisplayName": "Lê Văn Quới - Mã Lò"
+    },
+    {
+      "Code": "TTH 189",
+      "CamId": "63ae7893bfd3d90017e8f1e1",
+      "Name": "TTH 189",
+      "DisplayName": "Nguyễn Tất Thành - Lê Văn Linh"
+    },
+    {
+      "Code": "TTH 317.1",
+      "CamId": "662a8b9e1afb9c00172d284d",
+      "Name": "TTH 317.1",
+      "DisplayName": "đường dẫn cao tốc Thành Phố Hồ Chí Minh - Trung Lương - Tân Túc 1"
+    },
+    {
+      "Code": "TTH 100.1",
+      "CamId": "5a823ba75058170011f6ea9e",
+      "Name": "TTH 100.1",
+      "DisplayName": "Trần Hưng Đạo - Nguyễn Thái Học 1"
+    },
+    {
+      "Code": "TTH 434",
+      "CamId": "681887346dfb4b0018f8f36a",
+      "Name": "TTH 434",
+      "DisplayName": "Trần Văn Giàu - Lê Đình Chi"
+    },
+    {
+      "Code": "TTH 364",
+      "CamId": "662b5a401afb9c00172d91fc",
+      "Name": "TTH 364",
+      "DisplayName": "Trường Chinh - Nguyễn Hồng Đào"
+    },
+    {
+      "Code": "TTH 29.1",
+      "CamId": "56df8544c062921100c143e6",
+      "Name": "TTH 29.1",
+      "DisplayName": "Trường Sơn - Ga Quốc Tế"
+    },
+    {
+      "Code": "TTH 21.71",
+      "CamId": "595ddb493dcfc400106f28b6",
+      "Name": "TTH 21.71",
+      "DisplayName": "Quốc lộ 1 - Cầu vượt Tân Thới Hiệp 2"
+    },
+    {
+      "Code": "TTH 443.2",
+      "CamId": "68188ab56dfb4b0018f8f7be",
+      "Name": "TTH 443.2",
+      "DisplayName": "Võ Trần Chí - Thế Lữ 2"
+    },
+    {
+      "Code": "TTH 412",
+      "CamId": "66b1c1f2779f740018673f0d",
+      "Name": "TTH 412",
+      "DisplayName": "An Dương Vương - Nguyễn Văn Cừ"
+    },
+    {
+      "Code": "TTH 47.5",
+      "CamId": "589b4379b3bf7600110283c9",
+      "Name": "TTH 47.5",
+      "DisplayName": "QL 22 - Giáp Hải"
+    },
+    {
+      "Code": "TTH 24.5",
+      "CamId": "5a60604f8576340017d0660b",
+      "Name": "TTH 24.5",
+      "DisplayName": "Nguyễn Thái Sơn - Nguyễn Văn Nghi 2"
+    },
+    {
+      "Code": "TTH 156",
+      "CamId": "5d8cd9cb766c88001718895c",
+      "Name": "TTH 156",
+      "DisplayName": "Phạm Văn Đồng - Tô Ngọc Vân (hướng đi Sân bay)"
+    },
+    {
+      "Code": "TTH 266",
+      "CamId": "6623e6b86f998a001b2523b8",
+      "Name": "TTH 266",
+      "DisplayName": "Lý Thái Tổ - Hồ Thị Kỷ"
+    },
+    {
+      "Code": "TTH 109.2",
+      "CamId": "5a8256315058170011f6eac9",
+      "Name": "TTH 109.2",
+      "DisplayName": "Đinh Bộ Lĩnh - Nguyễn Xí"
+    },
+    {
+      "Code": "TTH 125.2",
+      "CamId": "5ad064b498d8fc001102e26f",
+      "Name": "TTH 125.2",
+      "DisplayName": "Lã Xuân Oai - Cầu Tăng Long (2)"
+    },
+    {
+      "Code": "TTH 35.5",
+      "CamId": "58af8d68bd82540010390c2e",
+      "Name": "TTH 35.5",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Điện Biên Phủ 2"
+    },
+    {
+      "Code": "TTH 251",
+      "CamId": "65e0552f6b18080018db6647",
+      "Name": "TTH 251",
+      "DisplayName": "Lê Lai - Phan Chu Trinh"
+    },
+    {
+      "Code": "TTH 21.57",
+      "CamId": "595da7783dcfc400106f2888",
+      "Name": "TTH 21.57",
+      "DisplayName": "Quốc lộ 1 - Đường Vườn Lài 1"
+    },
+    {
+      "Code": "TTH 413.2",
+      "CamId": "66b1c22f779f740018673f6e",
+      "Name": "TTH 413.2",
+      "DisplayName": "Vòng xoay Phú Lâm (2)"
+    },
+    {
+      "Code": "TTH 323.2",
+      "CamId": "662a8e121afb9c00172d2a3f",
+      "Name": "TTH 323.2",
+      "DisplayName": "Huỳnh Tấn Phát - cầu Tân Thuận 1"
+    },
+    {
+      "Code": "TTH 371",
+      "CamId": "662b5be91afb9c00172d939b",
+      "Name": "TTH 371",
+      "DisplayName": "Lê Trọng Tấn - Tây Thạnh"
+    },
+    {
+      "Code": "TTH 136",
+      "CamId": "5b728aafca0577001163ff7e",
+      "Name": "TTH 136",
+      "DisplayName": "Hồng Bàng - Châu Văn Liêm"
+    },
+    {
+      "Code": "TTH 456",
+      "CamId": "6818901a6dfb4b0018f9058a",
+      "Name": "TTH 456",
+      "DisplayName": "Tỉnh Lộ 10 - cầu Tân Tạo"
+    },
+    {
+      "Code": "TTH 193",
+      "CamId": "63ae7966bfd3d90017e8f240",
+      "Name": "TTH 193",
+      "DisplayName": "Cách Mạng Tháng Tám - Tô Hiến Thành"
+    },
+    {
+      "Code": "TTH 336",
+      "CamId": "662b4efc1afb9c00172d86bc",
+      "Name": "TTH 336",
+      "DisplayName": "Trần Hưng Đạo - Trần Phú"
+    },
+    {
+      "Code": "IDICO-QL1 08",
+      "CamId": "5a607fa38576340017d06671",
+      "Name": "IDICO-QL1 08",
+      "DisplayName": "QL1-KCN Vĩnh Lộc (2) - Hướng An Lạc"
+    },
+    {
+      "Code": "TTH 408",
+      "CamId": "662b87551afb9c00172dd43a",
+      "Name": "TTH 408",
+      "DisplayName": "Trần Quốc Thảo - Kỳ Đồng"
+    },
+    {
+      "Code": "ITS 10.2-1",
+      "CamId": "5deb576d1dc17d7c5515ad21",
+      "Name": "ITS 10.2-1",
+      "DisplayName": "Nút giao Ngã sáu Nguyễn Tri Phương"
+    },
+    {
+      "Code": "TTH 447",
+      "CamId": "68188bf46dfb4b0018f8ff12",
+      "Name": "TTH 447",
+      "DisplayName": "Vĩnh Lộc - kênh Trung Ương"
+    },
+    {
+      "Code": "TTH 463.1",
+      "CamId": "68a589a54e89b100173b6267",
+      "Name": "TTH 463.1",
+      "DisplayName": "Tỉnh Lộ 8 - Sông Lu (1)"
+    },
+    {
+      "Code": "TTH 7.2",
+      "CamId": "56de42f611f398ec0c481289",
+      "Name": "TTH 7.2",
+      "DisplayName": "Võ Văn Kiệt - Cầu Ông Lãnh 2"
+    },
+    {
+      "Code": "TTH 34.10",
+      "CamId": "58ad69c4bd82540010390be7",
+      "Name": "TTH 34.10",
+      "DisplayName": "Nút giao Phú Nhuận 2 (Phan Đăng Lưu)"
+    },
+    {
+      "Code": "TTH 302.1",
+      "CamId": "6623f5876f998a001b25291a",
+      "Name": "TTH 302.1",
+      "DisplayName": "Võ Nguyên Giáp - quay đầu An Phú (1)"
+    },
+    {
+      "Code": "TTH 254",
+      "CamId": "6623e2e16f998a001b252233",
+      "Name": "TTH 254",
+      "DisplayName": "Hai Bà Trưng - Trần Quốc Toản"
+    },
+    {
+      "Code": "TTH 209",
+      "CamId": "63b54898bfd3d90017ea77ae",
+      "Name": "TTH 209",
+      "DisplayName": "Nguyễn Duy Trinh - Bưng Ông Thoàn"
+    },
+    {
+      "Code": "TTH 215",
+      "CamId": "63b549b8bfd3d90017ea782c",
+      "Name": "TTH 215",
+      "DisplayName": "Đỗ Xuân Hợp - Tây Hòa"
+    },
+    {
+      "Code": "TTH 367",
+      "CamId": "662b5b271afb9c00172d9296",
+      "Name": "TTH 367",
+      "DisplayName": "Trường Chinh - Tân Hải"
+    },
+    {
+      "Code": "TTH 307",
+      "CamId": "662a87df1afb9c00172d2522",
+      "Name": "TTH 307",
+      "DisplayName": "Trần Văn Giàu - Nguyễn Cửu Phú"
+    },
+    {
+      "Code": "BD 6.2",
+      "CamId": "68ede60a230ee50017d04c69",
+      "Name": "BD 6.2",
+      "DisplayName": "Đại lộ Bình Dương - ngã 5 Phước Kiến (2)"
+    },
+    {
+      "Code": "TTH 100.2",
+      "CamId": "5a823bd55058170011f6eaa0",
+      "Name": "TTH 100.2",
+      "DisplayName": "Trần Hưng Đạo - Nguyễn Thái Học 2"
+    },
+    {
+      "Code": "IDICO-QL1 27",
+      "CamId": "5a6085688576340017d06684",
+      "Name": "IDICO-QL1 27",
+      "DisplayName": "QL1-Tỉnh lộ 10 (3)"
+    },
+    {
+      "Code": "TTH 21.68",
+      "CamId": "595dd7693dcfc400106f28b0",
+      "Name": "TTH 21.68",
+      "DisplayName": "Quốc lộ 1 - Đường Lê Thị Riêng 1"
+    },
+    {
+      "Code": "IDICO-QL1 35",
+      "CamId": "59ca329d02eb490011a0a410",
+      "Name": "IDICO-QL1 35",
+      "DisplayName": "QL1 - Nút giao An Lạc 1"
+    },
+    {
+      "Code": "TTH 272",
+      "CamId": "6623e88c6f998a001b25248b",
+      "Name": "TTH 272",
+      "DisplayName": "Hoàng Minh Giám - Đăng Văn Sâm"
+    },
+    {
+      "Code": "TTH 214",
+      "CamId": "63b54996bfd3d90017ea781a",
+      "Name": "TTH 214",
+      "DisplayName": "Đỗ Xuân Hợp - Dương Đình Hội"
+    },
+    {
+      "Code": "TTH 4.1",
+      "CamId": "56de42f611f398ec0c481283",
+      "Name": "TTH 4.1",
+      "DisplayName": "Mai Chí Thọ - Trần Não 1"
+    },
+    {
+      "Code": "TTH 167",
+      "CamId": "5d8cdcf0766c880017188972",
+      "Name": "TTH 167",
+      "DisplayName": "Nút giao Lê Đại Hành 1 (Bình Thới)"
+    },
+    {
+      "Code": "TTH 22.9.1",
+      "CamId": "67e217643215f90017863b73",
+      "Name": "TTH 22.9.1",
+      "DisplayName": "Nguyễn Thị Định - Cổng A (20)"
+    },
+    {
+      "Code": "TTH 359",
+      "CamId": "662b57ec1afb9c00172d90e3",
+      "Name": "TTH 359",
+      "DisplayName": "Cộng Hòa - Hoàng Hoa Thám"
+    },
+    {
+      "Code": "TTH 45.3",
+      "CamId": "58af9670bd82540010390c34",
+      "Name": "TTH 45.3",
+      "DisplayName": "Phạm Văn Đồng - Phan Văn Trị 1"
+    },
+    {
+      "Code": "TTH 341",
+      "CamId": "662b50571afb9c00172d87df",
+      "Name": "TTH 341",
+      "DisplayName": "Quốc Lộ 50 - Bùi Minh Trực"
+    },
+    {
+      "Code": "TTH 33.1",
+      "CamId": "56df8274c062921100c143df",
+      "Name": "TTH 33.1",
+      "DisplayName": "Võ Nguyên Giáp - Tây Hòa 1"
+    },
+    {
+      "Code": "TTH 349",
+      "CamId": "662b52131afb9c00172d8a23",
+      "Name": "TTH 349",
+      "DisplayName": "Tỉnh lộ 10 - Mã Lò"
+    },
+    {
+      "Code": "TTH 445",
+      "CamId": "68188b786dfb4b0018f8face",
+      "Name": "TTH 445",
+      "DisplayName": "Láng Le Bàu Cò - Thích Thiện Hòa"
+    },
+    {
+      "Code": "TTH 21.83",
+      "CamId": "5a6061fd8576340017d06613",
+      "Name": "TTH 21.83",
+      "DisplayName": "Quang Trung - Trưng Nữ Vương"
+    },
+    {
+      "Code": "TTH 289",
+      "CamId": "6623f0246f998a001b252797",
+      "Name": "TTH 289",
+      "DisplayName": "Âu Cơ - Lũy Bán Bích"
+    },
+    {
+      "Code": "TTH 21.58",
+      "CamId": "595da7d93dcfc400106f288a",
+      "Name": "TTH 21.58",
+      "DisplayName": "Quốc lộ 1 - Đường Vườn Lài 2"
+    },
+    {
+      "Code": "TTH 297.1",
+      "CamId": "6623f3436f998a001b252863",
+      "Name": "TTH 297.1",
+      "DisplayName": "Phạm Văn Đồng - Kha Vạn Cân 1"
+    },
+    {
+      "Code": "TTH 413.1",
+      "CamId": "66b1c311779f740018674083",
+      "Name": "TTH 413.1",
+      "DisplayName": "Vòng xoay Phú Lâm (1)"
+    },
+    {
+      "Code": "TTH 313",
+      "CamId": "662a896e1afb9c00172d2674",
+      "Name": "TTH 313",
+      "DisplayName": "Võ Trần Chí - Trần Đại Nghĩa"
+    },
+    {
+      "Code": "TTH 464.3",
+      "CamId": "68ae7f327d735d00173c74e4",
+      "Name": "TTH 464.3",
+      "DisplayName": "Cầu Bình Triệu (2) hướng đi xòng xoay"
+    },
+    {
+      "Code": "IDICO-QL1 25",
+      "CamId": "59ca30fd02eb490011a0a406",
+      "Name": "IDICO-QL1 25",
+      "DisplayName": "QL1 - Tỉnh lộ 10 (1)"
+    },
+    {
+      "Code": "TTH 321",
+      "CamId": "662a8cfe1afb9c00172d296e",
+      "Name": "TTH 321",
+      "DisplayName": "Huỳnh Tấn Phát - Trần Trọng Cung"
+    },
+    {
+      "Code": "TTH 47.2",
+      "CamId": "589b39d9b3bf7600110283c1",
+      "Name": "TTH 47.2",
+      "DisplayName": "QL 22 - Nguyễn Ảnh Thủ 2"
+    },
+    {
+      "Code": "TTH 141",
+      "CamId": "5d8cd326766c88001718893e",
+      "Name": "TTH 141",
+      "DisplayName": "Nút giao Cây Gõ 3 (dạ cầu)"
+    },
+    {
+      "Code": "TTH 21.4",
+      "CamId": "587461c1b807da0011e33cc8",
+      "Name": "TTH 21.4",
+      "DisplayName": "Quốc lộ 1 - Ngã tư Linh Xuân"
+    },
+    {
+      "Code": "TTH 184",
+      "CamId": "63ae76afbfd3d90017e8f106",
+      "Name": "TTH 184",
+      "DisplayName": "Khánh Hội - Đường số 41"
+    },
+    {
+      "Code": "TTH 242.4",
+      "CamId": "63b661a3bfd3d90017eaa520",
+      "Name": "TTH 242.4",
+      "DisplayName": "Nguyễn Tất Thành - Cảng SG (Q4-Q7)"
+    },
+    {
+      "Code": "TTH 22.9",
+      "CamId": "583f926761cfea0012cf68f1",
+      "Name": "TTH 22.9",
+      "DisplayName": "Nguyễn Thị Định - Cổng A Cảng Cát Lái"
+    },
+    {
+      "Code": "TTH 230.1",
+      "CamId": "6878bab06145d3001ba517f7",
+      "Name": "TTH 230.1",
+      "DisplayName": "Mai Chí Thọ - Trần Quý Kiên (1)"
+    },
+    {
+      "Code": "TTH 32.2",
+      "CamId": "56df81d8c062921100c143de",
+      "Name": "TTH 32.2",
+      "DisplayName": "Nút giao Thủ Đức (trên cầu)"
+    },
+    {
+      "Code": "TTH 180.1",
+      "CamId": "63ae73cebfd3d90017e8f00d",
+      "Name": "TTH 180.1",
+      "DisplayName": "Nguyễn Thị Minh Khai - Cống Quỳnh"
+    },
+    {
+      "Code": "TTH 315",
+      "CamId": "662a8a661afb9c00172d2762",
+      "Name": "TTH 315",
+      "DisplayName": "Nguyễn Văn Linh - Quản Trọng Linh"
+    },
+    {
+      "Code": "TTH 296",
+      "CamId": "6623e7526f998a001b252407",
+      "Name": "TTH 296",
+      "DisplayName": "Thành Thái - cư xá Đồng Tiến"
+    },
+    {
+      "Code": "IDICO-QL1 24",
+      "CamId": "5a6084898576340017d06680",
+      "Name": "IDICO-QL1 24",
+      "DisplayName": "QL1 - Tân Tạo Chợ Đệm 3"
+    },
+    {
+      "Code": "TTH 19.2",
+      "CamId": "56de42f611f398ec0c48129b",
+      "Name": "TTH 19.2",
+      "DisplayName": "Võ Văn Kiệt - Hồ Học Lãm 2"
+    },
+    {
+      "Code": "TTH 34.2",
+      "CamId": "586e2492f9fab7001111b0ab",
+      "Name": "TTH 34.2",
+      "DisplayName": "Nguyễn Văn Trỗi - Nguyễn Đình Chính"
+    },
+    {
+      "Code": "BD 1.1",
+      "CamId": "68edd621230ee50017d031c5",
+      "Name": "BD 1.1",
+      "DisplayName": "Mỹ Phước Tân Vạn - Phạm Ngọc Thạch (1)"
+    },
+    {
+      "Code": "BD 3.1",
+      "CamId": "68ede0cf230ee50017d04657",
+      "Name": "BD 3.1",
+      "DisplayName": "Mỹ Phước Tân Vạn - Điện Biên Phủ (1)"
+    },
+    {
+      "Code": "TTH 356",
+      "CamId": "662b571d1afb9c00172d9083",
+      "Name": "TTH 356",
+      "DisplayName": "Cách Mạng Tháng Tám - Phạm Văn Hai (2)"
+    },
+    {
+      "Code": "TTH 28.8",
+      "CamId": "587479b1b807da0011e33cf9",
+      "Name": "TTH 28.8",
+      "DisplayName": "Trường Chinh - Tây Thạnh 2"
+    },
+    {
+      "Code": "TTH 268.2",
+      "CamId": "62da3e620637a10017d70720",
+      "Name": "TTH 268.2",
+      "DisplayName": "Quốc Lộ 13 - Đinh Thị Thi 2"
+    },
+    {
+      "Code": "TTH 126.1",
+      "CamId": "5b0b7aba0e517b00119fd800",
+      "Name": "TTH 126.1",
+      "DisplayName": "Nguyễn Văn Cừ - Trần Hưng Đạo 1"
+    },
+    {
+      "Code": "TTH 211.2",
+      "CamId": "63b54909bfd3d90017ea77e4",
+      "Name": "TTH 211.2",
+      "DisplayName": "Nguyễn Duy Trinh - Võ Chí Công 2"
+    },
+    {
+      "Code": "TTH 21.72",
+      "CamId": "595ddbbf3dcfc400106f28b8",
+      "Name": "TTH 21.72",
+      "DisplayName": "Quốc lộ 1 - Cầu vượt Tân Thới Hiệp 3"
+    },
+    {
+      "Code": "TTH 323.1",
+      "CamId": "662a8ddd1afb9c00172d2a0f",
+      "Name": "TTH 323.1",
+      "DisplayName": "Nguyễn Văn Linh - cầu Tân Thuận 2"
+    },
+    {
+      "Code": "TTH 1.6",
+      "CamId": "5d9de43b766c880017188cb6",
+      "Name": "TTH 1.6",
+      "DisplayName": "Cao tốc LTDG - Đỗ Xuân Hợp 1"
+    },
+    {
+      "Code": "TTH 105.1",
+      "CamId": "5a8250cc5058170011f6eaba",
+      "Name": "TTH 105.1",
+      "DisplayName": "Lê Văn Việt - Đình Phong Phú 1"
+    },
+    {
+      "Code": "TTH 21.80",
+      "CamId": "595f8f0b3dcfc400106f28f4",
+      "Name": "TTH 21.80",
+      "DisplayName": "Quốc lộ 1 - BQB Cầu vượt Quang Trung B (hướng Ngã 4 Ga)"
+    },
+    {
+      "Code": "TTH 432",
+      "CamId": "6818868b6dfb4b0018f8f298",
+      "Name": "TTH 432",
+      "DisplayName": "Trần Văn Giàu - Mai Bá Hương"
+    },
+    {
+      "Code": "TTH 127",
+      "CamId": "5b0b7e1c0e517b00119fd80b",
+      "Name": "TTH 127",
+      "DisplayName": "Nguyễn Duy Trinh (Chợ Long Trường)"
+    },
+    {
+      "Code": "TTH 143",
+      "CamId": "5d8cd3b7766c880017188942",
+      "Name": "TTH 143",
+      "DisplayName": "Lê Hồng Phong - Nguyễn Trãi"
+    },
+    {
+      "Code": "TTH 19.1",
+      "CamId": "56de42f611f398ec0c48129a",
+      "Name": "TTH 19.1",
+      "DisplayName": "Võ Văn Kiệt - Hồ Học Lãm 1"
+    },
+    {
+      "Code": "TTH 358",
+      "CamId": "662b57711afb9c00172d90a7",
+      "Name": "TTH 358",
+      "DisplayName": "Cộng Hòa - Đường A4"
+    },
+    {
+      "Code": "TTH 213",
+      "CamId": "63b54968bfd3d90017ea7808",
+      "Name": "TTH 213",
+      "DisplayName": "Nguyễn Duy Trinh - Đỗ Xuân Hợp"
+    },
+    {
+      "Code": "TTH 2.1",
+      "CamId": "56de42f611f398ec0c48127f",
+      "Name": "TTH 2.1",
+      "DisplayName": "Mai Chí Thọ - Lương Định Của 1"
+    },
+    {
+      "Code": "TTH 26.6",
+      "CamId": "58df5016dc195800111e04bd",
+      "Name": "TTH 26.6",
+      "DisplayName": "Yên Thế - Hồng Hà"
+    },
+    {
+      "Code": "TTH 435",
+      "CamId": "681887836dfb4b0018f8f3d1",
+      "Name": "TTH 435",
+      "DisplayName": "Trần Đại Nghĩa - Kênh B"
+    },
+    {
+      "Code": "TTH 427",
+      "CamId": "681884726dfb4b0018f8f035",
+      "Name": "TTH 427",
+      "DisplayName": "Lê Chính Đang - Lê Đình Chi"
+    },
+    {
+      "Code": "TTH 159",
+      "CamId": "5d8cdac3766c880017188962",
+      "Name": "TTH 159",
+      "DisplayName": "Trường Chinh - Đồng Đen"
+    },
+    {
+      "Code": "TTH 34.8",
+      "CamId": "587ef5dfb807da0011e33d59",
+      "Name": "TTH 34.8",
+      "DisplayName": "Nguyễn Văn Trỗi - Huỳnh Văn Bánh"
+    },
+    {
+      "Code": "TTH 466.1",
+      "CamId": "68fae32b6b936b001721878b",
+      "Name": "TTH 466.1",
+      "DisplayName": "Võ Chí Công - Cầu Ngọn Ngay (1)"
+    },
+    {
+      "Code": "TTH 21.60",
+      "CamId": "595dc2f03dcfc400106f2896",
+      "Name": "TTH 21.60",
+      "DisplayName": "Quốc lộ 1 - Rạch Láng Le 2"
+    },
+    {
+      "Code": "TTH 426",
+      "CamId": "681883f56dfb4b0018f8ef97",
+      "Name": "TTH 426",
+      "DisplayName": "Lê Chính Đang 2"
+    },
+    {
+      "Code": "TTH 402",
+      "CamId": "662b85f51afb9c00172dd1c2",
+      "Name": "TTH 402",
+      "DisplayName": "Nguyễn Thị Nghĩa - Lê Lai"
+    },
+    {
+      "Code": "TTH 461.2",
+      "CamId": "68a588c04e89b100173b616b",
+      "Name": "TTH 461.2",
+      "DisplayName": "Tỉnh Lộ 8 - Bến Than (2)"
+    },
+    {
+      "Code": "TTH 163",
+      "CamId": "5d8cdbdc766c88001718896a",
+      "Name": "TTH 163",
+      "DisplayName": "Hoàng Văn Thụ - Cộng Hòa"
+    },
+    {
+      "Code": "TTH 227",
+      "CamId": "63b54d5abfd3d90017ea7afe",
+      "Name": "TTH 227",
+      "DisplayName": "Đường số 1 - Cảng Phước Long"
+    },
+    {
+      "Code": "ITS 7.52",
+      "CamId": "5deb576d1dc17d7c5515ad13",
+      "Name": "ITS 7.52",
+      "DisplayName": "Pasteur - Lê Thánh Tôn"
+    },
+    {
+      "Code": "TTH 403",
+      "CamId": "662b862a1afb9c00172dd1ff",
+      "Name": "TTH 403",
+      "DisplayName": "Hàm Nghi - Phó Đức Chính"
+    },
+    {
+      "Code": "ITS 1.1",
+      "CamId": "5deb576d1dc17d7c5515acf2",
+      "Name": "ITS 1.1",
+      "DisplayName": "Điện Biên Phủ - Cách Mạng Tháng Tám"
+    },
+    {
+      "Code": "TTH 115.2",
+      "CamId": "5a824e465058170011f6eab4",
+      "Name": "TTH 115.2",
+      "DisplayName": "Quang Trung - Lê Văn Thọ (2)"
+    },
+    {
+      "Code": "TTH 357",
+      "CamId": "662b57471afb9c00172d9095",
+      "Name": "TTH 357",
+      "DisplayName": "Cộng Hòa - Ấp Bắc"
+    },
+    {
+      "Code": "TTH 13.1",
+      "CamId": "56de42f611f398ec0c481291",
+      "Name": "TTH 13.1",
+      "DisplayName": "Võ Văn Kiệt - Nguyễn Tri Phương 1"
+    },
+    {
+      "Code": "TTH 21.36",
+      "CamId": "584e71cb61cfea0012cf694b",
+      "Name": "TTH 21.36",
+      "DisplayName": "Quốc lộ 1 - KCN Vĩnh Lộc 3"
+    },
+    {
+      "Code": "TTH 224",
+      "CamId": "63b54c93bfd3d90017ea7ab8",
+      "Name": "TTH 224",
+      "DisplayName": "Lê Văn Chí - Linh Trung"
+    },
+    {
+      "Code": "TTH 21.76",
+      "CamId": "595f874d3dcfc400106f28ec",
+      "Name": "TTH 21.76",
+      "DisplayName": "Quốc lộ 1 - Nguyễn Văn Quá 2"
+    },
+    {
+      "Code": "TTH 120.2",
+      "CamId": "5b19d34faf4ff60011d6ea52",
+      "Name": "TTH 120.2",
+      "DisplayName": "Nguyễn Tất Thành - Tôn Đản"
+    },
+    {
+      "Code": "TTH 208",
+      "CamId": "63b3c9bfbfd3d90017e9b039",
+      "Name": "TTH 208",
+      "DisplayName": "Kha Vạn Cân - Đường Số 2"
+    },
+    {
+      "Code": "ITS 1.3-1",
+      "CamId": "5deb576d1dc17d7c5515acf4",
+      "Name": "ITS 1.3-1",
+      "DisplayName": "Nút giao Ngã bảy Lý Thái Tổ"
+    },
+    {
+      "Code": "TTH 36.2",
+      "CamId": "58af99abbd82540010390c39",
+      "Name": "TTH 36.2",
+      "DisplayName": "Nguyễn Hữu Cảnh - Nguyễn Bỉnh Khiêm"
+    },
+    {
+      "Code": "TTH 462.2",
+      "CamId": "68a5894a4e89b100173b6202",
+      "Name": "TTH 462.2",
+      "DisplayName": "Tỉnh Lộ 8 - KCN Tân Quy (2)"
+    },
+    {
+      "Code": "TTH 280",
+      "CamId": "6623ecc16f998a001b25269e",
+      "Name": "TTH 280",
+      "DisplayName": "Nguyễn Oanh - Nguyễn Văn Lượng"
+    },
+    {
+      "Code": "TTH 258",
+      "CamId": "6623e3ea6f998a001b2522ae",
+      "Name": "TTH 258",
+      "DisplayName": "Nguyễn Đình Chiểu - Cao Thắng"
+    },
+    {
+      "Code": "TTH 375",
+      "CamId": "662b7d0c1afb9c00172dc6a6",
+      "Name": "TTH 375",
+      "DisplayName": "Cống Quỳnh - Bùi Viện"
+    },
+    {
+      "Code": "TTH 352",
+      "CamId": "662b54bb1afb9c00172d8dbb",
+      "Name": "TTH 352",
+      "DisplayName": "Phạm Văn Chiêu - Đường số 59"
+    },
+    {
+      "Code": "TTH 362",
+      "CamId": "662b58bd1afb9c00172d9119",
+      "Name": "TTH 362",
+      "DisplayName": "Lê Văn Sỹ - Đặng Văn Ngữ"
+    },
+    {
+      "Code": "TTH 21.75",
+      "CamId": "595f86c43dcfc400106f28ea",
+      "Name": "TTH 21.75",
+      "DisplayName": "Quốc lộ 1 - Nguyễn Văn Quá 1"
+    },
+    {
+      "Code": "IDICO-QL1 34",
+      "CamId": "59ca321b02eb490011a0a40d",
+      "Name": "IDICO-QL1 34",
+      "DisplayName": "QL1 - Cầu An Lập"
+    },
+    {
+      "Code": "TTH 103",
+      "CamId": "5a82439f5058170011f6eaa9",
+      "Name": "TTH 103",
+      "DisplayName": "Nguyễn Biểu - Cầu Chữ Y"
+    },
+    {
+      "Code": "TTH 263",
+      "CamId": "6623e5d66f998a001b25235a",
+      "Name": "TTH 263",
+      "DisplayName": "Cách Mạng Tháng Tám - Đỗ Thị Lời"
+    },
+    {
+      "Code": "TTH 45.4",
+      "CamId": "58d7c20ac1e33c00112b321c",
+      "Name": "TTH 45.4",
+      "DisplayName": "Phạm Văn Đồng - Phan Văn Trị 2"
+    },
+    {
+      "Code": "TTH 49.4",
+      "CamId": "589d0b74b3bf7600110283d4",
+      "Name": "TTH 49.4",
+      "DisplayName": "Cầu Sài Gòn 4 (Thủ Đức 1)"
+    },
+    {
+      "Code": "TTH 28.3",
+      "CamId": "56df807bc062921100c143da",
+      "Name": "TTH 28.3",
+      "DisplayName": "Trường Chinh - Âu Cơ"
+    },
+    {
+      "Code": "TTH 389",
+      "CamId": "662b82a61afb9c00172dcdfd",
+      "Name": "TTH 389",
+      "DisplayName": "Trần Quang Khải - Trần Nhật Duật"
+    },
+    {
+      "Code": "TTH 28.5",
+      "CamId": "586e266ef9fab7001111b0b0",
+      "Name": "TTH 28.5",
+      "DisplayName": "Trường Chinh - Phạm Văn Bạch 1"
+    },
+    {
+      "Code": "TTH 198",
+      "CamId": "63ae7a74bfd3d90017e8f2c7",
+      "Name": "TTH 198",
+      "DisplayName": "Tô Hiến Thành – Sư Vạn Hạnh"
+    },
+    {
+      "Code": "TTH 33.6",
+      "CamId": "59d3414302eb490011a0a610",
+      "Name": "TTH 33.6",
+      "DisplayName": "Xa Lộ Hà Nội - Đường 120"
+    },
+    {
+      "Code": "TTH 274",
+      "CamId": "6623e9e96f998a001b2525ce",
+      "Name": "TTH 274",
+      "DisplayName": "Phan Đình Phùng - Huynh Văn Bánh"
+    },
+    {
+      "Code": "TTH 199",
+      "CamId": "63ae7a9cbfd3d90017e8f303",
+      "Name": "TTH 199",
+      "DisplayName": "Điện Biên Phủ – Cao Thắng"
+    },
+    {
+      "Code": "IDICO-QL1 26",
+      "CamId": "5a6085188576340017d06682",
+      "Name": "IDICO-QL1 26",
+      "DisplayName": "QL1-Tỉnh lộ 10 (2)"
+    },
+    {
+      "Code": "TTH 1.4",
+      "CamId": "58d8ebd2dc195800111e0429",
+      "Name": "TTH 1.4",
+      "DisplayName": "Cao tốc LTDG - Cầu Bà Dạt 2"
+    },
+    {
+      "Code": "TTH 44.7",
+      "CamId": "5a606a0f8576340017d0661e",
+      "Name": "TTH 44.7",
+      "DisplayName": "Nơ Trang Long - Nguyễn Xí"
+    },
+    {
+      "Code": "TTH 5.2",
+      "CamId": "56de42f611f398ec0c481286",
+      "Name": "TTH 5.2",
+      "DisplayName": "Mai Chí Thọ - Nguyễn Cơ Thạch 2"
+    },
+    {
+      "Code": "TTH 293",
+      "CamId": "6623f14b6f998a001b2527f0",
+      "Name": "TTH 293",
+      "DisplayName": "Tân Kỳ Tân Quý - Lê Trọng Tấn"
+    },
+    {
+      "Code": "TTH 337",
+      "CamId": "662b4f411afb9c00172d86fc",
+      "Name": "TTH 337",
+      "DisplayName": "Hậu Giang - Minh Phụng"
+    },
+    {
+      "Code": "TTH 0008",
+      "CamId": "6792f9c88c5ed4001b27fb3d",
+      "Name": "TTH 0008",
+      "DisplayName": "Quốc Lộ 1K - Đường GS1"
+    },
+    {
+      "Code": "TTH 395",
+      "CamId": "662b843d1afb9c00172dd02d",
+      "Name": "TTH 395",
+      "DisplayName": "Lê Thánh Tôn - Đồng Khởi"
+    },
+    {
+      "Code": "TTH 21.53",
+      "CamId": "595d9b3b3dcfc400106f287e",
+      "Name": "TTH 21.53",
+      "DisplayName": "Quốc lộ 1 - An Phú Đông 12 (1)"
+    },
+    {
+      "Code": "TTH 26.7",
+      "CamId": "58df50ffdc195800111e04c0",
+      "Name": "TTH 26.7",
+      "DisplayName": "Cộng Hòa - Thăng Long"
+    },
+    {
+      "Code": "TTH 344",
+      "CamId": "662b50e51afb9c00172d886a",
+      "Name": "TTH 344",
+      "DisplayName": "Bà Hom - An Dương Vương"
+    },
+    {
+      "Code": "ITS 8.51",
+      "CamId": "5deb576d1dc17d7c5515ad1a",
+      "Name": "ITS 8.51",
+      "DisplayName": "Pasteur - Lê Duẩn"
+    },
+    {
+      "Code": "ITS 7.1",
+      "CamId": "5deb576d1dc17d7c5515ad0b",
+      "Name": "ITS 7.1",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Lý Tự Trọng"
+    },
+    {
+      "Code": "IDICO-QL1 32",
+      "CamId": "5a6087858576340017d0668e",
+      "Name": "IDICO-QL1 32",
+      "DisplayName": "QL1-Trạm Biến Áp 500Kv Phú Lâm"
+    },
+    {
+      "Code": "TTH 333",
+      "CamId": "662b4e581afb9c00172d862f",
+      "Name": "TTH 333",
+      "DisplayName": "Lê Hồng Phong - Trần Phú"
+    },
+    {
+      "Code": "TTH 21.11",
+      "CamId": "587464e2b807da0011e33cd9",
+      "Name": "TTH 21.11",
+      "DisplayName": "Cầu vượt nút giao thông Gò Dưa"
+    },
+    {
+      "Code": "TTH 21.42",
+      "CamId": "58afdbaebd82540010390c48",
+      "Name": "TTH 21.42",
+      "DisplayName": "Quốc lộ 1 - Cao tốc Trung Lương"
+    },
+    {
+      "Code": "TTH 223",
+      "CamId": "63b54c51bfd3d90017ea7aa0",
+      "Name": "TTH 223",
+      "DisplayName": "Đường số 1 - Nguyễn Văn Bá"
+    },
+    {
+      "Code": "TTH 38.8",
+      "CamId": "58ad6214bd82540010390be2",
+      "Name": "TTH 38.8",
+      "DisplayName": "Cộng Hòa - Hoàng Hoa Thám"
+    },
+    {
+      "Code": "ITS 6.51",
+      "CamId": "5deb576d1dc17d7c5515ad09",
+      "Name": "ITS 6.51",
+      "DisplayName": "Trường Chinh - Hoàng Hoa Thám"
+    },
+    {
+      "Code": "TTH 35.3",
+      "CamId": "58af8a0bbd82540010390c25",
+      "Name": "TTH 35.3",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Võ Thị Sáu"
+    },
+    {
+      "Code": "TTH 120",
+      "CamId": "5b0b74280e517b00119fd7f9",
+      "Name": "TTH 120",
+      "DisplayName": "Nguyễn Tất Thành - Cảng Sài Gòn"
+    },
+    {
+      "Code": "TTH 10.2",
+      "CamId": "56de42f611f398ec0c48128e",
+      "Name": "TTH 10.2",
+      "DisplayName": "Võ Văn Kiệt - Cầu Chữ Y 2"
+    },
+    {
+      "Code": "TTH 45.1",
+      "CamId": "587ef859b807da0011e33d5b",
+      "Name": "TTH 45.1",
+      "DisplayName": "Phạm Văn Đồng - Lê Quang Định 2"
+    },
+    {
+      "Code": "TTH 42.3",
+      "CamId": "58744e97b807da0011e33cb9",
+      "Name": "TTH 42.3",
+      "DisplayName": "Dương Bá Trạc - Hẻm 219"
+    },
+    {
+      "Code": "TTH 217",
+      "CamId": "63b54a48bfd3d90017ea7850",
+      "Name": "TTH 217",
+      "DisplayName": "Lã Xuân Oai - Lò Lu"
+    },
+    {
+      "Code": "TTH 42.6",
+      "CamId": "58c2717ed56e930010a39ac0",
+      "Name": "TTH 42.6",
+      "DisplayName": "Quốc Lộ 50 - Cầu Nhị Thiên Đường 2"
+    },
+    {
+      "Code": "TTH 21.41",
+      "CamId": "58afcd9bbd82540010390c41",
+      "Name": "TTH 21.41",
+      "DisplayName": "Quốc lộ 1 - Nguyễn Hữu Trí 2"
+    },
+    {
+      "Code": "TTH 219",
+      "CamId": "63b54a9ebfd3d90017ea7911",
+      "Name": "TTH 219",
+      "DisplayName": "Nguyễn Xiển - Nguyễn Văn Tăng"
+    },
+    {
+      "Code": "TTH 137",
+      "CamId": "5bbc7163ca0577001164127f",
+      "Name": "TTH 137",
+      "DisplayName": "Lê Văn Lương - Cầu Long Kiểng (HCM)"
+    },
+    {
+      "Code": "TTH 298",
+      "CamId": "6623f3d66f998a001b252890",
+      "Name": "TTH 298",
+      "DisplayName": "Quốc Lộ 1K - đường số 8"
+    },
+    {
+      "Code": "TTH 103.2",
+      "CamId": "5b6005b6fd4edb0019c7db25",
+      "Name": "TTH 103.2",
+      "DisplayName": "Trần Hưng Đạo - Nguyễn Biểu"
+    },
+    {
+      "Code": "TTH 329",
+      "CamId": "662a902a1afb9c00172d2bed",
+      "Name": "TTH 329",
+      "DisplayName": "Quốc Lộ 1 - Hưng Nhơn"
+    },
+    {
+      "Code": "TTH 399",
+      "CamId": "662b85481afb9c00172dd0f1",
+      "Name": "TTH 399",
+      "DisplayName": "Võ Văn Kiệt - Pasteur"
+    },
+    {
+      "Code": "TTH 286",
+      "CamId": "6623ef2b6f998a001b252753",
+      "Name": "TTH 286",
+      "DisplayName": "Phan Văn Hớn - Trần Văn Mười"
+    },
+    {
+      "Code": "TTH 421",
+      "CamId": "66b1c4e7779f7400186741e4",
+      "Name": "TTH 421",
+      "DisplayName": "Hoàng Văn Thụ - Phạm Văn Hai"
+    },
+    {
+      "Code": "TTH 20.1",
+      "CamId": "56de42f611f398ec0c48129c",
+      "Name": "TTH 20.1",
+      "DisplayName": "Võ Văn Kiệt - Quốc Lộ 1"
+    },
+    {
+      "Code": "TTH 38.6",
+      "CamId": "587c8661b807da0011e33d43",
+      "Name": "TTH 38.6",
+      "DisplayName": "Lê Văn Sỹ - Hoàng Văn Thụ"
+    },
+    {
+      "Code": "TTH 133",
+      "CamId": "5b632a79fd4edb0019c7dc0f",
+      "Name": "TTH 133",
+      "DisplayName": "Nguyễn Tri Phương - Trần Hưng Đạo"
+    },
+    {
+      "Code": "TTH 306",
+      "CamId": "662a87a41afb9c00172d24e9",
+      "Name": "TTH 306",
+      "DisplayName": "Trần Văn Giàu - Tỉnh Lộ 10"
+    },
+    {
+      "Code": "TTH 21.65",
+      "CamId": "595dd4133dcfc400106f28a9",
+      "Name": "TTH 21.65",
+      "DisplayName": "Quốc lộ 1 - Đường Tô Ngọc Vân 2"
+    },
+    {
+      "Code": "TTH 125.1",
+      "CamId": "5ad0644698d8fc001102e26b",
+      "Name": "TTH 125.1",
+      "DisplayName": "Lã Xuân Oai - Cầu Tăng Long (1)"
+    },
+    {
+      "Code": "TTH 369",
+      "CamId": "662b5b8c1afb9c00172d92ca",
+      "Name": "TTH 369",
+      "DisplayName": "Bình Long - Lê Thúc Hoạch"
+    },
+    {
+      "Code": "TTH 151",
+      "CamId": "5d8cd7bb766c880017188952",
+      "Name": "TTH 151",
+      "DisplayName": "Phạm Văn Đồng - Đường 20 (hướng đi Thủ Đức)"
+    },
+    {
+      "Code": "TTH 455",
+      "CamId": "68188e8d6dfb4b0018f9038b",
+      "Name": "TTH 455",
+      "DisplayName": "Thanh Niên - gần trung tâm kiểm định giống cây"
+    },
+    {
+      "Code": "TTH 27",
+      "CamId": "56df857fc062921100c143e7",
+      "Name": "TTH 27",
+      "DisplayName": "Trần Quốc Hoàn - Phan Thúc Duyện"
+    },
+    {
+      "Code": "TTH 36.3",
+      "CamId": "58af9a07bd82540010390c3b",
+      "Name": "TTH 36.3",
+      "DisplayName": "Tôn Đức Thắng - Lê Duẩn"
+    },
+    {
+      "Code": "TTH 181.1",
+      "CamId": "63ae75debfd3d90017e8f082",
+      "Name": "TTH 181.1",
+      "DisplayName": "Cao Thắng – Võ Văn Tần 1"
+    },
+    {
+      "Code": "TTH 276",
+      "CamId": "6623eb466f998a001b252632",
+      "Name": "TTH 276",
+      "DisplayName": "Hà Huy Giáp - An Lộc"
+    },
+    {
+      "Code": "TTH 115.1",
+      "CamId": "5a824dc05058170011f6eab2",
+      "Name": "TTH 115.1",
+      "DisplayName": "Quang Trung - Lê Văn Thọ (1)"
+    },
+    {
+      "Code": "TTH 144",
+      "CamId": "5d8cd49f766c880017188944",
+      "Name": "TTH 144",
+      "DisplayName": "Nguyễn Tri Phương - Nguyễn Trãi"
+    },
+    {
+      "Code": "TTH 393",
+      "CamId": "662b836d1afb9c00172dcfa0",
+      "Name": "TTH 393",
+      "DisplayName": "Lê Duẩn - Nguyễn Bỉnh Khiêm"
+    },
+    {
+      "Code": "TTH 21.16",
+      "CamId": "5a606c078576340017d06624",
+      "Name": "TTH 21.16",
+      "DisplayName": "Quốc lộ 13 - Hiệp Bình"
+    },
+    {
+      "Code": "ITS 1.2",
+      "CamId": "5deb576d1dc17d7c5515acf3",
+      "Name": "ITS 1.2",
+      "DisplayName": "Ba Tháng Hai - Lý Thái Tổ"
+    },
+    {
+      "Code": "TTH 108.1",
+      "CamId": "5a8254b05058170011f6eac3",
+      "Name": "TTH 108.1",
+      "DisplayName": "Xô Viết Nghệ Tĩnh - Nguyễn Xí 1"
+    },
+    {
+      "Code": "TTH 343",
+      "CamId": "662b50c11afb9c00172d8843",
+      "Name": "TTH 343",
+      "DisplayName": "An Dương Vương - Đường số 7"
+    },
+    {
+      "Code": "TTH 188.1",
+      "CamId": "63ae77bfbfd3d90017e8f18f",
+      "Name": "TTH 188.1",
+      "DisplayName": "Nguyễn Tất Thành - Cầu Tân Thuận 2"
+    },
+    {
+      "Code": "TTH 301",
+      "CamId": "6623f51a6f998a001b252900",
+      "Name": "TTH 301",
+      "DisplayName": "Quốc Lộ 13 - Nguyễn Thị Nhung"
+    },
+    {
+      "Code": "ITS 9.1",
+      "CamId": "5deb576d1dc17d7c5515ad1b",
+      "Name": "ITS 9.1",
+      "DisplayName": "Hoàng Diệu - Cầu Ông Lãnh"
+    },
+    {
+      "Code": "ITS 6.52",
+      "CamId": "5deb576d1dc17d7c5515ad0a",
+      "Name": "ITS 6.52",
+      "DisplayName": "Hoàng Văn Thụ - Xuân Diệu"
+    },
+    {
+      "Code": "TTH 42.2",
+      "CamId": "58744e3eb807da0011e33cb7",
+      "Name": "TTH 42.2",
+      "DisplayName": "Dương Bá Trạc - Hẻm 288"
+    },
+    {
+      "Code": "TTH 42.1",
+      "CamId": "58744dd9b807da0011e33cb5",
+      "Name": "TTH 42.1",
+      "DisplayName": "Quốc lộ 50 - Tạ Quang Bửu"
+    },
+    {
+      "Code": "TTH 24.3",
+      "CamId": "56df8416c062921100c143e4",
+      "Name": "TTH 24.3",
+      "DisplayName": "Nút giao Nguyễn Thái Sơn 2 (Nguyễn Kiệm)"
+    },
+    {
+      "Code": "BD 5.1",
+      "CamId": "68ede438230ee50017d04a79",
+      "Name": "BD 5.1",
+      "DisplayName": "Mỹ Phước Tân Vạn - ĐT 743A (1)"
+    },
+    {
+      "Code": "TTH 454",
+      "CamId": "68188e466dfb4b0018f902f2",
+      "Name": "TTH 454",
+      "DisplayName": "Thanh Niên - gần chùa Liên Hoa"
+    },
+    {
+      "Code": "TTH 12.1",
+      "CamId": "56de42f611f398ec0c481290",
+      "Name": "TTH 12.1",
+      "DisplayName": "Võ Văn Kiệt - An Bình"
+    },
+    {
+      "Code": "TTH 425",
+      "CamId": "681883b46dfb4b0018f8ef39",
+      "Name": "TTH 425",
+      "DisplayName": "Lê Chính Đang 1"
+    },
+    {
+      "Code": "TTH 35.4",
+      "CamId": "58af8b69bd82540010390c28",
+      "Name": "TTH 35.4",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Điện Biên Phủ 1"
+    },
+    {
+      "Code": "TTH 257",
+      "CamId": "6623e3a26f998a001b252291",
+      "Name": "TTH 257",
+      "DisplayName": "Lý Chính Thắng - Trần Quốc Thảo"
+    },
+    {
+      "Code": "TTH 47.3",
+      "CamId": "589b3ceeb3bf7600110283c3",
+      "Name": "TTH 47.3",
+      "DisplayName": "QL 22 - Nguyễn Văn Bứa 1"
+    },
+    {
+      "Code": "TTH 21.63",
+      "CamId": "595dcab53dcfc400106f289d",
+      "Name": "TTH 21.63",
+      "DisplayName": "Quốc lộ 1 - BQB Trước bến xe Ngã 4 Ga (hướng đi Bình Phước)"
+    },
+    {
+      "Code": "TTH 44.3",
+      "CamId": "58ad7291bd82540010390bf9",
+      "Name": "TTH 44.3",
+      "DisplayName": "Phan Đăng Lưu - Nguyễn Văn Đậu"
+    },
+    {
+      "Code": "TTH 312",
+      "CamId": "662a89211afb9c00172d2636",
+      "Name": "TTH 312",
+      "DisplayName": "Quốc Lộ 1 - Dương Đình Cúc"
+    },
+    {
+      "Code": "ITS 4.1",
+      "CamId": "5deb576d1dc17d7c5515ad05",
+      "Name": "ITS 4.1",
+      "DisplayName": "Điện Biên Phủ - Đinh Tiên Hoàng"
+    },
+    {
+      "Code": "TTH 21.66",
+      "CamId": "595dd4f43dcfc400106f28ab",
+      "Name": "TTH 21.66",
+      "DisplayName": "Quốc lộ 1 - Cầu Bến Cát 1"
+    },
+    {
+      "Code": "TTH 463.2",
+      "CamId": "68a589c84e89b100173b629d",
+      "Name": "TTH 463.2",
+      "DisplayName": "Tỉnh Lộ 8 - Sông Lu (2)"
+    },
+    {
+      "Code": "TTH 0001",
+      "CamId": "6792ef4f8c5ed4001b27f2c0",
+      "Name": "TTH 0001",
+      "DisplayName": "Quốc Lộ 1 - Ba Làng"
+    },
+    {
+      "Code": "TTH 396",
+      "CamId": "662b84771afb9c00172dd076",
+      "Name": "TTH 396",
+      "DisplayName": "Nguyễn Du - Công xã Paris"
+    },
+    {
+      "Code": "TTH 291",
+      "CamId": "6623f0b46f998a001b2527c3",
+      "Name": "TTH 291",
+      "DisplayName": "Hòa Bình - Lũy Bán Bích"
+    },
+    {
+      "Code": "TTH 309",
+      "CamId": "665861d864f11e00173c73a9",
+      "Name": "TTH 309",
+      "DisplayName": "Huỳnh Tấn Phát - Cầu Tân Thuận 1"
+    },
+    {
+      "Code": "IDICO-QL1 07",
+      "CamId": "5a607f078576340017d0666f",
+      "Name": "IDICO-QL1 07",
+      "DisplayName": "QL1-Phan Văn Hớn (H.Hoc Mon)"
+    },
+    {
+      "Code": "BD 3.2",
+      "CamId": "68ede112230ee50017d046a6",
+      "Name": "BD 3.2",
+      "DisplayName": "Mỹ Phước Tân Vạn - Điện Biên Phủ (2)"
+    },
+    {
+      "Code": "TTH 116.1",
+      "CamId": "5a824ee15058170011f6eab6",
+      "Name": "TTH 116.1",
+      "DisplayName": "Nguyễn Oanh - Phan Văn Trị (1)"
+    },
+    {
+      "Code": "TTH 281",
+      "CamId": "6623ed396f998a001b2526b8",
+      "Name": "TTH 281",
+      "DisplayName": "Nguyễn Thái Sơn - Phạm Ngũ Lão"
+    },
+    {
+      "Code": "TTH 134",
+      "CamId": "5b632b60fd4edb0019c7dc12",
+      "Name": "TTH 134",
+      "DisplayName": "Hồng Bàng - Ngô Quyền 1"
+    },
+    {
+      "Code": "TTH 34.4",
+      "CamId": "587c8d97b807da0011e33d49",
+      "Name": "TTH 34.4",
+      "DisplayName": "Hoàng Văn Thụ - Nguyễn Văn Trỗi 2"
+    },
+    {
+      "Code": "TTH 38.9",
+      "CamId": "59414c883dcfc400106f260b",
+      "Name": "TTH 38.9",
+      "DisplayName": "Cộng Hòa - Bình Giã"
+    },
+    {
+      "Code": "TTH 33.2",
+      "CamId": "56df82d4c062921100c143e0",
+      "Name": "TTH 33.2",
+      "DisplayName": "Võ Nguyên Giáp - Tây Hòa 2"
+    },
+    {
+      "Code": "TTH 0004",
+      "CamId": "6792f1008c5ed4001b27f41f",
+      "Name": "TTH 0004",
+      "DisplayName": "Quốc Lộ 22 - Võ Văn Điều"
+    },
+    {
+      "Code": "TTH 21.14",
+      "CamId": "58affc6017139d0010f35cc8",
+      "Name": "TTH 21.14",
+      "DisplayName": "Phạm Văn Đồng - Quốc Lộ 13 (1)"
+    },
+    {
+      "Code": "TTH 21.8",
+      "CamId": "587463bab807da0011e33cd3",
+      "Name": "TTH 21.8",
+      "DisplayName": "Quốc lộ 1 - Lê Thị Hoa"
+    },
+    {
+      "Code": "ITS 9.2",
+      "CamId": "5deb576d1dc17d7c5515ad1c",
+      "Name": "ITS 9.2",
+      "DisplayName": "Hoàng Diệu - Nguyễn Tất Thành"
+    },
+    {
+      "Code": "TTH 6.1",
+      "CamId": "56de42f611f398ec0c481287",
+      "Name": "TTH 6.1",
+      "DisplayName": "Võ Văn Kiệt - Ký Con"
+    },
+    {
+      "Code": "TTH 373",
+      "CamId": "662b5c981afb9c00172d94c0",
+      "Name": "TTH 373",
+      "DisplayName": "Tân Kỳ Tân Quý - Tân Quý"
+    },
+    {
+      "Code": "TTH 303",
+      "CamId": "662a861e1afb9c00172d23ad",
+      "Name": "TTH 303",
+      "DisplayName": "Nguyễn Hữu Thọ - Phạm Hữu Lầu"
+    },
+    {
+      "Code": "TTH 365",
+      "CamId": "662b5a9c1afb9c00172d9240",
+      "Name": "TTH 365",
+      "DisplayName": "Trường Chinh - Nguyễn Thái Bình"
+    },
+    {
+      "Code": "TTH 311",
+      "CamId": "662a88a01afb9c00172d25d1",
+      "Name": "TTH 311",
+      "DisplayName": "Trần Văn Giàu - Đường Thanh Niên"
+    },
+    {
+      "Code": "TTH 460.2",
+      "CamId": "68a587fc4e89b100173b6054",
+      "Name": "TTH 460.2",
+      "DisplayName": "Tỉnh Lộ 8 - Tỉnh Lộ 15 (2)"
+    },
+    {
+      "Code": "TTH 332",
+      "CamId": "662b4e201afb9c00172d85f9",
+      "Name": "TTH 332",
+      "DisplayName": "Hồng Bàng - Tạ Uyên"
+    },
+    {
+      "Code": "TTH 161",
+      "CamId": "5d8cdb4b766c880017188966",
+      "Name": "TTH 161",
+      "DisplayName": "Hoàng Văn Thụ - Út Tịch"
+    },
+    {
+      "Code": "TTH 33.5",
+      "CamId": "58b57a6c17139d0010f35d65",
+      "Name": "TTH 33.5",
+      "DisplayName": "Xa Lộ Hà Nội - Đường D13"
+    },
+    {
+      "Code": "TTH 240",
+      "CamId": "63b66051bfd3d90017eaa4a3",
+      "Name": "TTH 240",
+      "DisplayName": "Nơ Trang Long - Phan Văn Trị"
+    },
+    {
+      "Code": "TTH 268.1",
+      "CamId": "62da3e390637a10017d706ff",
+      "Name": "TTH 268.1",
+      "DisplayName": "Quốc Lộ 13 - Đinh Thị Thi 1"
+    },
+    {
+      "Code": "ITS 7.7",
+      "CamId": "5deb576d1dc17d7c5515ad10",
+      "Name": "ITS 7.7",
+      "DisplayName": "Cách Mạng Tháng Tám - Nguyễn Thị Minh Khai"
+    },
+    {
+      "Code": "TTH 34.1",
+      "CamId": "56f11ac33ac17b11001c504c",
+      "Name": "TTH 34.1",
+      "DisplayName": "Nguyễn Văn Trỗi - Hoàng Văn Thụ 1"
+    },
+    {
+      "Code": "TTH 420",
+      "CamId": "66b1c4a2779f74001867418c",
+      "Name": "TTH 420",
+      "DisplayName": "Lê Văn Sỹ - Phạm Văn Hai"
+    },
+    {
+      "Code": "TTH 49.8",
+      "CamId": "631813ebc9eae60017a196b0",
+      "Name": "TTH 49.8",
+      "DisplayName": "Cầu Sài Gòn 8 (Thủ Đức)"
+    },
+    {
+      "Code": "TTH 452",
+      "CamId": "68188cfa6dfb4b0018f9013c",
+      "Name": "TTH 452",
+      "DisplayName": "Thanh Niên - kênh 1"
+    },
+    {
+      "Code": "TTH 29.3",
+      "CamId": "587475abb807da0011e33cea",
+      "Name": "TTH 29.3",
+      "DisplayName": "Trường Sơn - Cửu Long"
+    },
+    {
+      "Code": "ITS 7.6",
+      "CamId": "5deb576d1dc17d7c5515ad0e",
+      "Name": "ITS 7.6",
+      "DisplayName": "Cách Mạng Tháng Tám - Nguyễn Đình Chiểu"
+    },
+    {
+      "Code": "BD 4.1",
+      "CamId": "68ede227230ee50017d0480b",
+      "Name": "BD 4.1",
+      "DisplayName": "Mỹ Phước Tân Vạn - Thủ Khoa Huân (1)"
+    },
+    {
+      "Code": "ITS 7.5",
+      "CamId": "5deb576d1dc17d7c5515ad11",
+      "Name": "ITS 7.5",
+      "DisplayName": "Nguyễn Đình Chiểu - Trương Định"
+    },
+    {
+      "Code": "BD 4.2",
+      "CamId": "68ede25b230ee50017d0484d",
+      "Name": "BD 4.2",
+      "DisplayName": "Mỹ Phước Tân Vạn - Thủ Khoa Huân (2)"
+    },
+    {
+      "Code": "TTH 28.1",
+      "CamId": "587478d8b807da0011e33cf3",
+      "Name": "TTH 28.1",
+      "DisplayName": "Nút giao Bảy Hiền 1 (Cách Mạng Tháng Tám)"
+    },
+    {
+      "Code": "ITS 1.51",
+      "CamId": "5deb576d1dc17d7c5515acf8",
+      "Name": "ITS 1.51",
+      "DisplayName": "Ba Tháng Hai - Cao Thắng"
+    },
+    {
+      "Code": "TTH 48.8",
+      "CamId": "591c6833a6bfb500119400a3",
+      "Name": "TTH 48.8",
+      "DisplayName": "Đặng Thúc Vịnh - Trịnh Thị Miếng"
+    },
+    {
+      "Code": "TTH 192",
+      "CamId": "63ae7938bfd3d90017e8f226",
+      "Name": "TTH 192",
+      "DisplayName": "Quốc Lộ 1- Công ty Pouyen 3 (Cổng)"
+    },
+    {
+      "Code": "TTH 243.2",
+      "CamId": "63b664edbfd3d90017eaaa24",
+      "Name": "TTH 243.2",
+      "DisplayName": "CT Trung Lương - Võ Trần Chí 2"
+    },
+    {
+      "Code": "TTH 24.1",
+      "CamId": "56df83d8c062921100c143e3",
+      "Name": "TTH 24.1",
+      "DisplayName": "Nút giao Nguyễn Thái Sơn 1 (Hồng Hà)"
+    },
+    {
+      "Code": "TTH 262",
+      "CamId": "6623e5776f998a001b252337",
+      "Name": "TTH 262",
+      "DisplayName": "Trần Quang Diệu - Trường Sa"
+    },
+    {
+      "Code": "IDICO-QL1 22",
+      "CamId": "59ca308302eb490011a0a403",
+      "Name": "IDICO-QL1 22",
+      "DisplayName": "QL1 - Tân Tạo Chợ Đệm 1"
+    },
+    {
+      "Code": "ITS 2.7",
+      "CamId": "5deb576d1dc17d7c5515acfd",
+      "Name": "ITS 2.7",
+      "DisplayName": "Lý Chính Thắng - Nguyễn Thông"
+    },
+    {
+      "Code": "TTH 32.1",
+      "CamId": "56df8159c062921100c143dc",
+      "Name": "TTH 32.1",
+      "DisplayName": "Nút giao Thủ Đức (Lê Văn Việt)"
+    },
+    {
+      "Code": "TTH 34.7",
+      "CamId": "587ef2e4b807da0011e33d57",
+      "Name": "TTH 34.7",
+      "DisplayName": "Nguyễn Văn Trỗi - Nguyễn Trọng Tuyển"
+    },
+    {
+      "Code": "TTH 47.4",
+      "CamId": "589b3f7db3bf7600110283c6",
+      "Name": "TTH 47.4",
+      "DisplayName": "QL 22 - Nguyễn Văn Bứa 2"
+    },
+    {
+      "Code": "TTH 450",
+      "CamId": "68188c876dfb4b0018f9007b",
+      "Name": "TTH 450",
+      "DisplayName": "Võ Văn Văn - đường 1A"
+    },
+    {
+      "Code": "TTH 265",
+      "CamId": "6623e6706f998a001b25239b",
+      "Name": "TTH 265",
+      "DisplayName": "Hùng Vương - Trần Nhân Tôn"
+    },
+    {
+      "Code": "TTH 404",
+      "CamId": "662b86551afb9c00172dd227",
+      "Name": "TTH 404",
+      "DisplayName": "Trần Hưng Đạo - Calmette"
+    },
+    {
+      "Code": "TTH 310",
+      "CamId": "662a88521afb9c00172d2592",
+      "Name": "TTH 310",
+      "DisplayName": "Kinh Dương Vương - Hồ Học Lãm"
+    },
+    {
+      "Code": "TTH 248",
+      "CamId": "649da77ea6068200171a6dd4",
+      "Name": "TTH 248",
+      "DisplayName": "Tôn Đức Thắng - Công trường Mê Linh"
+    },
+    {
+      "Code": "TTH 207",
+      "CamId": "63b3c59fbfd3d90017e9ace8",
+      "Name": "TTH 207",
+      "DisplayName": "Vĩnh Lộc - Quách Điêu"
+    },
+    {
+      "Code": "TTH 21.15",
+      "CamId": "58b5510817139d0010f35d4e",
+      "Name": "TTH 21.15",
+      "DisplayName": "Phạm Văn Đồng - Quốc Lộ 13 (2)"
+    },
+    {
+      "Code": "TTH 104.3",
+      "CamId": "5a824c905058170011f6eab0",
+      "Name": "TTH 104.3",
+      "DisplayName": "Nút giao Bốn Xã 2 (Hòa Bình)"
+    },
+    {
+      "Code": "ITS 8.4",
+      "CamId": "5deb576d1dc17d7c5515ad16",
+      "Name": "ITS 8.4",
+      "DisplayName": "Nguyễn Thị Minh Khai - Pasteur"
+    },
+    {
+      "Code": "TTH 203.2",
+      "CamId": "63ae7c73bfd3d90017e8f3ed",
+      "Name": "TTH 203.2",
+      "DisplayName": "Lý Thường Kiệt - Tô Hiến Thành 2"
+    },
+    {
+      "Code": "TTH 38.2",
+      "CamId": "586e1d4ef9fab7001111b0a2",
+      "Name": "TTH 38.2",
+      "DisplayName": "Cộng Hòa - Đường C 18"
+    },
+    {
+      "Code": "TTH 178.1",
+      "CamId": "63195512c9eae60017a1c279",
+      "Name": "TTH 178.1",
+      "DisplayName": "Nguyễn Trãi - Cống Quỳnh 1"
+    },
+    {
+      "Code": "IDICO-QL1 15",
+      "CamId": "59ca2ecb02eb490011a0a3f6",
+      "Name": "IDICO-QL1 15",
+      "DisplayName": "QL1 - Trạm thu phí AS-AL 1"
+    },
+    {
+      "Code": "TTH 253",
+      "CamId": "6623df636f998a001b251e92",
+      "Name": "TTH 253",
+      "DisplayName": "Hai Bà Trưng - Trần Cao Vân"
+    },
+    {
+      "Code": "TTH 166",
+      "CamId": "5d8cdc9d766c880017188970",
+      "Name": "TTH 166",
+      "DisplayName": "Lạc Long Quân - Âu Cơ"
+    },
+    {
+      "Code": "TTH 0006",
+      "CamId": "6792f1b78c5ed4001b27f4a9",
+      "Name": "TTH 0006",
+      "DisplayName": "Quốc Lộ 13 - Cầu Vĩnh Bình"
+    },
+    {
+      "Code": "TTH 1.3",
+      "CamId": "58d8ec0adc195800111e042b",
+      "Name": "TTH 1.3",
+      "DisplayName": "Cao tốc LTDG - Cầu Bà Dạt 1"
+    },
+    {
+      "Code": "TTH 21.61",
+      "CamId": "595dc5ac3dcfc400106f2898",
+      "Name": "TTH 21.61",
+      "DisplayName": "Quốc lộ 1 - BQB Đường dẫn cầu vượt Ngã 4 Ga (hướng đi An Sương)"
+    },
+    {
+      "Code": "BD 2.1",
+      "CamId": "69047bfa10c1b90017c62ccc",
+      "Name": "BD 2.1",
+      "DisplayName": "Mỹ Phước - Tân Vận - Huỳnh Văn Lũy (1)"
+    },
+    {
+      "Code": "TTH 108.2",
+      "CamId": "5a8254f25058170011f6eac5",
+      "Name": "TTH 108.2",
+      "DisplayName": "Xô Viết Nghệ Tĩnh - Nguyễn Xí 2"
+    },
+    {
+      "Code": "TTH 203.1",
+      "CamId": "63ae7c53bfd3d90017e8f3d8",
+      "Name": "TTH 203.1",
+      "DisplayName": "Lý Thường Kiệt - Tô Hiến Thành 1"
+    },
+    {
+      "Code": "ITS 10.1",
+      "CamId": "5deb576d1dc17d7c5515ad20",
+      "Name": "ITS 10.1",
+      "DisplayName": "Hồng Bàng - Ngô Quyền 2"
+    },
+    {
+      "Code": "TTH 28.7",
+      "CamId": "5874796db807da0011e33cf7",
+      "Name": "TTH 28.7",
+      "DisplayName": "Trường Chinh - Tây Thạnh 1"
+    },
+    {
+      "Code": "ITS 2.1-2",
+      "CamId": "5deb576d1dc17d7c5515acfa",
+      "Name": "ITS 2.1-2",
+      "DisplayName": "Nút giao Công Trường Dân Chủ"
+    },
+    {
+      "Code": "TTH 21.12",
+      "CamId": "58746536b807da0011e33cdc",
+      "Name": "TTH 21.12",
+      "DisplayName": "Cầu vượt Bình Phước 1"
+    },
+    {
+      "Code": "TTH 105.2",
+      "CamId": "5a8251575058170011f6eabc",
+      "Name": "TTH 105.2",
+      "DisplayName": "Lê Văn Việt - Đình Phong Phú 2"
+    },
+    {
+      "Code": "TTH 338",
+      "CamId": "662b4f7e1afb9c00172d872e",
+      "Name": "TTH 338",
+      "DisplayName": "Hậu Giang - Nguyễn Văn Luông"
+    },
+    {
+      "Code": "TTH 363",
+      "CamId": "662b59291afb9c00172d912b",
+      "Name": "TTH 363",
+      "DisplayName": "Lê Văn Sỹ - Nguyễn Trọng Tuyển"
+    },
+    {
+      "Code": "TTH 24.6",
+      "CamId": "5a6060a88576340017d0660d",
+      "Name": "TTH 24.6",
+      "DisplayName": "Nguyễn Thái Sơn - Phan Văn Trị 1"
+    },
+    {
+      "Code": "TTH 233.2",
+      "CamId": "63b65f33bfd3d90017eaa405",
+      "Name": "TTH 233.2",
+      "DisplayName": "Nguyễn Hữu Cảnh - Ngô Tất Tố 3 (Nhánh chính cầu Thủ Thiêm 1)"
+    },
+    {
+      "Code": "ITS 9.5",
+      "CamId": "5deb576d1dc17d7c5515ad1e",
+      "Name": "ITS 9.5",
+      "DisplayName": "Pasteur - Hàm Nghi"
+    },
+    {
+      "Code": "TTH 21.82",
+      "CamId": "5a6061868576340017d06611",
+      "Name": "TTH 21.82",
+      "DisplayName": "Quang Trung - Bà Triệu"
+    },
+    {
+      "Code": "TTH 47.1",
+      "CamId": "589b3705b3bf7600110283bd",
+      "Name": "TTH 47.1",
+      "DisplayName": "QL 22 - Nguyễn Ảnh Thủ 1"
+    },
+    {
+      "Code": "TTH 187.1",
+      "CamId": "63ae7759bfd3d90017e8f162",
+      "Name": "TTH 187.1",
+      "DisplayName": "Nguyễn Tất Thành - Cầu Khánh Hội"
+    },
+    {
+      "Code": "TTH 186.1",
+      "CamId": "63ae7709bfd3d90017e8f135",
+      "Name": "TTH 186.1",
+      "DisplayName": "Hoàng Diệu - Đoàn Văn Bơ 1"
+    },
+    {
+      "Code": "TTH 353",
+      "CamId": "662b55111afb9c00172d8e2e",
+      "Name": "TTH 353",
+      "DisplayName": "Quang Trung - Phạm Văn Chiêu"
+    },
+    {
+      "Code": "TTH 229",
+      "CamId": "649da419a6068200171a6c90",
+      "Name": "TTH 229",
+      "DisplayName": "Nguyễn Chí Thanh - Ngô Quyền"
+    },
+    {
+      "Code": "TTH 21.40",
+      "CamId": "58afccadbd82540010390c3f",
+      "Name": "TTH 21.40",
+      "DisplayName": "Quốc lộ 1 - Nguyễn Hữu Trí 1"
+    },
+    {
+      "Code": "TTH 388",
+      "CamId": "662b82761afb9c00172dcda3",
+      "Name": "TTH 388",
+      "DisplayName": "Trần Quang Khải - Trần Nguyên Đán"
+    },
+    {
+      "Code": "ITS 1.4-2",
+      "CamId": "5deb576d1dc17d7c5515acf7",
+      "Name": "ITS 1.4-2",
+      "DisplayName": "Nút giao Ngã sáu Cộng Hòa"
+    },
+    {
+      "Code": "TTH 169",
+      "CamId": "5d9ddd49766c880017188c94",
+      "Name": "TTH 169",
+      "DisplayName": "Nút giao Hàng Xanh 1 (Viện Máy tính)"
+    },
+    {
+      "Code": "TTH 150",
+      "CamId": "5d8cd767766c880017188950",
+      "Name": "TTH 150",
+      "DisplayName": "Phạm Văn Đồng - Nguyễn Xí (hướng đi Sân bay)"
+    },
+    {
+      "Code": "TTH 0005",
+      "CamId": "6792f16e8c5ed4001b27f482",
+      "Name": "TTH 0005",
+      "DisplayName": "Cao tốc LT-DG - Trạm thu phí Long Phước"
+    },
+    {
+      "Code": "TTH 21.79",
+      "CamId": "595f8d813dcfc400106f28f2",
+      "Name": "TTH 21.79",
+      "DisplayName": "Quốc lộ 1 - Quang Trung 2 (hướng đi An Sương)"
+    },
+    {
+      "Code": "TTH 459.1",
+      "CamId": "68a5871d4e89b100173b5f37",
+      "Name": "TTH 459.1",
+      "DisplayName": "Tỉnh Lộ 8 - Hà Duy Phiên (1)"
+    },
+    {
+      "Code": "TTH 21.13",
+      "CamId": "5874656eb807da0011e33cde",
+      "Name": "TTH 21.13",
+      "DisplayName": "Cầu vượt Bình Phước 2"
+    },
+    {
+      "Code": "TTH 256",
+      "CamId": "6623e3566f998a001b25226d",
+      "Name": "TTH 256",
+      "DisplayName": "Lê Văn Sỹ - Trường Sa"
+    },
+    {
+      "Code": "TTH 249.1",
+      "CamId": "5abbb6d698d8fc001102dfc8",
+      "Name": "TTH 249.1",
+      "DisplayName": "Nguyễn Văn Linh - Nguyễn Lương Bằng (1)"
+    },
+    {
+      "Code": "TTH 168",
+      "CamId": "5d8cdd26766c880017188974",
+      "Name": "TTH 168",
+      "DisplayName": "Nút giao Lê Đại Hành 2 (Lê Đại Hành)"
+    },
+    {
+      "Code": "TTH 16.1",
+      "CamId": "56de42f611f398ec0c481296",
+      "Name": "TTH 16.1",
+      "DisplayName": "Võ Văn Kiệt - Cao Văn Lầu"
+    },
+    {
+      "Code": "ITS 3.5",
+      "CamId": "5deb576d1dc17d7c5515ad03",
+      "Name": "ITS 3.5",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa - Nguyễn Đình Chiểu"
+    },
+    {
+      "Code": "TTH 187.2",
+      "CamId": "63ae777cbfd3d90017e8f177",
+      "Name": "TTH 187.2",
+      "DisplayName": "Nguyễn Tất Thành - Đoàn Như Hài"
+    },
+    {
+      "Code": "TTH 177",
+      "CamId": "631828cac9eae60017a19f50",
+      "Name": "TTH 177",
+      "DisplayName": "Nguyễn Thị Minh Khai - Nguyễn Bỉnh Khiêm 1"
+    },
+    {
+      "Code": "TTH 49.1",
+      "CamId": "63b3c2fbbfd3d90017e9abbf",
+      "Name": "TTH 49.1",
+      "DisplayName": "Cầu Sài Gòn 1 (dạ cầu Bình Thạnh)"
+    },
+    {
+      "Code": "TTH 28.9",
+      "CamId": "58d7c2e6c1e33c00112b321e",
+      "Name": "TTH 28.9",
+      "DisplayName": "Trường Chinh - Phan Văn Hớn 1 (Q12-HM)"
+    },
+    {
+      "Code": "TTH 220.1",
+      "CamId": "63b54ad1bfd3d90017ea7974",
+      "Name": "TTH 220.1",
+      "DisplayName": "Võ Chí Công - Liên Phường 1"
+    },
+    {
+      "Code": "TTH 368",
+      "CamId": "662b5b481afb9c00172d92a8",
+      "Name": "TTH 368",
+      "DisplayName": "Trường Chinh - Trương Công Định"
+    },
+    {
+      "Code": "TTH 428",
+      "CamId": "681885376dfb4b0018f8f0f2",
+      "Name": "TTH 428",
+      "DisplayName": "Lê Đình Chi - Kênh 3"
+    },
+    {
+      "Code": "TTH 22.1",
+      "CamId": "56de42f611f398ec0c48129e",
+      "Name": "TTH 22.1",
+      "DisplayName": "Đồng Văn Cống - Phan Văn Đáng"
+    },
+    {
+      "Code": "TTH 170",
+      "CamId": "5d9dddb9766c880017188c96",
+      "Name": "TTH 170",
+      "DisplayName": "Nút giao Hàng Xanh 2 (ĐH Hồng Bàng)"
+    },
+    {
+      "Code": "TTH 142",
+      "CamId": "5d8cd372766c880017188940",
+      "Name": "TTH 142",
+      "DisplayName": "Nút giao Cây Gõ 2 (Minh Phụng)"
+    },
+    {
+      "Code": "TTH 119.2",
+      "CamId": "5ad06a0d98d8fc001102e27b",
+      "Name": "TTH 119.2",
+      "DisplayName": "Vĩnh Lộc - Nguyễn Thị Tú 2"
+    },
+    {
+      "Code": "IDICO-QL1 21",
+      "CamId": "5a60839c8576340017d0667c",
+      "Name": "IDICO-QL1 21",
+      "DisplayName": "QL1 - Hương Lộ 2 (2)"
+    },
+    {
+      "Code": "TTH 448",
+      "CamId": "68188c236dfb4b0018f8ff8f",
+      "Name": "TTH 448",
+      "DisplayName": "Vĩnh Lộc - Lại Hùng Cường"
+    },
+    {
+      "Code": "TTH 234",
+      "CamId": "63b65f64bfd3d90017eaa41f",
+      "Name": "TTH 234",
+      "DisplayName": "Xô Viết Nghệ Tĩnh - Đường D5"
+    },
+    {
+      "Code": "TTH 21.7",
+      "CamId": "58746371b807da0011e33cd1",
+      "Name": "TTH 21.7",
+      "DisplayName": "Quốc lộ 1 - Đường 14"
+    },
+    {
+      "Code": "TTH 244",
+      "CamId": "63bd1e95bfd3d90017ec3cd5",
+      "Name": "TTH 244",
+      "DisplayName": "Nguyễn Lương Bằng - Hoàng Quốc Việt"
+    },
+    {
+      "Code": "TTH 204",
+      "CamId": "63ae7cd3bfd3d90017e8f408",
+      "Name": "TTH 204",
+      "DisplayName": "Lạc Long Quân - Ông Ích Khiêm"
+    },
+    {
+      "Code": "TTH 149",
+      "CamId": "5d8cd70e766c88001718894e",
+      "Name": "TTH 149",
+      "DisplayName": "Phạm Văn Đồng - Nguyễn Xí (hướng đi Thủ Đức)"
+    },
+    {
+      "Code": "TTH 42.5",
+      "CamId": "58b555ac17139d0010f35d59",
+      "Name": "TTH 42.5",
+      "DisplayName": "Tùng Thiện Vương - Cầu Nhị Thiên Đường"
+    },
+    {
+      "Code": "TTH 21.73",
+      "CamId": "595ddc123dcfc400106f28ba",
+      "Name": "TTH 21.73",
+      "DisplayName": "Quốc lộ 1 - Cầu vượt Tân Thới Hiệp 1"
+    },
+    {
+      "Code": "TTH 21.1",
+      "CamId": "587460aab807da0011e33cc2",
+      "Name": "TTH 21.1",
+      "DisplayName": "Quốc lộ 1 - ĐH Nông Lâm 1"
+    },
+    {
+      "Code": "TTH 33.9",
+      "CamId": "59d3524f02eb490011a0a61b",
+      "Name": "TTH 33.9",
+      "DisplayName": "Cầu vượt Trạm 2 (TĐ ->Q9)"
+    },
+    {
+      "Code": "TTH 327",
+      "CamId": "662a8f701afb9c00172d2b5e",
+      "Name": "TTH 327",
+      "DisplayName": "Nguyễn Thị Thập - Lê Văn Lương"
+    },
+    {
+      "Code": "TTH 231.2",
+      "CamId": "63b55020bfd3d90017ea7cb7",
+      "Name": "TTH 231.2",
+      "DisplayName": "Nút giao Mỹ Thủy (6)"
+    },
+    {
+      "Code": "BD 7.2",
+      "CamId": "68ede746230ee50017d04dcc",
+      "Name": "BD 7.2",
+      "DisplayName": "Đại lộ Bình Dương - ngã tư chợ Đình (2)"
+    },
+    {
+      "Code": "TTH 120.1",
+      "CamId": "5b19d2f9af4ff60011d6ea4f",
+      "Name": "TTH 120.1",
+      "DisplayName": "Nguyễn Tất Thành - Xóm Chiếu"
+    },
+    {
+      "Code": "TTH 285",
+      "CamId": "6623eec96f998a001b25273b",
+      "Name": "TTH 285",
+      "DisplayName": "Quang Trung - Thống Nhất"
+    },
+    {
+      "Code": "TTH 330",
+      "CamId": "662b4d781afb9c00172d8571",
+      "Name": "TTH 330",
+      "DisplayName": "An Dương Vương - Lê Hồng Phong"
+    },
+    {
+      "Code": "TTH 44.8",
+      "CamId": "5a606a958576340017d06621",
+      "Name": "TTH 44.8",
+      "DisplayName": "Đinh Bộ Lĩnh - Bạch Đằng 3"
+    },
+    {
+      "Code": "TTH 318",
+      "CamId": "662a8c381afb9c00172d28b6",
+      "Name": "TTH 318",
+      "DisplayName": "Dương Bá Trạc - đường 9A"
+    },
+    {
+      "Code": "TTH 242.3",
+      "CamId": "63b6617ebfd3d90017eaa50b",
+      "Name": "TTH 242.3",
+      "DisplayName": "Nguyễn Tất Thành - Cảng SG (Q7-Q4)"
+    },
+    {
+      "Code": "TTH 21.81",
+      "CamId": "595f91653dcfc400106f28f6",
+      "Name": "TTH 21.81",
+      "DisplayName": "Quốc lộ 1 - Cầu vượt An Sương (Song hành QL 22)"
+    },
+    {
+      "Code": "TTH 21.39",
+      "CamId": "56de42f611f398ec0c48129d",
+      "Name": "TTH 21.39",
+      "DisplayName": "Quốc lộ 1 - Trần Đại Nghĩa"
+    },
+    {
+      "Code": "TTH 17.1",
+      "CamId": "56de42f611f398ec0c481292",
+      "Name": "TTH 17.1",
+      "DisplayName": "Võ Văn Kiệt - Phạm Phú Thứ"
+    },
+    {
+      "Code": "TTH 436",
+      "CamId": "681888066dfb4b0018f8f4c2",
+      "Name": "TTH 436",
+      "DisplayName": "Trần Văn Giàu - Võ Hữu Lợi"
+    },
+    {
+      "Code": "ITS 3.3",
+      "CamId": "5deb576d1dc17d7c5515acff",
+      "Name": "ITS 3.3",
+      "DisplayName": "Hai Bà Trưng - Lý Chính Thắng"
+    },
+    {
+      "Code": "TTH 361",
+      "CamId": "662b58791afb9c00172d9107",
+      "Name": "TTH 361",
+      "DisplayName": "255 Hoàng Văn Thụ"
+    },
+    {
+      "Code": "TTH 384",
+      "CamId": "662b811d1afb9c00172dcc1d",
+      "Name": "TTH 384",
+      "DisplayName": "Trần Hưng Đạo - Nguyễn Cư Trinh"
+    },
+    {
+      "Code": "TTH 324.2",
+      "CamId": "662a8eb41afb9c00172d2aba",
+      "Name": "TTH 324.2",
+      "DisplayName": "Nguyễn Văn Linh - Nguyễn Thị Thập 2"
+    },
+    {
+      "Code": "TTH 211.1",
+      "CamId": "63b548ecbfd3d90017ea77d2",
+      "Name": "TTH 211.1",
+      "DisplayName": "Nguyễn Duy Trinh - Võ Chí Công 1"
+    },
+    {
+      "Code": "ITS 2.6",
+      "CamId": "5deb576d1dc17d7c5515acfb",
+      "Name": "ITS 2.6",
+      "DisplayName": "Võ Thị Sáu - Bà Huyện Thanh Quan"
+    },
+    {
+      "Code": "TTH 1.1",
+      "CamId": "56de42f611f398ec0c48127d",
+      "Name": "TTH 1.1",
+      "DisplayName": "Mai Chí Thọ - Võ Nguyên Giáp (Cát Lái cầu A)"
+    },
+    {
+      "Code": "TTH 2a",
+      "CamId": "56de42f611f398ec0c48128d",
+      "Name": "TTH 2a",
+      "DisplayName": "Hải Thượng Lãn Ông - Cầu Chà Và"
+    },
+    {
+      "Code": "TTH 0003",
+      "CamId": "6792f03d8c5ed4001b27f378",
+      "Name": "TTH 0003",
+      "DisplayName": "Quốc Lộ 50 - Cổng chào Long An"
+    },
+    {
+      "Code": "BD 5.2",
+      "CamId": "68ede490230ee50017d04ae5",
+      "Name": "BD 5.2",
+      "DisplayName": "Mỹ Phước Tân Vạn - ĐT 743A (2)"
+    },
+    {
+      "Code": "TTH 267",
+      "CamId": "6623e7076f998a001b2523ea",
+      "Name": "TTH 267",
+      "DisplayName": "Lý Thái Tổ - Sư Vạn Hạnh"
+    },
+    {
+      "Code": "IDICO-QL1 02",
+      "CamId": "59ca2cac02eb490011a0a3e9",
+      "Name": "IDICO-QL1 02",
+      "DisplayName": "Cầu vượt An Sương 2"
+    },
+    {
+      "Code": "TTH 124.2",
+      "CamId": "5aab1f852d266a0017e5afd4",
+      "Name": "TTH 124.2",
+      "DisplayName": "Võ Chí Công - Cầu Phú Mỹ"
+    },
+    {
+      "Code": "TTH 157",
+      "CamId": "5d8cda2e766c88001718895e",
+      "Name": "TTH 157",
+      "DisplayName": "Phạm Văn Đồng - Kha Vạn Cân (hướng đi Quốc lộ 1)"
+    },
+    {
+      "Code": "TTH 28.4",
+      "CamId": "586e25e1f9fab7001111b0ae",
+      "Name": "TTH 28.4",
+      "DisplayName": "Trường Chinh - Tân Kỳ Tân Quý"
+    },
+    {
+      "Code": "TTH 441",
+      "CamId": "681889ec6dfb4b0018f8f6cb",
+      "Name": "TTH 441",
+      "DisplayName": "Nguyễn Cửu Phú - Trần Đại Nghĩa"
+    },
+    {
+      "Code": "TTH 172",
+      "CamId": "5d9dde8e766c880017188c9a",
+      "Name": "TTH 172",
+      "DisplayName": "Nút giao Hàng Xanh 4 (Cầu Văn Thánh - Hàng Xanh)"
+    },
+    {
+      "Code": "TTH 174",
+      "CamId": "5d9ddf0f766c880017188c9e",
+      "Name": "TTH 174",
+      "DisplayName": "Nút giao Hàng Xanh 6 (Cầu Điện Biên Phủ - Hàng Xanh)"
+    },
+    {
+      "Code": "TTH 424",
+      "CamId": "681883866dfb4b0018f8eef6",
+      "Name": "TTH 424",
+      "DisplayName": "Mai Bá Hương - Lê Chính Đang"
+    },
+    {
+      "Code": "TTH 185",
+      "CamId": "63ae76ddbfd3d90017e8f11b",
+      "Name": "TTH 185",
+      "DisplayName": "Khánh Hội - Hoàng Diệu"
+    },
+    {
+      "Code": "ITS 7.53",
+      "CamId": "5deb576d1dc17d7c5515ad14",
+      "Name": "ITS 7.53",
+      "DisplayName": "Lý Tự Trọng - Đồng Khởi"
+    },
+    {
+      "Code": "TTH 239",
+      "CamId": "63b66035bfd3d90017eaa48e",
+      "Name": "TTH 239",
+      "DisplayName": "Nơ Trang Long - Nguyễn Huy Lượng (Bệnh viện Ung Bướu)"
+    },
+    {
+      "Code": "TTH 37.1",
+      "CamId": "585b284ac3f96200127dc500",
+      "Name": "TTH 37.1",
+      "DisplayName": "Huỳnh Tấn Phát - Lưu Trọng Lư 1"
+    },
+    {
+      "Code": "TTH 15.1",
+      "CamId": "56de42f611f398ec0c481295",
+      "Name": "TTH 15.1",
+      "DisplayName": "Võ Văn Kiệt - Cầu Chà Và 1 (dạ cầu)"
+    },
+    {
+      "Code": "ITS 3.51",
+      "CamId": "5deb576d1dc17d7c5515ad04",
+      "Name": "ITS 3.51",
+      "DisplayName": "Võ Thị Sáu - Pasteur"
+    },
+    {
+      "Code": "TTH 122.1",
+      "CamId": "5a8278f35058170011f6eaed",
+      "Name": "TTH 122.1",
+      "DisplayName": "Nguyễn Văn Linh - Phạm Hùng 1"
+    },
+    {
+      "Code": "TTH 391",
+      "CamId": "662b830e1afb9c00172dcf50",
+      "Name": "TTH 391",
+      "DisplayName": "Cách Mạng Tháng Tám - Võ Văn Tần"
+    },
+    {
+      "Code": "IDICO-QL1 23",
+      "CamId": "5a6084208576340017d0667e",
+      "Name": "IDICO-QL1 23",
+      "DisplayName": "QL1 - Tân Tạo Chợ Đệm 2"
+    },
+    {
+      "Code": "TTH 220.2",
+      "CamId": "63b54aedbfd3d90017ea79c3",
+      "Name": "TTH 220.2",
+      "DisplayName": "Võ Chí Công - Liên Phường 2"
+    },
+    {
+      "Code": "TTH 117.2",
+      "CamId": "5a825ab55058170011f6ead2",
+      "Name": "TTH 117.2",
+      "DisplayName": "Nguyễn Văn Linh - Nguyễn Hữu Thọ (2)"
+    },
+    {
+      "Code": "TTH 39.1",
+      "CamId": "586e20a0f9fab7001111b0a7",
+      "Name": "TTH 39.1",
+      "DisplayName": "Nguyễn Kiệm - Hồ Văn Huê"
+    },
+    {
+      "Code": "TTH 126.2",
+      "CamId": "5b0b7bbe0e517b00119fd806",
+      "Name": "TTH 126.2",
+      "DisplayName": "Nguyễn Văn Cừ - Trần Hưng Đạo 2"
+    },
+    {
+      "Code": "TTH 282.2",
+      "CamId": "6623edd26f998a001b2526f7",
+      "Name": "TTH 282.2",
+      "DisplayName": "Vòng xoay Gò Vấp (2)"
+    },
+    {
+      "Code": "TTH 109.1",
+      "CamId": "5a8255a55058170011f6eac7",
+      "Name": "TTH 109.1",
+      "DisplayName": "BX Miền Đông - Đinh Bộ Lĩnh 1"
+    },
+    {
+      "Code": "TTH 14.2",
+      "CamId": "56de42f611f398ec0c481294",
+      "Name": "TTH 14.2",
+      "DisplayName": "Đường hầm - Đầu Quận 1"
+    },
+    {
+      "Code": "TTH 2.2",
+      "CamId": "56de42f611f398ec0c481280",
+      "Name": "TTH 2.2",
+      "DisplayName": "Mai Chí Thọ - Lương Định Của 2"
+    },
+    {
+      "Code": "TTH 44.5",
+      "CamId": "587ed91db807da0011e33d4e",
+      "Name": "TTH 44.5",
+      "DisplayName": "Phan Đăng Lưu - Đinh Tiên Hoàng 2"
+    },
+    {
+      "Code": "TTH 228",
+      "CamId": "63b54dcbbfd3d90017ea7ba8",
+      "Name": "TTH 228",
+      "DisplayName": "Quốc Lộ 1 - Cổng ĐH Quốc gia TPHCM"
+    },
+    {
+      "Code": "TTH 8.2",
+      "CamId": "56de42f611f398ec0c48128a",
+      "Name": "TTH 8.2",
+      "DisplayName": "Võ Văn Kiệt - Trần Đình Xu 2"
+    },
+    {
+      "Code": "TTH 282.1",
+      "CamId": "6623ed9b6f998a001b2526cd",
+      "Name": "TTH 282.1",
+      "DisplayName": "Vòng xoay Gò Vấp (1)"
+    },
+    {
+      "Code": "TTH 35.7",
+      "CamId": "58b5752e17139d0010f35d5f",
+      "Name": "TTH 35.7",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa -Nguyễn Thị Minh Khai 2"
+    },
+    {
+      "Code": "TTH 4.2",
+      "CamId": "58175c81edeb6c0012a2d5c2",
+      "Name": "TTH 4.2",
+      "DisplayName": "Mai Chí Thọ - Trần Não 2"
+    },
+    {
+      "Code": "TTH 49.11",
+      "CamId": "631812e6c9eae60017a19567",
+      "Name": "TTH 49.11",
+      "DisplayName": "Cầu Sài Gòn 11 (Bình Thạnh)"
+    },
+    {
+      "Code": "TTH 269",
+      "CamId": "6623e7b76f998a001b25242d",
+      "Name": "TTH 269",
+      "DisplayName": "Đinh Bộ Lĩnh - Bùi Đình Túy"
+    },
+    {
+      "Code": "TTH 118.1",
+      "CamId": "5ad068b198d8fc001102e278",
+      "Name": "TTH 118.1",
+      "DisplayName": "Quốc lộ 50 - Cầu Ông Thìn (1)"
+    },
+    {
+      "Code": "TTH 334.2",
+      "CamId": "66f126e8538c780017c9362f",
+      "Name": "TTH 334.2",
+      "DisplayName": "Nguyễn Chí Thanh - Nguyễn Kim"
+    },
+    {
+      "Code": "TTH 180.2",
+      "CamId": "63ae75a3bfd3d90017e8f051",
+      "Name": "TTH 180.2",
+      "DisplayName": "Cống Quỳnh - Phạm Viết Chánh"
+    },
+    {
+      "Code": "TTH 376",
+      "CamId": "662b7d8a1afb9c00172dc71f",
+      "Name": "TTH 376",
+      "DisplayName": "Lê Lai - Phạm Hồng Thái"
+    },
+    {
+      "Code": "TTH 249.2",
+      "CamId": "5abbb77298d8fc001102dfce",
+      "Name": "TTH 249.2",
+      "DisplayName": "Nguyễn Văn Linh - Nguyễn Lương Bằng (2)"
+    },
+    {
+      "Code": "TTH 246",
+      "CamId": "63bd1f48bfd3d90017ec3d19",
+      "Name": "TTH 246",
+      "DisplayName": "Huỳnh Tấn Phát - Nguyễn Thị Thập"
+    },
+    {
+      "Code": "TTH 21.45",
+      "CamId": "58aff2c6bd82540010390c55",
+      "Name": "TTH 21.45",
+      "DisplayName": "Quốc lộ 1 - Đinh Đức Thiện 1"
+    },
+    {
+      "Code": "TTH 129",
+      "CamId": "5b25a1dcf13cba001124e710",
+      "Name": "TTH 129",
+      "DisplayName": "Lý Tự Trọng - Pasteur 1"
+    },
+    {
+      "Code": "TTH 153",
+      "CamId": "5d8cd886766c880017188956",
+      "Name": "TTH 153",
+      "DisplayName": "Phạm Văn Đồng - Hiệp Bình (hướng đi Thủ Đức)"
+    },
+    {
+      "Code": "ITS 8.6",
+      "CamId": "5deb576d1dc17d7c5515ad18",
+      "Name": "ITS 8.6",
+      "DisplayName": "Hai Bà Trưng - Lê Duẩn"
+    },
+    {
+      "Code": "TTH 411",
+      "CamId": "66b1c1bf779f740018673ef2",
+      "Name": "TTH 411",
+      "DisplayName": "An Dương Vương - Trần Phú"
+    },
+    {
+      "Code": "TTH 22.5",
+      "CamId": "56de42f611f398ec0c4812a0",
+      "Name": "TTH 22.5",
+      "DisplayName": "Nguyễn Thị Định - Đường A"
+    },
+    {
+      "Code": "TTH 288",
+      "CamId": "6623efc26f998a001b25277f",
+      "Name": "TTH 288",
+      "DisplayName": "Tô Ký - Nguyễn Ảnh Thủ"
+    },
+    {
+      "Code": "TTH 342",
+      "CamId": "662b50841afb9c00172d880d",
+      "Name": "TTH 342",
+      "DisplayName": "Tùng Thiện Vương - Xóm Củi"
+    },
+    {
+      "Code": "TTH 49.3",
+      "CamId": "58abc0cbbd82540010390ba6",
+      "Name": "TTH 49.3",
+      "DisplayName": "Cầu Sài Gòn 3 (Dạ cầu Bình Thạnh)"
+    },
+    {
+      "Code": "TTH 21.43",
+      "CamId": "58afea5dbd82540010390c4d",
+      "Name": "TTH 21.43",
+      "DisplayName": "Quốc lộ 1 - Bùi Thanh Khiết 1"
+    },
+    {
+      "Code": "ITS 5.2",
+      "CamId": "5deb576d1dc17d7c5515ad07",
+      "Name": "ITS 5.2",
+      "DisplayName": "Nguyễn Văn Trỗi - Trương Quốc Dung"
+    },
+    {
+      "Code": "TTH 164",
+      "CamId": "5d8cdc1d766c88001718896c",
+      "Name": "TTH 164",
+      "DisplayName": "Trường Sơn - Hậu Giang"
+    },
+    {
+      "Code": "TTH 44.9",
+      "CamId": "5a606c758576340017d06626",
+      "Name": "TTH 44.9",
+      "DisplayName": "BX Miền Đông - Quốc Lộ 13 (1)"
+    },
+    {
+      "Code": "TTH 465.1",
+      "CamId": "68fae2966b936b00172186a6",
+      "Name": "TTH 465.1",
+      "DisplayName": "Võ Chí Công - đường số 5 (1)"
+    },
+    {
+      "Code": "TTH 238",
+      "CamId": "63b66008bfd3d90017eaa476",
+      "Name": "TTH 238",
+      "DisplayName": "Ung Văn Khiêm - Nguyễn Văn Thương (D1)"
+    },
+    {
+      "Code": "IDICO-QL1 03",
+      "CamId": "59ca2cf302eb490011a0a3eb",
+      "Name": "IDICO-QL1 03",
+      "DisplayName": "Cầu vượt An Sương 3"
+    },
+    {
+      "Code": "TTH 121.1",
+      "CamId": "5a82628e5058170011f6eadb",
+      "Name": "TTH 121.1",
+      "DisplayName": "Nguyễn Văn Linh - Quốc lộ 50 (1)"
+    },
+    {
+      "Code": "TTH 48.2",
+      "CamId": "589b46b3b3bf7600110283d0",
+      "Name": "TTH 48.2",
+      "DisplayName": "Hà Huy Giáp - Cầu Phú Long 2"
+    },
+    {
+      "Code": "TTH 0007",
+      "CamId": "6792f2248c5ed4001b27f4dc",
+      "Name": "TTH 0007",
+      "DisplayName": "Quốc Lộ 1 - Độc Lập (cổng KCN Sóng Thần)"
+    },
+    {
+      "Code": "TTH 148",
+      "CamId": "5d8cd653766c88001718894c",
+      "Name": "TTH 148",
+      "DisplayName": "Kha Vạn Cân - Võ Văn Ngân"
+    },
+    {
+      "Code": "TTH 331",
+      "CamId": "662b4de41afb9c00172d85c5",
+      "Name": "TTH 331",
+      "DisplayName": "Hải Thượng Lãn Ông - Châu Văn Liêm"
+    },
+    {
+      "Code": "TTH 35.6",
+      "CamId": "58af8eb2bd82540010390c30",
+      "Name": "TTH 35.6",
+      "DisplayName": "Nam Kỳ Khởi Nghĩa -Nguyễn Thị Minh Khai 1"
+    },
+    {
+      "Code": "TTH 283",
+      "CamId": "6623ee176f998a001b25270c",
+      "Name": "TTH 283",
+      "DisplayName": "Phan Văn Trị - Lê Đức Thọ"
+    },
+    {
+      "Code": "TTH 104.4",
+      "CamId": "5b0b7d240e517b00119fd809",
+      "Name": "TTH 104.4",
+      "DisplayName": "Hương Lộ 2 (Số 878)"
+    },
+    {
+      "Code": "TTH 21.6",
+      "CamId": "58746314b807da0011e33cce",
+      "Name": "TTH 21.6",
+      "DisplayName": "Quốc lộ 1 - Cầu vượt Linh Xuân"
+    },
+    {
+      "Code": "TTH 21.78",
+      "CamId": "595f8d233dcfc400106f28f0",
+      "Name": "TTH 21.78",
+      "DisplayName": "Quốc lộ 1 - Quang Trung 1 (hướng đi Bình Phước)"
+    },
+    {
+      "Code": "TTH 33.7",
+      "CamId": "59d34ce302eb490011a0a616",
+      "Name": "TTH 33.7",
+      "DisplayName": "Đỗ Xuân Hợp - Cầu Cống Đập."
+    },
+    {
+      "Code": "TTH 324.1",
+      "CamId": "662a8e641afb9c00172d2a7e",
+      "Name": "TTH 324.1",
+      "DisplayName": "Nguyễn Văn Linh - Nguyễn Thị Thập 1"
+    },
+    {
+      "Code": "ITS 9.4",
+      "CamId": "5deb576d1dc17d7c5515ad1d",
+      "Name": "ITS 9.4",
+      "DisplayName": "Nguyễn Công Trứ - Calmette 2"
+    },
+    {
+      "Code": "TTH 201.2",
+      "CamId": "63ae7c12bfd3d90017e8f3c0",
+      "Name": "TTH 201.2",
+      "DisplayName": "Ba Tháng Hai - Lê Đại Hành 2"
+    },
+    {
+      "Code": "TTH 464.2",
+      "CamId": "68ae7e997d735d00173c7445",
+      "Name": "TTH 464.2",
+      "DisplayName": "Cầu Bình Triệu (2) hướng đi lên cầu Bình Triệu 2"
+    },
+    {
+      "Code": "TTH 128",
+      "CamId": "5b0b835b0e517b00119fd80d",
+      "Name": "TTH 128",
+      "DisplayName": "Tam Bình (Số 81)"
+    },
+    {
+      "Code": "TTH 135.1",
+      "CamId": "5b6c155aca0577001163fe36",
+      "Name": "TTH 135.1",
+      "DisplayName": "Nguyễn Hữu Cảnh 1 (Dạ cầu)"
+    },
+    {
+      "Code": "TTH 390",
+      "CamId": "662b82da1afb9c00172dce94",
+      "Name": "TTH 390",
+      "DisplayName": "Hai Bà Trưng - Nguyễn Hữu Cầu"
+    },
+    {
+      "Code": "TTH 140",
+      "CamId": "5d8cd2a3766c88001718893c",
+      "Name": "TTH 140",
+      "DisplayName": "Nút giao Cây Gõ 1 (trên cầu)"
+    },
+    {
+      "Code": "TTH 334",
+      "CamId": "662b4e8e1afb9c00172d865c",
+      "Name": "TTH 334",
+      "DisplayName": "Lý Thường Kiệt - Nguyễn Chí Thanh"
+    },
+    {
+      "Code": "TTH 410",
+      "CamId": "66b1c190779f740018673ed4",
+      "Name": "TTH 410",
+      "DisplayName": "Nguyễn Trãi - Trần Phú"
+    },
+    {
+      "Code": "TTH 379",
+      "CamId": "662b7f9f1afb9c00172dca50",
+      "Name": "TTH 379",
+      "DisplayName": "Nguyễn Đình Chiểu - Nguyễn Bỉnh Khiêm"
+    },
+    {
+      "Code": "TTH 462.1",
+      "CamId": "68a589294e89b100173b61d9",
+      "Name": "TTH 462.1",
+      "DisplayName": "Tỉnh Lộ 8 - KCN Tân Quy (1)"
+    },
+    {
+      "Code": "TTH 28.2",
+      "CamId": "58747923b807da0011e33cf5",
+      "Name": "TTH 28.2",
+      "DisplayName": "Nút giao Bảy Hiền 2 (Hoàng Văn Thụ)"
+    },
+    {
+      "Code": "TTH 200.2",
+      "CamId": "63ae7af4bfd3d90017e8f32c",
+      "Name": "TTH 200.2",
+      "DisplayName": "Ba Tháng Hai - Lý Thường Kiệt 2"
+    },
+    {
+      "Code": "TTH 42.4",
+      "CamId": "5875d4f8b807da0011e33d1a",
+      "Name": "TTH 42.4",
+      "DisplayName": "Tạ Quang Bửu - Phạm Hùng 1"
+    },
+    {
+      "Code": "TTH 21.50",
+      "CamId": "595d92013dcfc400106f2877",
+      "Name": "TTH 21.50",
+      "DisplayName": "Quốc Lộ 1A - Cầu Bình Phước"
+    },
+    {
+      "Code": "TTH 22.8",
+      "CamId": "583f976361cfea0012cf68f9",
+      "Name": "TTH 22.8",
+      "DisplayName": "Nguyễn Thị Định - Lê Phụng Hiểu"
+    },
+    {
+      "Code": "TTH 433",
+      "CamId": "681886f26dfb4b0018f8f31a",
+      "Name": "TTH 433",
+      "DisplayName": "Trần Văn Giàu - Thanh Niên"
+    },
+    {
+      "Code": "TTH 381",
+      "CamId": "662b80721afb9c00172dcb28",
+      "Name": "TTH 381",
+      "DisplayName": "Nguyễn Văn Thủ - Trần Doãn Khanh"
+    },
+    {
+      "Code": "IDICO-QL1 18",
+      "CamId": "59ca2f4402eb490011a0a3f9",
+      "Name": "IDICO-QL1 18",
+      "DisplayName": "QL1 - Tân Kỳ Tân Quý 2"
+    },
+    {
+      "Code": "TTH 38.1",
+      "CamId": "586e1f18f9fab7001111b0a5",
+      "Name": "TTH 38.1",
+      "DisplayName": "Cộng Hòa - Trường Chinh"
+    },
+    {
+      "Code": "TTH 458",
+      "CamId": "681891e26dfb4b0018f90a69",
+      "Name": "TTH 458",
+      "DisplayName": "Nguyễn Cửu Phú - Trần Văn Giàu"
+    },
+    {
+      "Code": "TTH 235",
+      "CamId": "63b65f8dbfd3d90017eaa434",
+      "Name": "TTH 235",
+      "DisplayName": "Xô Viết Nghệ Tĩnh - Phan Văn Hân (Cầu Thị Nghè)"
+    },
+    {
+      "Code": "TTH 1.5",
+      "CamId": "5d9de3c2766c880017188cb3",
+      "Name": "TTH 1.5",
+      "DisplayName": "Cao tốc LTDG - Cầu Bà Dạt 3"
+    },
+    {
+      "Code": "TTH 205",
+      "CamId": "63ae7cfcbfd3d90017e8f422",
+      "Name": "TTH 205",
+      "DisplayName": "Cách Mạng Tháng Tám – Phạm Văn Hai"
+    },
+    {
+      "Code": "TTH 175.2",
+      "CamId": "5b0e1faacddcc80011ceb449",
+      "Name": "TTH 175.2",
+      "DisplayName": "Nút giao Hàng Xanh 8 (HX-VT)"
+    },
+    {
+      "Code": "TTH 236",
+      "CamId": "63b65fa9bfd3d90017eaa449",
+      "Name": "TTH 236",
+      "DisplayName": "Xô Viết Nghệ Tĩnh - Nguyễn Văn Lạc"
+    },
+    {
+      "Code": "TTH 270",
+      "CamId": "6623e7f06f998a001b25244a",
+      "Name": "TTH 270",
+      "DisplayName": "Đinh Bộ Lĩnh - Chu Văn An"
+    },
+    {
+      "Code": "TTH 261",
+      "CamId": "6623e5066f998a001b252317",
+      "Name": "TTH 261",
+      "DisplayName": "Nguyễn Thị Minh Khai - Tôn Thất Tùng"
+    },
+    {
+      "Code": "TTH 372",
+      "CamId": "662b5c141afb9c00172d93d7",
+      "Name": "TTH 372",
+      "DisplayName": "Tân Kỳ Tân Quý - Bình Long"
+    },
+    {
+      "Code": "TTH 409",
+      "CamId": "66b1c158779f740018673eb4",
+      "Name": "TTH 409",
+      "DisplayName": "Hùng Vương - Lê Hồng Phong"
+    },
+    {
+      "Code": "TTH 25.1",
+      "CamId": "56df8381c062921100c143e2",
+      "Name": "TTH 25.1",
+      "DisplayName": "Nguyễn Hữu Thọ - Nguyễn Thị Thập 1"
+    },
+    {
+      "Code": "TTH 138",
+      "CamId": "5d8cd1f9766c880017188938",
+      "Name": "TTH 138",
+      "DisplayName": "Nguyễn Tri Phương - Trần Phú"
+    },
+    {
+      "Code": "TTH 264",
+      "CamId": "6623e61d6f998a001b252377",
+      "Name": "TTH 264",
+      "DisplayName": "Cách Mạng Tháng Tám - Rạch Bùng Binh"
+    },
+    {
+      "Code": "TTH 21.56",
+      "CamId": "595da2dd3dcfc400106f2885",
+      "Name": "TTH 21.56",
+      "DisplayName": "Quốc lộ 1 - Đường 15 (2)"
+    },
+    {
+      "Code": "TTH 294",
+      "CamId": "6623f1996f998a001b252805",
+      "Name": "TTH 294",
+      "DisplayName": "Mai Chí Thọ - Xa Lộ Hà Nội (3)"
+    },
+    {
+      "Code": "TTH 21.74",
+      "CamId": "595f80e83dcfc400106f28e4",
+      "Name": "TTH 21.74",
+      "DisplayName": "Quốc lộ 1 - BQB Cầu vượt Tân Thới Hiệp B (hướng Bình Phước)"
+    },
+    {
+      "Code": "ITS 1.3-2",
+      "CamId": "5deb576d1dc17d7c5515acf5",
+      "Name": "ITS 1.3-2",
+      "DisplayName": "Nút giao Ngã bảy Lý Thái Tổ"
+    },
+    {
+      "Code": "TTH 179",
+      "CamId": "631955e7c9eae60017a1c30a",
+      "Name": "TTH 179",
+      "DisplayName": "Cách Mạng Tháng Tám – Hòa Hưng"
+    },
+    {
+      "Code": "TTH 24.7",
+      "CamId": "5a6060e08576340017d0660f",
+      "Name": "TTH 24.7",
+      "DisplayName": "Nguyễn Thái Sơn - Phan Văn Trị 2"
+    },
+    {
+      "Code": "IDICO-QL1 06",
+      "CamId": "5a607ea98576340017d0666d",
+      "Name": "IDICO-QL1 06",
+      "DisplayName": "QL1-Phan Văn Hớn (Q12)"
+    },
+    {
+      "Code": "TTH 196.2",
+      "CamId": "63ae7a26bfd3d90017e8f29a",
+      "Name": "TTH 196.2",
+      "DisplayName": "Ba Tháng Hai - Lê Hồng Phong 2"
+    },
+    {
+      "Code": "TTH 210",
+      "CamId": "63b548c3bfd3d90017ea77c0",
+      "Name": "TTH 210",
+      "DisplayName": "Nguyễn Duy Trinh - Nguyễn Thị Tư"
+    },
+    {
+      "Code": "TTH 319",
+      "CamId": "662a8c931afb9c00172d2901",
+      "Name": "TTH 319",
+      "DisplayName": "Huỳnh Tấn Phát - Hoàng Quốc Việt"
+    },
+    {
+      "Code": "TTH 178.2",
+      "CamId": "63195556c9eae60017a1c2ba",
+      "Name": "TTH 178.2",
+      "DisplayName": "Nguyễn Trãi - Cống Quỳnh 2"
+    },
+    {
+      "Code": "TTH 26.2",
+      "CamId": "58df4adedc195800111e04b4",
+      "Name": "TTH 26.2",
+      "DisplayName": "Phổ Quang - Huỳnh Lan Khanh"
+    },
+    {
+      "Code": "IDICO-QL1 20",
+      "CamId": "59ca301902eb490011a0a400",
+      "Name": "IDICO-QL1 20",
+      "DisplayName": "QL1 - Hương Lộ 2 (1)"
+    },
+    {
+      "Code": "TTH 21.38",
+      "CamId": "584e738361cfea0012cf6951",
+      "Name": "TTH 21.38",
+      "DisplayName": "Quốc lộ 1 - Nguyễn Thị Tú"
+    },
+    {
+      "Code": "TTH 22.6",
+      "CamId": "583f958161cfea0012cf68f5",
+      "Name": "TTH 22.6",
+      "DisplayName": "Nguyễn Thị Định - Đường C"
+    },
+    {
+      "Code": "TTH 107.1",
+      "CamId": "5a8253615058170011f6eabf",
+      "Name": "TTH 107.1",
+      "DisplayName": "Đinh Bộ Lĩnh - Bạch Đằng 1"
+    },
+    {
+      "Code": "ITS 7.4",
+      "CamId": "5deb576d1dc17d7c5515ad0f",
+      "Name": "ITS 7.4",
+      "DisplayName": "Nguyễn Thị Minh Khai - Trương Định"
+    },
+    {
+      "Code": "TTH 465.2",
+      "CamId": "68fae2b66b936b00172186e5",
+      "Name": "TTH 465.2",
+      "DisplayName": "Võ Chí Công - đường số 5 (2)"
+    },
+    {
+      "Code": "TTH 346",
+      "CamId": "662b51761afb9c00172d88ef",
+      "Name": "TTH 346",
+      "DisplayName": "Hương Lộ 3 - Đường kênh 19/5"
+    },
+    {
+      "Code": "TTH 459.2",
+      "CamId": "68a5873d4e89b100173b5f60",
+      "Name": "TTH 459.2",
+      "DisplayName": "Tỉnh Lộ 8 - Hà Duy Phiên (2)"
+    },
+    {
+      "Code": "TTH 415",
+      "CamId": "66b1c370779f7400186740b3",
+      "Name": "TTH 415",
+      "DisplayName": "Thành Thái - Tô Hiến Thành"
+    },
+    {
+      "Code": "TTH 278",
+      "CamId": "6623ec376f998a001b252671",
+      "Name": "TTH 278",
+      "DisplayName": "Tô Ký - Nguyễn Văn Quá"
+    },
+    {
+      "Code": "IDICO-QL1 13",
+      "CamId": "59ca2e6002eb490011a0a3f3",
+      "Name": "IDICO-QL1 13",
+      "DisplayName": "QL1 - TTDK 50-07V"
+    },
+    {
+      "Code": "TTH 171",
+      "CamId": "5d9dde1f766c880017188c98",
+      "Name": "TTH 171",
+      "DisplayName": "Nút giao Hàng Xanh 3 (Cầu Thị Nghè - Hàng Xanh)"
+    },
+    {
+      "Code": "TTH 135.3",
+      "CamId": "5b6c1618ca0577001163fe3c",
+      "Name": "TTH 135.3",
+      "DisplayName": "Nguyễn Hữu Cảnh 2 (Chân cầu)"
+    },
+    {
+      "Code": "TTH 33.4",
+      "CamId": "58b5528e17139d0010f35d52",
+      "Name": "TTH 33.4",
+      "DisplayName": "Xa Lộ Hà Nội - Đường D400"
+    },
+    {
+      "Code": "ITS 10.2-2",
+      "CamId": "5deb576d1dc17d7c5515ad22",
+      "Name": "ITS 10.2-2",
+      "DisplayName": "Nút giao Ngã sáu Nguyễn Tri Phương"
+    },
+    {
+      "Code": "TTH 243.1",
+      "CamId": "63b664d2bfd3d90017eaaa0f",
+      "Name": "TTH 243.1",
+      "DisplayName": "CT Trung Lương - Võ Trần Chí 1"
+    },
+    {
+      "Code": "TTH 26",
+      "CamId": "56df85bdc062921100c143e8",
+      "Name": "TTH 26",
+      "DisplayName": "Phan Đình Giót - Phan Thúc Duyện"
+    },
+    {
+      "Code": "TTH 398",
+      "CamId": "662b85031afb9c00172dd0dc",
+      "Name": "TTH 398",
+      "DisplayName": "Lê Lợi - Phan Bội Châu"
+    },
+    {
+      "Code": "TTH 21.48",
+      "CamId": "58d7b5a7c1e33c00112b320a",
+      "Name": "TTH 21.48",
+      "DisplayName": "Nút giao Chợ Đệm 1 (CT Trung Lương - Bùi Thanh Khiết)"
+    },
+    {
+      "Code": "TTH 326",
+      "CamId": "662a8f3a1afb9c00172d2b31",
+      "Name": "TTH 326",
+      "DisplayName": "Nguyễn Hữu Thọ - Đường số 15"
+    },
+    {
+      "Code": "TTH 21.44",
+      "CamId": "58aff01fbd82540010390c50",
+      "Name": "TTH 21.44",
+      "DisplayName": "Quốc lộ 1 - Bùi Thanh Khiết 2"
+    },
+    {
+      "Code": "TTH 162",
+      "CamId": "5d8cdb9f766c880017188968",
+      "Name": "TTH 162",
+      "DisplayName": "Hoàng Văn Thụ - Trần Huy Liệu"
+    },
+    {
+      "Code": "IDICO-QL1 28",
+      "CamId": "5a6085fb8576340017d06686",
+      "Name": "IDICO-QL1 28",
+      "DisplayName": "QL1-Tỉnh lộ 10B (1)"
+    },
+    {
+      "Code": "TTH 107.2",
+      "CamId": "5a8253bc5058170011f6eac1",
+      "Name": "TTH 107.2",
+      "DisplayName": "Đinh Bộ Lĩnh - Bạch Đằng 2"
+    },
+    {
+      "Code": "IDICO-QL1 33",
+      "CamId": "59ca31d602eb490011a0a40b",
+      "Name": "IDICO-QL1 33",
+      "DisplayName": "QL1 - Hồ Học Lãm"
+    },
+    {
+      "Code": "TTH 33.3",
+      "CamId": "587c782db807da0011e33d3b",
+      "Name": "TTH 33.3",
+      "DisplayName": "Võ Nguyên Giáp - Thảo Điền"
+    },
+    {
+      "Code": "TTH 322",
+      "CamId": "662a8d821afb9c00172d29c8",
+      "Name": "TTH 322",
+      "DisplayName": "Nguyễn Thị Thập - Tân Mỹ"
+    },
+    {
+      "Code": "TTH 206",
+      "CamId": "63ae7d29bfd3d90017e8f437",
+      "Name": "TTH 206",
+      "DisplayName": "Lý Thường Kiệt - Bắc Hải"
+    },
+    {
+      "Code": "TTH 464.1",
+      "CamId": "68ae7ee47d735d00173c7492",
+      "Name": "TTH 464.1",
+      "DisplayName": "Cầu Bình Triệu (2) hướng vòng xoay"
+    },
+    {
+      "Code": "TTH 22.2",
+      "CamId": "56de42f611f398ec0c48129f",
+      "Name": "TTH 22.2",
+      "DisplayName": "Đồng Văn Cống - Nguyễn Thị Định"
+    },
+    {
+      "Code": "TTH 444.2",
+      "CamId": "68188b296dfb4b0018f8f9a3",
+      "Name": "TTH 444.2",
+      "DisplayName": "Võ Trần Chí - Kênh 10 (2)"
+    },
+    {
+      "Code": "TTH 382",
+      "CamId": "662b80b91afb9c00172dcb5b",
+      "Name": "TTH 382",
+      "DisplayName": "Nút giao Ngã sáu Phù Đổng 2"
+    },
+    {
+      "Code": "TTH 453",
+      "CamId": "68188d586dfb4b0018f9018d",
+      "Name": "TTH 453",
+      "DisplayName": "Thanh Niên - Phạm Văn Hai"
+    },
+    {
+      "Code": "ITS 9.51",
+      "CamId": "5deb576d1dc17d7c5515ad1f",
+      "Name": "ITS 9.51",
+      "DisplayName": "Hùng Vương - Ngô Gia Tự"
+    },
+    {
+      "Code": "TTH 340",
+      "CamId": "662b50261afb9c00172d87b2",
+      "Name": "TTH 340",
+      "DisplayName": "Dương Bá Trạc - Đường số 9"
+    },
+    {
+      "Code": "IDICO-QL1 05",
+      "CamId": "59ca2d9d02eb490011a0a3f0",
+      "Name": "IDICO-QL1 05",
+      "DisplayName": "QL1 - Phan Văn Hớn 2"
+    },
+    {
+      "Code": "TTH 461.1",
+      "CamId": "68a588984e89b100173b6138",
+      "Name": "TTH 461.1",
+      "DisplayName": "Tỉnh Lộ 8 - Bến Than (1)"
+    },
+    {
+      "Code": "TTH 110",
+      "CamId": "5a8256df5058170011f6eacb",
+      "Name": "TTH 110",
+      "DisplayName": "BX Miền Đông - Quốc Lộ 13 (2)"
+    },
+    {
+      "Code": "ITS 2.5",
+      "CamId": "5deb576d1dc17d7c5515acfc",
+      "Name": "ITS 2.5",
+      "DisplayName": "Điện Biên Phủ - Trương Định"
+    },
+    {
+      "Code": "TTH 34.3",
+      "CamId": "587c8c20b807da0011e33d47",
+      "Name": "TTH 34.3",
+      "DisplayName": "Hoàng Văn Thụ - Hồ Văn Huê"
+    },
+    {
+      "Code": "TTH 43.2",
+      "CamId": "58744fb0b807da0011e33cc0",
+      "Name": "TTH 43.2",
+      "DisplayName": "Hưng Phú - Chánh Hưng 2"
+    },
+    {
+      "Code": "TTH 3a",
+      "CamId": "5822f23aedeb6c0012a2d6a8",
+      "Name": "TTH 3a",
+      "DisplayName": "Hồng Bàng - Nguyễn Thị Nhỏ"
+    },
+    {
+      "Code": "TTH 230.3",
+      "CamId": "649da495a6068200171a6cb6",
+      "Name": "TTH 230.3",
+      "DisplayName": "Mai Chí Thọ - Trần Quý Kiên (3)"
+    }
+  ]
+}
