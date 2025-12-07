@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowLeft, Home, Search, MapPin, Camera, Clock } from "lucide-react";
+import { ArrowLeft, Home, Search, MapPin, Camera } from "lucide-react";
 import { useParams } from "next/navigation";
 import camInfo from "../../../assets/cam_info.json";
 
@@ -83,24 +83,20 @@ export default function CameraDetailPage() {
                     <MapPin className="w-4 h-4" />
                     <span>Mã: {camera.Code}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    <span>Cập nhật: Thời gian thực</span>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Camera Image Placeholder */}
+       {/* Camera Image Placeholder */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-6">
           <div className="p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Hình ảnh Camera</h2>
-            <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-inner">
+            <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-inner relative group">
               <iframe 
                 src={`https://giaothong.hochiminhcity.gov.vn/expandcameraplayer/?camId=${camera.CamId}`}
-                className="w-full h-full border-0"
+                className="w-full h-[130%] border-0 -translate-y-[3%]"
                 title={`Camera ${camera.DisplayName}`}
                 allowFullScreen
                 loading="lazy"
