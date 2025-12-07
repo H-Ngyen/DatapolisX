@@ -43,6 +43,14 @@ interface WeatherData {
   };
 }
 
+interface WeatherApiResponse {
+    success: boolean;
+    data: WeatherData;
+    isFallback?: boolean;
+    errorType?: string;
+    message?: string;
+}
+
 const getStatusConfig = (score: number) => {
   if (score > 120) return { text: "Kẹt cứng", color: "text-red-600" };
   if (score > 95) return { text: "Tắc nghẽn", color: "text-red-500" };
@@ -54,19 +62,24 @@ const getStatusConfig = (score: number) => {
 export default function CameraDetailPage() {
   const params = useParams();
   const camId = params.id as string;
-  const { data: dashboardData, loading, error, execute } = useApiCall<DashboardResponse>();
+  const { data: dashboardData, loading: dashboardLoading, execute: executeDashboard } = useApiCall<DashboardResponse>();
   
-  const [weatherData, setWeatherData] = React.useState<WeatherData | null>(null);
-  const [weatherLoading, setWeatherLoading] = React.useState(false);
-  const [weatherErrorType, setWeatherErrorType] = React.useState<string | null>(null);
+  // Use useApiCall for weather data as well
+  const { 
+    data: weatherResponse, 
+    loading: weatherLoading, 
+    error: weatherApiError, 
+    execute: executeWeather 
+  } = useApiCall<WeatherApiResponse>();
 
   useEffect(() => {
-    execute('/api/dashboard');
+    executeDashboard('/api/dashboard');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   const camera = camInfo.data_filtered_final.find(cam => cam.CamId === camId);
   const weatherFetchedRef = React.useRef(false);
+  const trafficInfo = dashboardData?.data?.find(item => item.id === camId);
   
   // Real-time Clock State
   const [currentTime, setCurrentTime] = React.useState(new Date());
@@ -80,34 +93,27 @@ export default function CameraDetailPage() {
     if (camera?.DisplayName && !weatherFetchedRef.current) {
       weatherFetchedRef.current = true;
       
-      const fetchWeather = async () => {
-        setWeatherLoading(true);
-        setWeatherErrorType(null);
-        try {
-          const res = await fetch('/api/weather', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ location: camera.DisplayName })
-          });
-          const data = await res.json();
-          if (data.success) {
-            setWeatherData(data.data);
-            if (data.isFallback && data.errorType) {
-                setWeatherErrorType(data.errorType);
-            }
-          }
-        } catch (err) {
-          console.error('Weather fetch error:', err);
-        } finally {
-          setWeatherLoading(false);
-        }
-      };
-      
-      fetchWeather();
+      executeWeather('/api/weather', 'POST', { 
+        location: camera.DisplayName,
+        traffic: trafficInfo ? {
+          si_score: trafficInfo.si_score,
+          change_percent: trafficInfo.change_percent
+        } : null
+      });
     }
-  }, [camera]);
+  }, [camera, trafficInfo, executeWeather]);
 
-  const trafficInfo = dashboardData?.data?.find(item => item.id === camId);
+  // Derived state for weather data and errors
+  const weatherData = weatherResponse?.success ? weatherResponse.data : null;
+  
+  // Determine if we should show the "System Overloaded" error
+  // Case 1: API returned success=false or network error (caught by useApiCall)
+  // Case 2: API returned fallback data with errorType='rate_limit' (specific to your backend logic)
+  const showWeatherError = 
+      weatherApiError || 
+      (weatherResponse && !weatherResponse.success) || 
+      (weatherResponse?.isFallback && weatherResponse?.errorType === 'rate_limit') ||
+      (weatherResponse?.isFallback && weatherResponse?.errorType === 'server_error'); // Assuming server_error fallback exists
 
   // Format Date & Time for UI
   const formattedTime = new Intl.DateTimeFormat('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(currentTime);
@@ -144,7 +150,7 @@ export default function CameraDetailPage() {
     return "bg-gradient-to-br from-blue-500 to-indigo-600";
   };
 
-  if (loading) {
+  if (dashboardLoading) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
         <div className="flex flex-col items-center p-8">
@@ -168,23 +174,7 @@ export default function CameraDetailPage() {
     );
   }
 
-  if (error) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <Info className="w-16 h-16 text-red-300 mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Lỗi tải dữ liệu</h1>
-          <p className="text-gray-600 mb-4">Không thể kết nối đến server</p>
-          <button 
-            onClick={() => execute('/api/dashboard')}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-          >
-            Thử lại
-          </button>
-        </div>
-      </div>
-    );
-  }
+
 
   if (!camera) {
     return (
@@ -341,7 +331,7 @@ export default function CameraDetailPage() {
                       <MapPin className="w-4 h-4" />
                       <span className="text-sm font-medium">Khu vực hiện tại</span>
                     </div>
-                    <h3 className="text-2xl font-bold leading-tight">{weatherData ? camera?.DisplayName : 'Đang tải...'}</h3>
+                    <h3 className="text-2xl font-bold leading-tight">{weatherData ? camera?.DisplayName : (weatherLoading ? 'Đang tải...' : camera?.DisplayName)}</h3>
                 </div>
               </div>
 
@@ -383,23 +373,23 @@ export default function CameraDetailPage() {
                         </div>
                       </div>
                   </div>
-
-                  {/* Error Warning */}
-                  {weatherErrorType === 'rate_limit' && (
-                    <div className="mt-4 p-3 bg-red-500/20 backdrop-blur-md border border-red-500/30 rounded-lg flex items-start gap-2 relative z-10">
-                        <Info className="w-4 h-4 text-red-200 mt-0.5 shrink-0" />
-                        <div className="text-xs text-red-100">
-                            <span className="font-bold block mb-0.5">Hệ thống đang quá tải (429)</span>
-                            Dữ liệu đang hiển thị là giả lập. Vui lòng quay lại sau 1 phút để có dữ liệu thực.
-                        </div>
-                    </div>
-                  )}
                 </>
               ) : (
                 <div className="h-40 flex items-center justify-center text-white/50">
-                  Không có dữ liệu
+                  {showWeatherError ? null : "Không có dữ liệu"}
                 </div>
               )}
+
+               {/* Error Warning */}
+               {showWeatherError && (
+                <div className="mt-4 p-3 bg-red-500 text-white rounded-lg flex items-start gap-2 relative z-10 shadow-md">
+                    <Info className="w-4 h-4 text-white mt-0.5 shrink-0" />
+                    <div className="text-xs">
+                        <span className="font-bold block mb-0.5">HỆ THỐNG ĐANG QUÁ TẢI</span>
+                        Xin vui lòng thử lại sau 10 phút.
+                    </div>
+                </div>
+               )}
 
                <div className="absolute bottom-4 right-4 px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[10px] font-bold border border-white/10 z-20 text-blue-50 tracking-wider">
                     AI WEATHER
