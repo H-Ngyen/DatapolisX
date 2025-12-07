@@ -87,9 +87,11 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true, data });
 
-  } catch (error) {
+  } catch (error: any) {
     console.error("Weather API Error Detailed:", JSON.stringify(error, Object.getOwnPropertyNames(error)));
     
+    const isRateLimit = error.message?.includes("429") || error.status === 429;
+
     // Fallback data CHỈ KHI có lỗi trong quá trình fetch/xử lý từ AI
     const mockData = {
       address: {
@@ -111,9 +113,11 @@ export async function POST(req: NextRequest) {
         condition: "Không có dữ liệu",
         humidity: "--%",
         wind: "--",
-        advice: "Hệ thống đang bận, vui lòng thử lại sau"
+        advice: isRateLimit 
+          ? "Hệ thống đang quá tải (Quota Exceeded). Vui lòng thử lại sau 1 phút." 
+          : "Hệ thống đang bận, vui lòng thử lại sau."
       }
     };
-    return NextResponse.json({ success: true, data: mockData });
+    return NextResponse.json({ success: true, data: mockData, isFallback: true, errorType: isRateLimit ? 'rate_limit' : 'unknown' });
   }
 }

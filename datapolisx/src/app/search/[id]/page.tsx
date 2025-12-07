@@ -57,6 +57,7 @@ export default function CameraDetailPage() {
   
   const [weatherData, setWeatherData] = React.useState<WeatherData | null>(null);
   const [weatherLoading, setWeatherLoading] = React.useState(false);
+  const [weatherErrorType, setWeatherErrorType] = React.useState<string | null>(null);
 
   useEffect(() => {
     execute('/api/dashboard');
@@ -80,6 +81,7 @@ export default function CameraDetailPage() {
       
       const fetchWeather = async () => {
         setWeatherLoading(true);
+        setWeatherErrorType(null);
         try {
           const res = await fetch('/api/weather', {
             method: 'POST',
@@ -89,6 +91,9 @@ export default function CameraDetailPage() {
           const data = await res.json();
           if (data.success) {
             setWeatherData(data.data);
+            if (data.isFallback && data.errorType) {
+                setWeatherErrorType(data.errorType);
+            }
           }
         } catch (err) {
           console.error('Weather fetch error:', err);
@@ -377,6 +382,17 @@ export default function CameraDetailPage() {
                         </div>
                       </div>
                   </div>
+
+                  {/* Error Warning */}
+                  {weatherErrorType === 'rate_limit' && (
+                    <div className="mt-4 p-3 bg-red-500/20 backdrop-blur-md border border-red-500/30 rounded-lg flex items-start gap-2 relative z-10">
+                        <Info className="w-4 h-4 text-red-200 mt-0.5 shrink-0" />
+                        <div className="text-xs text-red-100">
+                            <span className="font-bold block mb-0.5">Hệ thống đang quá tải (429)</span>
+                            Dữ liệu đang hiển thị là giả lập. Vui lòng quay lại sau 1 phút để có dữ liệu thực.
+                        </div>
+                    </div>
+                  )}
                 </>
               ) : (
                 <div className="h-40 flex items-center justify-center text-white/50">
