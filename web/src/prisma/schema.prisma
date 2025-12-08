@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model camera_detections {
+  id            Int      @id @default(autoincrement())
+  minio_key     String   @unique @db.VarChar(255)
+  camera_id     String   @db.VarChar(50)
+  detections    Json?
+  total_objects Int
+  created_at    DateTime @db.Timestamp(6)
+}
+
+model camera_predictions {
+  id                      Int       @id @default(autoincrement())
+  camera_id               String    @db.VarChar(50)
+  forecast_timestamp      DateTime  @db.Timestamptz(6)
+  predicted_total_objects Float
+  minutes_resample        Int       @db.SmallInt
+  prediction_time         DateTime? @default(now()) @db.Timestamptz(6)
+  forecast_hour           Int?      @db.SmallInt
+  forecast_dayofweek      Int?      @db.SmallInt
+  forecast_is_weekend     Boolean?
+  forecast_dayofyear      Int?      @db.SmallInt
+  forecast_weekofyear     Int?      @db.SmallInt
+  forecast_month          Int?      @db.SmallInt
+}

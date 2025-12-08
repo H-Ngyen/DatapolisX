@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  camera-ingest:
+    build:
+      context: ./camera-ingest
+    image: camera-ingest:latest
+    container_name: camera-ingest-service
+    restart: always
+    env_file:
+      - camera-ingest/.env
+      
+  image-process:
+    build:
+      context: ./image-process
+    image: image-process:latest
+    restart: always
+    env_file:
+      - image-process/.env
+
+
+
+#docker compose -f image-process-compose.yml up -d --scale image-process=3
+#docker compose -f image-process-compose.yml logs -f camera-ingest
+#docker compose -f image-process-compose.yml logs -f image-process
+
+
+#docker compose up -d --build
