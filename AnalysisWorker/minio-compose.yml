@@ -27,3 +27,4 @@ services:
 
 volumes:
   minio_data: # Volume này đảm bảo dữ liệu của bạn không bị mất khi container bị xóa.
+

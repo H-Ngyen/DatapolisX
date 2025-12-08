@@ -26,26 +26,47 @@ We need to start PostgreSQL and MinIO first as other services depend on them.
     cd AnalysisWorker
     ```
 
-2.  **Start PostgreSQL:**
-    ```bash
-    docker-compose -f postgres-service-compose.yml up -d
-    ```
-    *   This starts a Postgres database on port `5432`.
-    *   Default User: `neondb_owner` / Password: `password` / DB: `DatapolisX`
+2.  **Start PostgreSQL**
 
-3.  **Start MinIO (Object Storage):**
-    ```bash
-    docker-compose -f minio-compose.yml up -d
-    ```
-    *   Access MinIO Console at: `http://localhost:9001`
-    *   Default Login: `minioadmin` / `minioadmin`
+``` bash
+docker-compose -f postgres-service-compose.yml up -d
+```
 
-4.  **⚡ CRITICAL STEP: Create MinIO Bucket**
-    *   Open your browser and go to `http://localhost:9001`.
-    *   Login with `minioadmin` / `minioadmin`.
-    *   Go to **Buckets** -> **Create Bucket**.
-    *   Name the bucket: **`images`**.
-    *   *Without this step, the image processing worker will crash.*
+-   PostgreSQL runs on port **5432**\
+-   **Default credentials:**
+    -   User: `neondb_owner`
+    -   Password: `password`
+    -   Database: `DatapolisX`
+
+### 📥 Load Schema After PostgreSQL Starts
+
+Run the following command to import the schema:
+
+``` bash
+docker exec -i analysisworker-db-1 psql -U neondb_owner -d DatapolisX < ./init-scripts/schema.sql
+```
+
+> Note: The container must be named **analysisworker-db-1** (according
+> to your compose file).\
+> If it's different, run `docker ps` to check and adjust.
+
+
+3. **Start MinIO (Object Storage)**
+
+``` bash
+docker-compose -f minio-compose.yml up -d
+```
+-   MinIO Console: **http://localhost:9001**
+-   S3 API Endpoint: **http://localhost:9000**
+-   **Default Login:** `minioadmin` / `minioadmin`
+
+4. ⚡ **CRITICAL STEP: Create MinIO Bucket**
+    * Open **http://localhost:9001**
+    * Log in: `minioadmin` / `minioadmin`
+    * Navigate to **Buckets → Create Bucket**
+    * Create bucket named: **`images`**
+
+> ❗ Without this bucket, the image processing worker will **crash**.
 
 ---
 
@@ -94,28 +115,65 @@ Now we set up the Next.js frontend and initialize the database schema.
 
 This is the most complex part due to the Google Cloud dependency.
 
-### A. Environment Setup
+Python Workers Setup (Docker-Based)
 
-1.  Navigate to `AnalysisWorker`:
-    ```bash
-    cd ../AnalysisWorker
-    ```
-2.  Create a virtual environment (Recommended):
-    ```bash
-    python -m venv venv
-    # Windows:
-    venv\Scripts\activate
-    # Mac/Linux:
-    source venv/bin/activate
-    ```
-3.  Install dependencies for **all** sub-projects:
-    ```bash
-    pip install -r camera-ingest/requirements.txt
-    pip install -r image-process/requirements.txt
-    pip install -r image-predict/requirements.txt
-    ```
+All Python workers run inside Docker containers.\
+No local virtual environment or manual installation is required.
 
-### B. Google Cloud Credentials (Required)
+
+### A. Start Image Processing Workers
+
+Start the **image-process** service and scale it to **3 worker
+instances**:
+
+``` bash
+docker compose -f image-process-compose.yml up -d --scale image-process=3
+```
+
+### B. Check Worker Logs
+
+Verify that both services start correctly.
+
+**1. camera-ingest**
+
+``` bash
+docker comose -f image-process-compose.yml logs -f camera-ingest
+```
+
+**2. image-process**
+
+``` bash
+docker compose -f image-process-compose.yml logs -f image-process
+```
+
+**Continue only when both services are running without errors.**
+
+
+### C. Start the Image Prediction Worker
+
+Wait about **1 minute** for the previous services to fully initialize and push data to postgres,
+then start:
+
+``` bash
+docker compose -f image-predict-compose.yml up -d
+```
+
+### D. Final Verification
+
+Run the following to confirm all containers are running:
+
+``` bashê
+docker ps
+```
+You should see the following containers:
+
+-   MinIO (9000 - 9001)
+-   PostgreSQL (5432)
+-   camera-ingest (1 instance)
+-   image-process (3 instances)
+-   image-predict (1 instance)
+
+### E. Google Cloud Credentials (Required)
 
 The system needs a Service Account Key to talk to Pub/Sub.
 
@@ -136,7 +194,7 @@ The system needs a Service Account Key to talk to Pub/Sub.
     *   You cannot run the **Real-time Ingest -> Process** pipeline fully.
     *   However, you can still run the **Web App** and manually inject data into the Database to test the UI.
 
-### C. Running the Workers (With GCP Key)
+### F. Running the Workers (With GCP Key)
 
 You need to run these services in separate terminals.
 

@@ -10,6 +10,9 @@ services:
       - "5432:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
-      - ./init-scripts:/docker-entrypoint-initdb.d
+#      - ./init-scripts:/docker-entrypoint-initdb.d:z
 volumes:
   pg_data:
+
+# docker exec -i analysisworker-db-1 psql -U neondb_owner -d DatapolisX < ./init-scripts/schema.sql
+# docker compose -f image-process-compose.yml logs -f db

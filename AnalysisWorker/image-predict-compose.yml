@@ -1,0 +1,12 @@
+services:
+  image-predict:
+    build:
+      context: ./image-predict
+    image: image-predict:latest
+    container_name: image-predict-service
+    restart: always
+    env_file:
+      - image-predict/.env
+
+#docker compose -f image-predict-compose.yml up -d
+##docker compose -f image-process-compose.yml logs -f image-predict
