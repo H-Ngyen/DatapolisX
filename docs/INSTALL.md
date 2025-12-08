@@ -70,8 +70,8 @@ Now we set up the Next.js frontend and initialize the database schema.
     ```
     Open `.env` and verify the `DATABASE_URL`. It should match the Postgres credentials started in Step 2:
     ```env
-        DATABASE_URL='your connection string'
-        GEMINI_API_KEY=your gemini api key
+    DATABASE_URL='your connection string'
+    GEMINI_API_KEY=your gemini api key
     ```
 
 4.  **Initialize Database Schema (Prisma):**

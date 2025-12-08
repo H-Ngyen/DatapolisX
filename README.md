@@ -10,36 +10,8 @@
 
 The system follows a microservices architecture separating data ingestion, processing, storage, and presentation.
 
-```mermaid
-graph TB
-    subgraph "External"
-        CAM["🎥 Traffic Cameras"]
-    end
+![architecture](https://github.com/user-attachments/assets/bbfc8dc7-d687-49fd-9ade-818cff928b80)
 
-    subgraph "AnalysisWorker (Python)"
-        INGEST["📥 Camera Ingest"]
-        QUEUE["📨 Pub/Sub"]
-        PROCESS["🔍 Image Process (YOLO)"]
-        PREDICT["🤖 Image Predict (ML)"]
-    end
-
-    subgraph "Storage"
-        MINIO["📦 MinIO"]
-        POSTGRES[("🗄️ PostgreSQL")]
-    end
-
-    subgraph "Web App (Next.js)"
-        UI["⚛️ Dashboard UI"]
-        API["🔌 API Routes"]
-    end
-
-    CAM --> INGEST
-    INGEST --> QUEUE
-    QUEUE --> PROCESS
-    PROCESS --> MINIO & POSTGRES
-    PREDICT --> POSTGRES
-    UI <--> API <--> POSTGRES
-```
 
 ## 🛠 Tech Stack
 
