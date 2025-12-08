@@ -60,6 +60,12 @@ DatapolisX/
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.
 
+### Contact
+
+- Nguyen Ngo Hoang Nguyen: hoangnguyennn0210@gmail.com
+- Cao Phan Khai: caophankhai2004@gmail.com
+- Nguyen Khac Minh Tan: devmind.tan@gmail.com
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
