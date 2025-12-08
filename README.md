@@ -10,7 +10,7 @@
 
 The system follows a microservices architecture separating data ingestion, processing, storage, and presentation.
 
-![architecture](https://github.com/user-attachments/assets/bbfc8dc7-d687-49fd-9ade-818cff928b80)
+![architecture](https://github.com/user-attachments/assets/1f40160b-1d87-4d8b-8e7f-9298070947e2)
 
 
 ## 🛠 Tech Stack
