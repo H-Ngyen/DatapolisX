@@ -19,7 +19,7 @@ jobs:
           username: bitnami
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           script: |
-            cd /opt/bitnami/projects/DatapolisX
+            cd ~/DatapolisX
             git pull origin main
             cd web
             npm install
