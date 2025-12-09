@@ -1,0 +1,28 @@
+name: Deploy to Lightsail
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.LIGHTSAIL_HOST }}
+          username: bitnami
+          key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+          script: |
+            cd /opt/bitnami/projects/DatapolisX
+            git pull origin main
+            cd web
+            npm install
+            npx prisma generate
+            npm run build
+            pm2 restart datapolisx-web
