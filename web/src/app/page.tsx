@@ -34,7 +34,7 @@ import {
   Github
 } from "lucide-react";
 import { useApiCall } from "../hooks/useApiCall";
-import camInfo from "../data/camInfo";
+import camInfo from "../assets/cam_info.json";
 
 // --- Camera Location Helper ---
 const getLocationByCamId = (camId: string): string => {
