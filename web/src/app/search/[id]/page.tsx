@@ -25,7 +25,7 @@ import Image from "next/image";
 import { ArrowLeft, Home, Search, MapPin, Camera, Clock, Info, Wind, Droplets, Github } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useApiCall } from "../../../hooks/useApiCall";
-import camInfo from "../../../assets/cam_info.json";
+import camInfo from "../../../data/camInfo";
 
 interface TrafficItem {
   id: string;

@@ -24,7 +24,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Search, Home, MapPin, Github } from "lucide-react";
 import { useApiCall } from "../../hooks/useApiCall";
-import camInfo from "../../assets/cam_info.json";
+import camInfo from "../../data/camInfo";
 
 
 

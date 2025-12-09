@@ -1,4 +1,11 @@
-{
+export interface CameraInfo {
+  Code: string;
+  CamId: string;
+  Name: string;
+  DisplayName: string;
+}
+
+export const camInfo: { data_filtered_final: CameraInfo[] } = {
   "data_filtered_final": [
     {
       "Code": "TTH 406",
@@ -4699,4 +4706,6 @@
       "DisplayName": "Mai Chí Thọ - Trần Quý Kiên (3)"
     }
   ]
-}
+};
+
+export default camInfo;
