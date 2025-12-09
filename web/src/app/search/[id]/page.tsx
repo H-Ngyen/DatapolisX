@@ -93,7 +93,7 @@ export default function CameraDetailPage() {
   } = useApiCall<WeatherApiResponse>();
 
   useEffect(() => {
-    executeDashboard('/api/dashboard');
+    executeDashboard(`/api/traffic?camera_id${camId}`);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   

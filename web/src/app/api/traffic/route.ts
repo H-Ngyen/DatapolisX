@@ -20,9 +20,10 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { withErrorHandler } from '@/lib/errorHandler'
-import { dashboardController } from '@/controllers/dashboardController'
+import trafficController from '@/controllers/trafficController'
 
-export const GET = withErrorHandler(async () => {
-  const users = await dashboardController.getDashboardData()
-  return NextResponse.json({ success: true, data: users })
-})
+export const GET = withErrorHandler(async (req: NextRequest) => {
+  const id = req.nextUrl.searchParams.get('camera_id');
+  const trafficMetrics = await trafficController.getTrafficMetrics(id);  
+  return NextResponse.json({ success: true, data: trafficMetrics });
+});

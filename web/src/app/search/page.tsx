@@ -54,7 +54,7 @@ export default function SearchPage() {
   const { data: dashboardData, loading, execute } = useApiCall<DashboardResponse>();
 
   useEffect(() => {
-    execute('/api/dashboard');
+    execute('/api/traffic');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
