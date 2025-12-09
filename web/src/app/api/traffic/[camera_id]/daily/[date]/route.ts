@@ -32,8 +32,6 @@ interface RouteParams {
 
 export const GET = withErrorHandler(async (req: NextRequest, { params }: RouteParams) => {
   const { camera_id, date } = params;
-  
   const dailyStats = await trafficController.getDailyTrafficStats(camera_id, date);
-  
   return NextResponse.json({ success: true, data: dailyStats });
 });
