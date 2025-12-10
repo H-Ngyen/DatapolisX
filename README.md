@@ -17,7 +17,7 @@ The system follows a microservices architecture separating data ingestion, proce
 
 *   **Frontend:** Next.js 14, React, Tailwind CSS, TypeScript.
 *   **Backend Services:** Python 3.10+.
-*   **AI/ML:** YOLOv8 (Object Detection), Scikit-learn (Prediction).
+*   **AI/ML:** YOLOv11 (Object Detection), Scikit-learn (Prediction).
 *   **Infrastructure:** Docker, Docker Compose.
 *   **Storage:** PostgreSQL (Data), MinIO (Images).
 *   **Message Queue:** Google Cloud Pub/Sub.
