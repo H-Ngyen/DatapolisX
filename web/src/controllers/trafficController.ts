@@ -153,12 +153,13 @@ const getTrafficMetrics = async (id: string | null = null) => {
 }
 
 async function getDailyTrafficStats(cameraId: string, dateStr: string) {
-  // 1. Xác định khung thời gian (Start of Day -> End of Day)
-  const startDate = new Date(`${dateStr}T00:00:00.000Z`); // Giả định server chạy UTC hoặc xử lý múi giờ phù hợp
-  const endDate = new Date(`${dateStr}T23:59:59.999Z`);
-
-  // Có thể cần điều chỉnh múi giờ +7 tuỳ vào config server của bạn
-  // Ví dụ: startDate.setHours(startDate.getHours() - 7); 
+  // 1. Xác định khung thời gian theo múi giờ Việt Nam (UTC+7)
+  const VN_OFFSET = 7 * 60 * 60 * 1000; // 7 giờ tính bằng milliseconds
+  
+  // Parse date string và tạo timestamp cho 00:00:00 và 23:59:59 theo giờ VN
+  const baseDate = new Date(dateStr + 'T00:00:00.000+07:00');
+  const startDate = new Date(baseDate.getTime());
+  const endDate = new Date(baseDate.getTime() + 24 * 60 * 60 * 1000 - 1); 
 
   // 2. Lấy dữ liệu Detections và Max Capacity
   const [detections, capacityRecord] = await Promise.all([
@@ -212,7 +213,9 @@ async function getDailyTrafficStats(cameraId: string, dateStr: string) {
   // 4. Duyệt qua dữ liệu và lấp đầy các xô (buckets)
   for (const record of detections) {
     const recordDate = new Date(record.created_at);
-    const hourIndex = recordDate.getHours(); 
+    // Chuyển sang giờ Việt Nam (UTC+7)
+    const vnTime = new Date(recordDate.getTime() + VN_OFFSET);
+    const hourIndex = vnTime.getUTCHours(); 
 
     if (hourIndex < 0 || hourIndex > 23) continue;
 
@@ -233,8 +236,9 @@ async function getDailyTrafficStats(cameraId: string, dateStr: string) {
     bucket.sumCar += car;
     bucket.sumBig += big;
 
-    // Tính tổng từ 0:00 đến hiện tại
-    if (recordDate <= now) {
+    // Tính tổng từ 0:00 đến hiện tại (so sánh theo giờ VN)
+    const nowVN = new Date(now.getTime() + VN_OFFSET);
+    if (vnTime <= nowVN) {
       totalSiUntilNow += instantSi;
       totalCountUntilNow++;
       totalVehiclesUntilNow += total;
