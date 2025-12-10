@@ -116,7 +116,7 @@ const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentD
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between font-medium whitespace-nowrap">
               <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">
-                Chỉ số tắc nghẽn (SI)
+                Độ bão hòa (SI)
               </span>
             </div>
             <div className="flex overflow-hidden rounded-sm transition-[max-height] duration-500 max-md:flex-col max-h-40 md:max-h-14">
@@ -361,9 +361,12 @@ export default function TrafficDashboard() {
             <Info className="w-4 h-4 flex-shrink-0 mt-0.5 text-blue-600" />
             <div className="text-sm text-blue-800">
               <p className="font-medium mb-1">Về chỉ số giao thông</p>
-              <p className="text-blue-700 leading-relaxed">
-                Chỉ số tắc nghẽn được tính toán dựa trên dữ liệu từ hệ thống camera AI phân tích giao thông thời gian thực, 
+              <p className="text-blue-700 leading-relaxed mb-3">
+                <span className="font-semibold">Độ bão hòa (SI):</span> Được tính toán dựa trên dữ liệu từ hệ thống camera AI phân tích giao thông thời gian thực, 
                 kết hợp với thuật toán dự đoán bất thường để đánh giá mức độ tắc nghẽn tại các điểm quan trọng trong thành phố.
+              </p>
+              <p className="text-blue-700 leading-relaxed">
+                <span className="font-semibold">Xu hướng:</span> Phần trăm tăng hoặc giảm khả năng kẹt xe trong vòng 10 phút tới.
               </p>
             </div>
           </div>

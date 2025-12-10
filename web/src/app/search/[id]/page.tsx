@@ -363,7 +363,7 @@ export default function CameraDetailPage() {
                   </p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-lg">
-                  <h3 className="font-medium text-gray-900 mb-1">Chỉ số SI</h3>
+                  <h3 className="font-medium text-gray-900 mb-1">Độ bão hòa (SI)</h3>
                   <p className="text-2xl font-bold text-blue-600">{trafficInfo.si_score}</p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-lg">
@@ -393,7 +393,7 @@ export default function CameraDetailPage() {
                 <h2 className="text-lg font-semibold text-gray-900">Biểu đồ Giao thông Hôm nay</h2>
                 <div className="flex items-center gap-2 text-xs text-gray-500">
                   <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                  <span>Chỉ số SI</span>
+                  <span>Độ bão hòa (SI)</span>
                 </div>
               </div>
               
