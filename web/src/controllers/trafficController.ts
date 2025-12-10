@@ -32,7 +32,7 @@ const getTrafficMetrics = async (id: string | null = null) => {
   });
 
   const anchorNow = lastRecord?.created_at || new Date();
-  const minutesWindow = new Date(anchorNow.getTime() - 5 * 60 * 1000);
+  const minutesWindow = new Date(anchorNow.getTime() - 2 * 60 * 1000);
 
   const baseWhere = {
     ...filterId,
@@ -128,7 +128,7 @@ const getTrafficMetrics = async (id: string | null = null) => {
     }
 
     // --- TÍNH TOÁN CHỈ SỐ ---
-    const siScore = (avgCurrentRaw / (capacity * 1.3)) * 100;
+    const siScore = avgCurrentRaw / capacity * 100;
 
     let changePercent = 0;
 
