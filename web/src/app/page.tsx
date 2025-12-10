@@ -101,16 +101,16 @@ const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentD
           
           {/* Top: Title & Time */}
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 tracking-tight mb-1">
+            <h1 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-1">
               Xếp hạng Giao thông
             </h1>
-            <div className="flex items-center gap-2 text-sm">
-              <Clock className="w-3.5 h-3.5 text-gray-500" />
+            <div className="flex flex-wrap items-center gap-1 md:gap-2 text-xs md:text-sm">
+              <Clock className="w-3 md:w-3.5 h-3 md:h-3.5 text-gray-500" />
               <span className="font-bold text-gray-500">{currentTime}</span>
               <span className="text-gray-400">•</span>
-              <span className="text-gray-500">{currentDate}</span>
-              <span className="text-gray-400">•</span>
-              <span className="text-gray-500">TP. Hồ Chí Minh</span>
+              <span className="text-gray-500 hidden sm:inline">{currentDate}</span>
+              <span className="text-gray-400 hidden sm:inline">•</span>
+              <span className="text-gray-500">TP. HCM</span>
             </div>
           </div>
 
@@ -230,21 +230,21 @@ export default function TrafficDashboard() {
       <div className="bg-slate-900 border-b border-slate-800">
         <div className="max-w-4xl mx-auto px-4 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-8">
-              <h1 className="text-2xl font-bold text-white cursor-pointer tracking-tight flex items-center gap-3" onClick={() => window.location.href = '/'}>
+            <div className="flex items-center gap-4 md:gap-8">
+              <h1 className="text-xl md:text-2xl font-bold text-white cursor-pointer tracking-tight flex items-center gap-3" onClick={() => window.location.href = '/'}>
                 DatapolisX
               </h1>
-              <nav className="flex items-center gap-3">
-                <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600/20 border border-blue-500/30 rounded-lg shadow-sm cursor-pointer">
-                  <Home className="w-4 h-4" />
-                  Trang chủ
+              <nav className="flex items-center gap-2 md:gap-3">
+                <button className="flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 text-xs md:text-sm font-medium text-white bg-blue-600/20 border border-blue-500/30 rounded-lg shadow-sm cursor-pointer">
+                  <Home className="w-3.5 md:w-4 h-3.5 md:h-4" />
+                  <span className="hidden sm:inline">Trang chủ</span>
                 </button>
                 <button 
                   onClick={() => window.location.href = '/search'}
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
+                  className="flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 text-xs md:text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
                 >
-                  <Search className="w-4 h-4" />
-                  Tìm kiếm
+                  <Search className="w-3.5 md:w-4 h-3.5 md:h-4" />
+                  <span className="hidden sm:inline">Tìm kiếm</span>
                 </button>
               </nav>
             </div>
@@ -277,50 +277,91 @@ export default function TrafficDashboard() {
               return (
                 <div 
                   key={item.id} 
-                  className="group flex items-center py-4 px-4 hover:bg-slate-50 transition-colors cursor-pointer"
+                  className="group py-3 md:py-4 px-3 md:px-4 hover:bg-slate-50 transition-colors cursor-pointer"
                   onClick={() => window.location.href = `/search/${item.id}`}
                 >
-                  
-                  {/* Column 1: Rank */}
-                  <div className="w-12 md:w-16 flex-shrink-0 text-center">
-                    <span className="text-xl font-bold text-gray-400 group-hover:text-gray-600 transition-colors">
-                      {item.rank}
-                    </span>
-                  </div>
-
-                  {/* Column 2: Location & Context */}
-                  <div className="flex-1 min-w-0 pr-4">
-                    <div className="flex items-baseline gap-2 mb-1">
-                      <h3 className="text-base font-bold text-gray-800 truncate">
-                        {item.location}
-                      </h3>
+                  {/* Desktop Layout */}
+                  <div className="hidden md:flex items-center">
+                    {/* Column 1: Rank */}
+                    <div className="w-16 flex-shrink-0 text-center">
+                      <span className="text-xl font-bold text-gray-400 group-hover:text-gray-600 transition-colors">
+                        {item.rank}
+                      </span>
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                      {/* Vehicle Composition */}
-                      <div className={`flex items-center gap-1 text-[11px] font-medium ${vehicleInfo.color}`}>
-                        {vehicleInfo.icon}
-                        <span>{vehicleInfo.text}</span>
+                    {/* Column 2: Location & Context */}
+                    <div className="flex-1 min-w-0 pr-4">
+                      <div className="flex items-baseline gap-2 mb-1">
+                        <h3 className="text-base font-bold text-gray-800 truncate">
+                          {item.location}
+                        </h3>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                        <div className={`flex items-center gap-1 text-[11px] font-medium ${vehicleInfo.color}`}>
+                          {vehicleInfo.icon}
+                          <span>{vehicleInfo.text}</span>
+                        </div>
                       </div>
                     </div>
+
+                    {/* Column 3: Change Percentage */}
+                    <div className="w-20 flex-shrink-0 text-center">
+                      <div className={`text-sm font-bold ${
+                        item.change_percent > 0 ? 'text-red-500' : 
+                        item.change_percent < 0 ? 'text-green-500' : 'text-gray-400'
+                      }`}>
+                        {item.change_percent > 0 ? '+' : ''}{item.change_percent}%
+                      </div>
+                      <div className="text-[10px] text-gray-400 mt-0.5">
+                        {item.change_percent > 0 ? 'Tăng' : item.change_percent < 0 ? 'Giảm' : 'Ổn định'}
+                      </div>
+                    </div>
+
+                    {/* Column 4: Status Badge */}
+                    <div className="flex-shrink-0 pl-2">
+                      <StatusBadge data={item} />
+                    </div>
                   </div>
 
-                  {/* Column 3: Change Percentage */}
-                  <div className="w-20 flex-shrink-0 text-center">
-                    <div className={`text-sm font-bold ${
-                      item.change_percent > 0 ? 'text-red-500' : 
-                      item.change_percent < 0 ? 'text-green-500' : 'text-gray-400'
-                    }`}>
-                      {item.change_percent > 0 ? '+' : ''}{item.change_percent}%
+                  {/* Mobile Layout */}
+                  <div className="md:hidden">
+                    {/* Row 1: Rank + Location */}
+                    <div className="flex items-start gap-3 mb-2">
+                      <div className="w-8 flex-shrink-0 text-center pt-1">
+                        <span className="text-lg font-bold text-gray-400">
+                          {item.rank}
+                        </span>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-bold text-gray-800 leading-tight mb-1">
+                          {item.location}
+                        </h3>
+                        <div className={`flex items-center gap-1 text-[10px] font-medium ${vehicleInfo.color}`}>
+                          {vehicleInfo.icon}
+                          <span>{vehicleInfo.text}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-[10px] text-gray-400 mt-0.5">
-                      {item.change_percent > 0 ? 'Tăng' : item.change_percent < 0 ? 'Giảm' : 'Ổn định'}
-                    </div>
-                  </div>
 
-                  {/* Column 4: Status Badge */}
-                  <div className="flex-shrink-0 pl-2">
-                    <StatusBadge data={item} />
+                    {/* Row 2: Xu hướng + Trạng thái */}
+                    <div className="flex items-center justify-between pl-11">
+                      <div className="flex items-center gap-4">
+                        {/* Xu hướng */}
+                        <div className="flex items-center gap-2">
+                          <span className="text-[10px] text-gray-500 font-medium">Xu hướng:</span>
+                          <div className={`text-xs font-bold ${
+                            item.change_percent > 0 ? 'text-red-500' : 
+                            item.change_percent < 0 ? 'text-green-500' : 'text-gray-400'
+                          }`}>
+                            {item.change_percent > 0 ? '+' : ''}{item.change_percent}%
+                          </div>
+                        </div>
+                      </div>
+                      {/* Trạng thái */}
+                      <div className="scale-90">
+                        <StatusBadge data={item} />
+                      </div>
+                    </div>
                   </div>
 
                 </div>
