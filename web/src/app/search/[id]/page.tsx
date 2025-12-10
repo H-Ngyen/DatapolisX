@@ -32,11 +32,46 @@ interface TrafficItem {
   si_score: number;
   composition: { primary: string };
   change_percent: number;
+  vehicle_count?: {
+    bigcar: number;
+    car: number;
+    motorbike: number;
+  };
 }
 
 interface DashboardResponse {
   success: boolean;
   data: TrafficItem[];
+}
+
+interface ChartDataPoint {
+  time_display: string;
+  hour_index: number;
+  si_score: number;
+  total_count: number;
+  motorbike: number;
+  car: number;
+  big_car: number;
+}
+
+interface DailyStatsResponse {
+  success: boolean;
+  data: {
+    camera_id: string;
+    date: string;
+    summary: {
+      total_records: number;
+      estimated_capacity: number;
+      avg_si_until_now: number;
+      avg_vehicles_until_now: number;
+      vehicle_breakdown: {
+        motorbike: { avg_count: number; percentage: number };
+        car: { avg_count: number; percentage: number };
+        big_car: { avg_count: number; percentage: number };
+      };
+    };
+    chart_data: ChartDataPoint[];
+  };
 }
 
 interface WeatherData {
@@ -83,8 +118,7 @@ export default function CameraDetailPage() {
   const params = useParams();
   const camId = params.id as string;
   const { data: dashboardData, loading: dashboardLoading, execute: executeDashboard } = useApiCall<DashboardResponse>();
-  
-  // Use useApiCall for weather data as well
+  const { data: dailyStats, loading: chartLoading, execute: executeDailyStats } = useApiCall<DailyStatsResponse>();
   const { 
     data: weatherResponse, 
     loading: weatherLoading, 
@@ -93,7 +127,9 @@ export default function CameraDetailPage() {
   } = useApiCall<WeatherApiResponse>();
 
   useEffect(() => {
-    executeDashboard('/api/dashboard');
+    executeDashboard(`/api/traffic?camera_id=${camId}`);
+    const today = new Date().toISOString().split('T')[0];
+    executeDailyStats(`/api/traffic/${camId}/daily/${today}`);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
@@ -110,30 +146,44 @@ export default function CameraDetailPage() {
   }, []);
 
   useEffect(() => {
-    if (camera?.DisplayName && !weatherFetchedRef.current) {
+    if (camera?.DisplayName && trafficInfo && dailyStats?.data && !weatherFetchedRef.current) {
       weatherFetchedRef.current = true;
       
       executeWeather('/api/weather', 'POST', { 
         location: camera.DisplayName,
-        traffic: trafficInfo ? {
+        traffic: {
           si_score: trafficInfo.si_score,
           change_percent: trafficInfo.change_percent
-        } : null
+        },
+        daily_chart: dailyStats.data.chart_data
       });
     }
-  }, [camera, trafficInfo, executeWeather]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [trafficInfo, dailyStats]);
 
   // Derived state for weather data and errors
   const weatherData = weatherResponse?.success ? weatherResponse.data : null;
   
-  // Determine if we should show the "System Overloaded" error
-  // Case 1: API returned success=false or network error (caught by useApiCall)
-  // Case 2: API returned fallback data with errorType='rate_limit' (specific to your backend logic)
-  const showWeatherError = 
-      weatherApiError || 
-      (weatherResponse && !weatherResponse.success) || 
-      (weatherResponse?.isFallback && weatherResponse?.errorType === 'rate_limit') ||
-      (weatherResponse?.isFallback && weatherResponse?.errorType === 'server_error'); // Assuming server_error fallback exists
+  // Determine error type and message
+  const getWeatherErrorInfo = () => {
+    if (weatherApiError) {
+      return {
+        show: true,
+        title: 'LỖI KẾT NỐI',
+        message: 'Không thể kết nối đến dịch vụ thời tiết. Vui lòng kiểm tra kết nối mạng.'
+      };
+    }
+    if (weatherResponse && !weatherResponse.success) {
+      return {
+        show: true,
+        title: 'LỖI HỆ THỐNG',
+        message: weatherResponse.message || 'Không thể lấy dữ liệu thời tiết. Vui lòng thử lại sau.'
+      };
+    }
+    return { show: false, title: '', message: '' };
+  };
+  
+  const weatherError = getWeatherErrorInfo();
 
   // Format Date & Time for UI
   const formattedTime = new Intl.DateTimeFormat('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(currentTime);
@@ -220,24 +270,24 @@ export default function CameraDetailPage() {
       <div className="bg-slate-900 border-b border-slate-800">
         <div className="max-w-4xl mx-auto px-4 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-8">
-              <h1 className="text-2xl font-bold text-white cursor-pointer tracking-tight flex items-center gap-3" onClick={() => window.location.href = '/'}>
+            <div className="flex items-center gap-4 md:gap-8">
+              <h1 className="text-xl md:text-2xl font-bold text-white cursor-pointer tracking-tight flex items-center gap-3" onClick={() => window.location.href = '/'}>
                 DatapolisX
               </h1>
-              <nav className="flex items-center gap-3">
+              <nav className="flex items-center gap-2 md:gap-3">
                 <button 
                   onClick={() => window.location.href = '/'}
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
+                  className="flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 text-xs md:text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
                 >
-                  <Home className="w-4 h-4" />
-                  Trang chủ
+                  <Home className="w-3.5 md:w-4 h-3.5 md:h-4" />
+                  <span className="hidden sm:inline">Trang chủ</span>
                 </button>
                 <button 
                   onClick={() => window.location.href = '/search'}
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
+                  className="flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 text-xs md:text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg cursor-pointer transition-all"
                 >
-                  <Search className="w-4 h-4" />
-                  Tìm kiếm
+                  <Search className="w-3.5 md:w-4 h-3.5 md:h-4" />
+                  <span className="hidden sm:inline">Tìm kiếm</span>
                 </button>
               </nav>
             </div>
@@ -335,6 +385,135 @@ export default function CameraDetailPage() {
           </div>
         </div>
 
+        {/* Traffic Chart */}
+        {dailyStats?.data && (
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-8">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-lg font-semibold text-gray-900">Biểu đồ Giao thông Hôm nay</h2>
+                <div className="flex items-center gap-2 text-xs text-gray-500">
+                  <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <span>Chỉ số SI</span>
+                </div>
+              </div>
+              
+              {chartLoading ? (
+                <div className="h-64 flex items-center justify-center">
+                  <Clock className="w-8 h-8 animate-spin text-gray-400" />
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {/* Summary Stats */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div className="p-3 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border border-blue-200">
+                      <p className="text-xs text-blue-600 font-medium mb-1">SI Trung bình</p>
+                      <p className="text-2xl font-bold text-blue-900">{dailyStats.data.summary.avg_si_until_now}</p>
+                    </div>
+                    <div className="p-3 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
+                      <p className="text-xs text-green-600 font-medium mb-1">Xe máy</p>
+                      <p className="text-2xl font-bold text-green-900">{dailyStats.data.summary.vehicle_breakdown.motorbike.percentage}%</p>
+                    </div>
+                    <div className="p-3 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg border border-purple-200">
+                      <p className="text-xs text-purple-600 font-medium mb-1">Xe lớn</p>
+                      <p className="text-2xl font-bold text-purple-900">{dailyStats.data.summary.vehicle_breakdown.car.percentage}%</p>
+                    </div>
+                  </div>
+
+                  {/* Line Chart */}
+                  <div className="relative h-64 bg-gradient-to-b from-slate-50 to-white rounded-lg border border-gray-200 p-4">
+                    <svg className="w-full h-full" viewBox="0 0 1000 200" preserveAspectRatio="none">
+                      {/* Grid lines */}
+                      <line x1="0" y1="50" x2="1000" y2="50" stroke="#e5e7eb" strokeWidth="1" />
+                      <line x1="0" y1="100" x2="1000" y2="100" stroke="#e5e7eb" strokeWidth="1" />
+                      <line x1="0" y1="150" x2="1000" y2="150" stroke="#e5e7eb" strokeWidth="1" />
+                      
+                      {/* Area fill */}
+                      <defs>
+                        <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+                          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
+                          <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.05" />
+                        </linearGradient>
+                      </defs>
+                      
+                      <path
+                        d={`M 0 200 ${dailyStats.data.chart_data.map((point, i) => {
+                          const x = (i / 23) * 1000;
+                          const y = 200 - (point.si_score / 150) * 200;
+                          return `L ${x} ${y}`;
+                        }).join(' ')} L 1000 200 Z`}
+                        fill="url(#areaGradient)"
+                      />
+                      
+                      {/* Line */}
+                      <path
+                        d={dailyStats.data.chart_data.map((point, i) => {
+                          const x = (i / 23) * 1000;
+                          const y = 200 - (point.si_score / 150) * 200;
+                          return `${i === 0 ? 'M' : 'L'} ${x} ${y}`;
+                        }).join(' ')}
+                        fill="none"
+                        stroke="#3b82f6"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      
+                      {/* Dots */}
+                      {dailyStats.data.chart_data.map((point, i) => {
+                        const x = (i / 23) * 1000;
+                        const y = 200 - (point.si_score / 150) * 200;
+                        return point.si_score > 0 ? (
+                          <circle key={i} cx={x} cy={y} r="4" fill="#3b82f6" stroke="white" strokeWidth="2" />
+                        ) : null;
+                      })}
+                    </svg>
+                    
+                    {/* X-axis labels */}
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-between px-4 text-[10px] text-gray-500">
+                      {dailyStats.data.chart_data.filter((_, i) => i % 3 === 0).map((point) => (
+                        <span key={point.hour_index}>{point.time_display}</span>
+                      ))}
+                    </div>
+                    
+                    {/* Y-axis labels */}
+                    <div className="absolute left-0 top-0 bottom-0 flex flex-col justify-between text-[10px] text-gray-500 pr-2">
+                      <span>150</span>
+                      <span>100</span>
+                      <span>50</span>
+                      <span>0</span>
+                    </div>
+                  </div>
+
+                  {/* Hourly Details */}
+                  <div className="max-h-48 overflow-y-auto space-y-1">
+                    {dailyStats.data.chart_data.filter(p => p.si_score > 0).map((point) => (
+                      <div key={point.hour_index} className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                        <span className="text-xs font-medium text-gray-500 w-12">{point.time_display}</span>
+                        <div className="flex-1 h-6 bg-gray-100 rounded-full overflow-hidden relative">
+                          <div 
+                            className={`h-full rounded-full transition-all relative ${
+                              point.si_score > 95 ? 'bg-gradient-to-r from-red-500 to-red-600' :
+                              point.si_score > 80 ? 'bg-gradient-to-r from-orange-500 to-orange-600' :
+                              point.si_score > 50 ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' :
+                              'bg-gradient-to-r from-green-500 to-green-600'
+                            }`}
+                            style={{width: `${Math.min((point.si_score / 150) * 100, 100)}%`}}
+                          >
+                            <span className="absolute inset-0 flex items-center px-3 text-[10px] font-bold text-white">
+                              {point.si_score > 10 && `SI: ${point.si_score}`}
+                            </span>
+                          </div>
+                        </div>
+                        <span className="text-xs font-medium text-gray-600 w-16 text-right">{point.total_count} xe</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* Weather & Location Info (Redesigned) */}
         <div className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -396,17 +575,17 @@ export default function CameraDetailPage() {
                 </>
               ) : (
                 <div className="h-40 flex items-center justify-center text-white/50">
-                  {showWeatherError ? null : "Không có dữ liệu"}
+                  {weatherError.show ? null : "Không có dữ liệu"}
                 </div>
               )}
 
                {/* Error Warning */}
-               {showWeatherError && (
-                <div className="mt-4 p-3 bg-red-500 text-white rounded-lg flex items-start gap-2 relative z-10 shadow-md">
-                    <Info className="w-4 h-4 text-white mt-0.5 shrink-0" />
-                    <div className="text-xs">
-                        <span className="font-bold block mb-0.5">HỆ THỐNG ĐANG QUÁ TẢI</span>
-                        Xin vui lòng thử lại sau 10 phút.
+               {weatherError.show && (
+                <div className="mt-4 p-4 bg-red-500 text-white rounded-xl flex items-start gap-3 relative z-10 shadow-lg border-2 border-red-400">
+                    <Info className="w-5 h-5 text-white mt-0.5 shrink-0" />
+                    <div className="text-sm">
+                        <span className="font-bold block mb-1.5 text-base">{weatherError.title}</span>
+                        <p className="leading-relaxed opacity-95">{weatherError.message}</p>
                     </div>
                 </div>
                )}

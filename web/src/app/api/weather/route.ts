@@ -26,6 +26,7 @@ export const POST = withErrorHandler(async (req: NextRequest) => {
   const body = await req.json();
   const location = body.location;
   const traffic = body.traffic;
+  const dailyChart = body.daily_chart;
 
   if (!location) {
     return NextResponse.json(
@@ -57,18 +58,40 @@ export const POST = withErrorHandler(async (req: NextRequest) => {
     `;
   }
 
+  let chartContext = "";
+  if (dailyChart && Array.isArray(dailyChart)) {
+    const currentHour = new Date().getHours();
+    const recentData = dailyChart.filter(d => d.hour_index <= currentHour && d.si_score > 0).slice(-6);
+    const upcomingData = dailyChart.filter(d => d.hour_index > currentHour && d.si_score > 0).slice(0, 3);
+    
+    if (recentData.length > 0) {
+      chartContext += `\n    Dữ liệu giao thông trong ${recentData.length} giờ gần đây:`;
+      recentData.forEach(d => {
+        chartContext += `\n    - ${d.time_display}: SI=${d.si_score}, Tổng xe=${d.total_count}`;
+      });
+    }
+    
+    if (upcomingData.length > 0) {
+      chartContext += `\n    Dự đoán ${upcomingData.length} giờ tới:`;
+      upcomingData.forEach(d => {
+        chartContext += `\n    - ${d.time_display}: SI=${d.si_score}, Tổng xe=${d.total_count}`;
+      });
+    }
+  }
+
   const prompt = `
     Bạn là một trợ lý AI thông minh về địa lý và thời tiết tại Việt Nam.
     Thời điểm hiện tại là: ${now} (Giờ Việt Nam).
     
     ${trafficContext}
+    ${chartContext}
 
     Nhiệm vụ:
     1. Từ tên đường/địa điểm sau: "${location}" (tại TP.HCM), hãy xác định chính xác địa chỉ theo 2 định dạng:
        - Định dạng 3 cấp (Cũ/Hiện tại): Phường, Quận, Thành phố.
        - Định dạng 2 cấp (Mới/Dự kiến nếu có sáp nhập hoặc cách gọi tắt): Phường, Thành phố (bỏ qua Quận).
     2. Đưa ra dự báo thời tiết HIỆN TẠI cho khu vực đó tại thời điểm ${now}.
-    3. Đưa ra lời khuyên giao thông ngắn gọn, kết hợp cả yếu tố THỜI TIẾT, THỜI GIAN và TÌNH HÌNH GIAO THÔNG (nếu có thông tin ở trên). Ví dụ: Nếu đang mưa và kẹt xe thì khuyên tìm đường khác hoặc đi chậm; Nếu trời nắng và đường thoáng thì nhắc đội mũ/áo khoác... (Tối đa 20 từ).
+    3. Đưa ra lời khuyên giao thông ngắn gọn, PHẢI KẾT HỢP CẢ 3 YẾU TỐ: THỜI TIẾT hiện tại, THỜI GIAN (giờ cao điểm/thấp điểm), và XU HƯỚNG GIAO THÔNG từ dữ liệu biểu đồ (SI score, số xe qua các giờ). Ví dụ: Nếu mưa + kẹt xe + giờ cao điểm → khuyên tìm đường khác; Nếu nắng + thoáng + sáng sớm → nhắc chống nắng. (Tối đa 25 từ).
     
     Hãy trả về kết quả dưới dạng JSON thuần túy (không markdown) theo cấu trúc sau:
     {

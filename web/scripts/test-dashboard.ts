@@ -1,5 +1,5 @@
 import 'dotenv/config'; // MUST be the first import to ensure env vars are loaded before other imports
-import { dashboardController } from '../src/controllers/dashboardController';
+import { dashboardController } from '../src/controllers/trafficController';
 
 async function main() {
   console.log("Starting Dashboard Controller Test...");
