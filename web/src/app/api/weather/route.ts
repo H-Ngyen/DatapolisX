@@ -83,13 +83,15 @@ export const POST = withErrorHandler(async (req: NextRequest) => {
     Bạn là một trợ lý AI thông minh về địa lý và thời tiết tại Việt Nam.
     Thời điểm hiện tại là: ${now} (Giờ Việt Nam).
     
+    TÌM KIẾM GOOGLE MAPS: Trước tiên, hãy tìm kiếm địa điểm "${location}" trên Google Maps để lấy địa chỉ CHÍNH XÁC (Phường, Quận/Huyện, Tỉnh/Thành phố).
+      
     ${trafficContext}
     ${chartContext}
 
     Nhiệm vụ:
-    1. Từ tên đường/địa điểm sau: "${location}" (tại TP.HCM), hãy xác định chính xác địa chỉ theo 2 định dạng:
-       - Định dạng 3 cấp (Cũ/Hiện tại): Phường, Quận, Thành phố.
-       - Định dạng 2 cấp (Mới/Dự kiến nếu có sáp nhập hoặc cách gọi tắt): Phường, Thành phố (bỏ qua Quận).
+    1. Từ tên đường/địa điểm sau: "${location}", dựa trên danh sách chính thức và kiến thức địa lý, hãy xác định chính xác địa chỉ theo 2 định dạng:
+       - Định dạng 3 cấp (Trước 01/07/2025): Phường/Xã, Quận/Huyện/Thị xã, Tỉnh/Thành phố
+       - Định dạng 2 cấp (Sau 01/07/2025 - Chính thức): Phường/Xã, TP. Hồ Chí Minh. LÝ DO: Sau ngày 01/07/2025, Bình Dương, TP Thủ Đức và một phần Bà Rịa-Vũng Tàu đã được sáp nhập vào TP.HCM và không còn Thành Phố Thủ Đức, Bình Dương, Bà rịa vững tàu nữa (trở thành Thành Phố Hồ CHí Minh)
     2. Đưa ra dự báo thời tiết HIỆN TẠI cho khu vực đó tại thời điểm ${now}.
     3. Đưa ra lời khuyên giao thông ngắn gọn, PHẢI KẾT HỢP CẢ 3 YẾU TỐ: THỜI TIẾT hiện tại, THỜI GIAN (giờ cao điểm/thấp điểm), và XU HƯỚNG GIAO THÔNG từ dữ liệu biểu đồ (SI score, số xe qua các giờ). Ví dụ: Nếu mưa + kẹt xe + giờ cao điểm → khuyên tìm đường khác; Nếu nắng + thoáng + sáng sớm → nhắc chống nắng. (Tối đa 25 từ).
     

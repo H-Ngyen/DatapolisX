@@ -25,6 +25,7 @@ const getTrafficMetrics = async (id: string | null = null) => {
   const filterId = id ? { camera_id: id } : {};
 
   // --- BƯỚC 0: Xác định "NOW" ---
+  // Lấy bản ghi detection mới nhất để làm mốc thời gian thực
   const lastRecord = await prisma.camera_detections.findFirst({
     where: filterId,
     orderBy: { created_at: 'desc' },
@@ -32,108 +33,140 @@ const getTrafficMetrics = async (id: string | null = null) => {
   });
 
   const anchorNow = lastRecord?.created_at || new Date();
-  const minutesWindow = new Date(anchorNow.getTime() - 2 * 60 * 1000);
 
-  const baseWhere = {
-    ...filterId,
-    created_at: { gte: minutesWindow, lte: anchorNow }
-  };
+  // 1. Xác định "Cửa sổ trượt" cho dữ liệu thực tế (15 phút để làm mượt)
+  // Tại sao 15p? Để nó đủ dài ngang ngửa với bucket 10p của dự báo, giúp phép so sánh công bằng hơn.
+  const trendWindowTime = new Date(anchorNow.getTime() - 15 * 60 * 1000);
+
+  // 2. Xác định mốc thời gian của "Bucket Dự Báo Tiếp Theo"
+  // Logic: Làm tròn lên tới hàng chục phút gần nhất.
+  // Ví dụ: 8h06 -> 8h10. 8h12 -> 8h20.
+  const nextBucketTime = new Date(anchorNow);
+  const currentMinutes = nextBucketTime.getMinutes();
+  const nextBucketMinute = Math.floor(currentMinutes / 10) * 10 + 10;
+  
+  nextBucketTime.setMinutes(nextBucketMinute);
+  nextBucketTime.setSeconds(0);
+  nextBucketTime.setMilliseconds(0);
 
   // --- BƯỚC 1: Fetch dữ liệu ---
   const [recentDetections, capacities, predictions] = await Promise.all([
-    // 1. Detections
+    // 1. Lấy dữ liệu thực tế (Rolling 15 phút)
     prisma.camera_detections.findMany({
-      where: baseWhere,
-      select: { camera_id: true, detections: true },
+      where: {
+        ...filterId,
+        created_at: { gte: trendWindowTime, lte: anchorNow }
+      },
+      select: { camera_id: true, created_at: true, detections: true },
     }),
 
-    // 2. Max Capacity
+    // 2. Lấy Capacity
     prisma.camera_detections.groupBy({
       by: ['camera_id'],
       where: filterId,
       _max: { total_objects: true },
     }),
 
-    // 3. Predictions (Lấy dự báo tương lai gần nhất)
+    // 3. Lấy Dự Báo (Chỉ lấy ĐÚNG bucket tiếp theo)
     prisma.camera_predictions.findMany({
       where: {
         ...filterId,
-        forecast_timestamp: { gt: anchorNow }
+        // Chỉ lấy bản ghi khớp với mốc 8h10, 8h20...
+        forecast_timestamp: nextBucketTime 
       },
-      orderBy: { forecast_timestamp: 'asc' },
-      distinct: ['camera_id'],
       select: { camera_id: true, predicted_total_objects: true },
     }),
   ]);
 
   // --- BƯỚC 2: Xử lý dữ liệu ---
-
-  // A. Gom nhóm detection
+  
+  // Map để tính toán Trend (Rolling Average)
   const statsMap = new Map<string, {
-    sumRawObjects: number;
-    count: number;
-    sumBig: number; sumCar: number; sumMoto: number
+    trendSumRaw: number;
+    trendCount: number;
+    // Dùng cho SI hiện tại (2 phút cuối) - Giữ nguyên logic cũ của bạn
+    siSumRaw: number;
+    siCount: number;
+    // Composition
+    sumBig: number; sumCar: number; sumMoto: number;
   }>();
+
+  // Mốc thời gian cho cửa sổ SI (2 phút cuối)
+  const siWindowTime = new Date(anchorNow.getTime() - 2 * 60 * 1000);
 
   for (const record of recentDetections) {
     const detections = record.detections as DetectionData | null;
     if (!detections) continue;
 
-    const motorbike = detections.motorbike || 0;
-    const car = detections.car || 0;
+    const rawTotal = (detections.motorbike || 0) + (detections.car || 0) + 
+                     (detections.truck || 0) + (detections.bus || 0) + (detections.container || 0);
+    
+    // Thành phần xe (Cộng dồn hết 15p để tính tỷ lệ cho chính xác)
     const bigcar = (detections.truck || 0) + (detections.bus || 0) + (detections.container || 0);
-
-    const rawTotal = motorbike + car + bigcar;
-
+    
     if (!statsMap.has(record.camera_id)) {
-      statsMap.set(record.camera_id, {
-        sumRawObjects: 0, // Init
-        count: 0,
-        sumBig: 0, sumCar: 0, sumMoto: 0
+      statsMap.set(record.camera_id, { 
+        trendSumRaw: 0, trendCount: 0, 
+        siSumRaw: 0, siCount: 0,
+        sumBig: 0, sumCar: 0, sumMoto: 0 
       });
     }
-
     const stats = statsMap.get(record.camera_id)!;
-    stats.sumRawObjects += rawTotal;
+
+    // Luôn cộng vào Trend (15p)
+    stats.trendSumRaw += rawTotal;
+    stats.trendCount++;
     stats.sumBig += bigcar;
-    stats.sumCar += car;
-    stats.sumMoto += motorbike;
-    stats.count++;
+    stats.sumCar += (detections.car || 0);
+    stats.sumMoto += (detections.motorbike || 0);
+
+    // Chỉ cộng vào SI nếu trong 2p cuối
+    if (new Date(record.created_at) >= siWindowTime) {
+      stats.siSumRaw += rawTotal;
+      stats.siCount++;
+    }
   }
 
-  // B. Map Capacity và Prediction
-  const capacityMap = new Map(capacities.map(c => [c.camera_id, c._max.total_objects || 1]));
+  // Map Dự Báo
   const predictionMap = new Map(predictions.map(p => [p.camera_id, p.predicted_total_objects]));
+  const capacityMap = new Map(capacities.map(c => [c.camera_id, c._max.total_objects || 1]));
 
-  // C. Tổng hợp kết quả
+  // --- BƯỚC 3: Tổng hợp kết quả ---
   const allCameraIds = new Set([...statsMap.keys(), ...capacityMap.keys()]);
   const results = [];
 
   for (const cameraId of allCameraIds) {
     const stats = statsMap.get(cameraId);
     const capacity = capacityMap.get(cameraId) || 1;
-    const predictedVal = predictionMap.get(cameraId);
+    // Đây là giá trị dự báo cho bucket tiếp theo (ví dụ 8h10-8h20)
+    const predictedNextBucket = predictionMap.get(cameraId);
 
-    let avgCurrentRaw = 0;
-    let primaryComposition = "motorbike";
+    // 1. Tính SI Score (Tức thời - 2 phút)
+    let avgSiRaw = 0;
+    if (stats && stats.siCount > 0) avgSiRaw = stats.siSumRaw / stats.siCount;
+    const siScore = (avgSiRaw / (capacity * 1.3)) * 100;
 
-    if (stats && stats.count > 0) {
-      avgCurrentRaw = stats.sumRawObjects / stats.count;
+    // 2. Tính Trend %
+    let changePercent = 0;
+    // Tính trung bình thực tế 15 phút vừa qua
+    let avgTrendRaw = 0; 
+    if (stats && stats.trendCount > 0) avgTrendRaw = stats.trendSumRaw / stats.trendCount;
 
-      const totalAccumulated = stats.sumRawObjects;
-      if (totalAccumulated > 0) {
-        if ((stats.sumBig / totalAccumulated) > 0.15) primaryComposition = "bigcar";
-        else if ((stats.sumCar / totalAccumulated) > 0.50) primaryComposition = "car";
-      }
+    // Logic so sánh:
+    // avgTrendRaw: Trung bình thực tế từ 7h51 -> 8h06 (Mượt)
+    // predictedNextBucket: Dự báo trung bình cho 8h10 -> 8h20
+    if (predictedNextBucket !== undefined && avgTrendRaw > 5) { // >5 để tránh chia số quá nhỏ
+        changePercent = ((predictedNextBucket - avgTrendRaw) / avgTrendRaw) * 100;
     }
 
-    // --- TÍNH TOÁN CHỈ SỐ ---
-    const siScore = avgCurrentRaw / capacity * 100;
-
-    let changePercent = 0;
-
-    if (predictedVal !== undefined && avgCurrentRaw > 10) {
-      changePercent = ((predictedVal - avgCurrentRaw) / avgCurrentRaw) * 100;
+    // 3. Composition
+    let primaryComposition = "motorbike";
+    if (stats) {
+       const total = stats.sumBig + stats.sumCar + stats.sumMoto;
+       if (total > 0) {
+          if ((stats.sumBig / total) > 0.15) primaryComposition = "bigcar";
+          else if ((stats.sumCar / total) > 0.50) primaryComposition = "car";
+       }
     }
 
     results.push({
@@ -141,11 +174,8 @@ const getTrafficMetrics = async (id: string | null = null) => {
       si_score: Math.round(siScore),
       composition: { primary: primaryComposition },
       change_percent: Math.round(changePercent),
-      vehicle_count: {
-        bigcar: stats?.sumBig || 0,
-        car: stats?.sumCar || 0,
-        motorbike: stats?.sumMoto || 0,
-      }
+      // Debug info nếu cần kiểm tra
+      // debug: { current_avg_15m: avgTrendRaw, next_pred_10m: predictedNextBucket }
     });
   }
 

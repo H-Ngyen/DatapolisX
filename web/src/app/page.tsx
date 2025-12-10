@@ -20,8 +20,9 @@
 
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
+import useSWR from "swr"; // 1. Import SWR
 import {
   Truck,
   Car,
@@ -31,9 +32,10 @@ import {
   Clock,
   Home,
   Search,
-  Github
+  Github,
+  AlertCircle // Thêm icon báo lỗi
 } from "lucide-react";
-import { useApiCall } from "../hooks/useApiCall";
+// Bỏ import useApiCall vì không dùng nữa
 import camInfo from "../assets/cam_info.json";
 
 // --- Camera Location Helper ---
@@ -42,6 +44,7 @@ const getLocationByCamId = (camId: string): string => {
   return cam?.DisplayName || "Không xác định";
 };
 
+// --- Interfaces ---
 interface TrafficItem {
   id: string;
   si_score: number;
@@ -56,8 +59,10 @@ interface DashboardResponse {
   data: TrafficItem[];
 }
 
-// --- Helper Functions ---
+// --- Fetcher Function cho SWR ---
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
+// --- Helper Functions ---
 const getStatusConfig = (score: number) => {
   if (score > 120) return { color: "bg-purple-600", text: "Kẹt cứng", textColor: "text-white" };
   if (score > 95) return { color: "bg-red-500", text: "Tắc nghẽn", textColor: "text-white" };
@@ -65,8 +70,6 @@ const getStatusConfig = (score: number) => {
   if (score > 50) return { color: "bg-yellow-400", text: "Đông chậm", textColor: "text-black" };
   return { color: "bg-green-500", text: "Thông thoáng", textColor: "text-white" };
 };
-
-
 
 const getVehicleIcon = (primary: string) => {
   switch (primary) {
@@ -83,8 +86,7 @@ const getVehicleIcon = (primary: string) => {
   }
 };
 
-// --- Components ---
-
+// --- Components (LegendBar & StatusBadge giữ nguyên) ---
 const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentDate: string }) => {
   const legends = [
     { color: "bg-green-500", label: "0-50", text: "Thông thoáng", textColor: "text-black" },
@@ -98,8 +100,6 @@ const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentD
     <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 shadow-sm">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex flex-col gap-4">
-          
-          {/* Top: Title & Time */}
           <div>
             <h1 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-1">
               Xếp hạng Giao thông
@@ -113,12 +113,10 @@ const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentD
               <span className="text-gray-500">TP. HCM</span>
             </div>
           </div>
-
-          {/* Bottom: Legend */}
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between font-medium whitespace-nowrap">
               <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">
-                Chỉ số tắc nghẽn (SI)
+                Độ bão hòa (SI)
               </span>
             </div>
             <div className="flex overflow-hidden rounded-sm transition-[max-height] duration-500 max-md:flex-col max-h-40 md:max-h-14">
@@ -130,7 +128,6 @@ const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentD
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -139,65 +136,62 @@ const LegendBar = ({ currentTime, currentDate }: { currentTime: string, currentD
 
 const StatusBadge = ({ data }: { data: TrafficItem & { rank: number } }) => {
   const config = getStatusConfig(data.si_score);
-
   return (
-    <div
-      className={`
-        relative flex flex-col items-center justify-center 
-        w-[88px] h-[52px] rounded-lg shadow-sm transition-all duration-300
-        ${config.color} ${config.textColor}
-      `}
-    >
-      {/* Score */}
-      <div className="flex items-center font-bold text-lg leading-none">
-        {data.si_score}
-      </div>
-
-      {/* Caption Status */}
-      <span className="text-[10px] font-medium uppercase mt-0.5 opacity-90 tracking-tight">
-        {config.text}
-      </span>
+    <div className={`relative flex flex-col items-center justify-center w-[88px] h-[52px] rounded-lg shadow-sm transition-all duration-300 ${config.color} ${config.textColor}`}>
+      <div className="flex items-center font-bold text-lg leading-none">{data.si_score}</div>
+      <span className="text-[10px] font-medium uppercase mt-0.5 opacity-90 tracking-tight">{config.text}</span>
     </div>
   );
 };
 
+// --- Main Component ---
 export default function TrafficDashboard() {
   const [currentTime, setCurrentTime] = useState('');
   const [currentDate, setCurrentDate] = useState('');
-  const { data: dashboardData, loading, execute } = useApiCall<DashboardResponse>();
 
-  useEffect(() => {
-    execute('/api/traffic');
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // 2. Sử dụng useSWR thay cho useApiCall
+  const { data: dashboardData, error, isLoading } = useSWR<DashboardResponse>(
+    '/api/traffic', // Key (endpoint)
+    fetcher,        // Fetcher function
+    {
+      refreshInterval: 10000, // Tự động gọi lại API mỗi 5 giây (Realtime Polling)
+      revalidateOnFocus: true, // Cập nhật khi user quay lại tab
+      dedupingInterval: 2000, // Tránh gọi trùng lặp trong 2s
+    }
+  );
 
+  // Time update effect (Giữ nguyên)
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const locale = process.env.NEXT_PUBLIC_LOCALE;
-      const timezone = process.env.NEXT_PUBLIC_TIMEZONE;
+      const locale = process.env.NEXT_PUBLIC_LOCALE || 'vi-VN';
+      const timezone = process.env.NEXT_PUBLIC_TIMEZONE || 'Asia/Ho_Chi_Minh';
       
       setCurrentTime(new Intl.DateTimeFormat(locale, { timeZone: timezone, hour: '2-digit', minute: '2-digit' }).format(now));
       setCurrentDate(new Intl.DateTimeFormat(locale, { timeZone: timezone, weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now));
     };
     
     updateTime();
-    const interval = setInterval(updateTime, Number(process.env.NEXT_PUBLIC_TIME_UPDATE_INTERVAL));
+    const interval = setInterval(updateTime, Number(process.env.NEXT_PUBLIC_TIME_UPDATE_INTERVAL) || 1000);
     return () => clearInterval(interval);
   }, []);
 
-  // Process API data: sort by si_score and add rank + location
-  const trafficData = dashboardData?.data
-    ? dashboardData.data
-        .sort((a, b) => b.si_score - a.si_score)
-        .map((item, index) => ({
-          ...item,
-          rank: index + 1,
-          location: getLocationByCamId(item.id)
-        }))
-    : [];
+  // 3. Xử lý dữ liệu với useMemo để tối ưu hiệu năng
+  // (Tránh tính toán lại mỗi giây khi đồng hồ nhảy số)
+  const trafficData = useMemo(() => {
+    if (!dashboardData?.success || !dashboardData?.data) return [];
+    
+    return dashboardData.data
+      .sort((a, b) => b.si_score - a.si_score)
+      .map((item, index) => ({
+        ...item,
+        rank: index + 1,
+        location: getLocationByCamId(item.id)
+      }));
+  }, [dashboardData]);
 
-  if (loading) {
+  // Loading State
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
         <div className="flex flex-col items-center p-8">
@@ -209,23 +203,35 @@ export default function TrafficDashboard() {
           </div>
           <h2 className="text-xl font-bold text-slate-800 tracking-tight">DatapolisX</h2>
           <div className="flex items-center gap-1 mt-2">
-            <span className="text-slate-500 font-medium">Đang đồng bộ dữ liệu</span>
-            <span className="flex gap-1">
-              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-              <span className="w-1 h-1 bg-slate-400 rounded-full animate-bounce"></span>
-            </span>
+            <span className="text-slate-500 font-medium">Đang tải dữ liệu...</span>
           </div>
         </div>
       </div>
     );
   }
 
+  // Error State (Nên thêm vào để UX tốt hơn)
+  if (error) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <div className="text-center p-8 bg-white rounded-xl shadow-sm border border-red-100">
+          <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
+          <h3 className="text-lg font-bold text-gray-900 mb-2">Không thể tải dữ liệu</h3>
+          <p className="text-gray-500 mb-4">Vui lòng kiểm tra kết nối mạng và thử lại.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            className="px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+          >
+            Tải lại trang
+          </button>
+        </div>
+      </div>
+    );
+  }
 
-
+  // Render UI chính (Giữ nguyên cấu trúc cũ)
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-slate-900 flex flex-col">
-      
       {/* Navigation Header */}
       <div className="bg-slate-900 border-b border-slate-800">
         <div className="max-w-4xl mx-auto px-4 py-5">
@@ -252,16 +258,11 @@ export default function TrafficDashboard() {
         </div>
       </div>
 
-      {/* Sticky Header & Legend Combined */}
       <LegendBar currentTime={currentTime} currentDate={currentDate} />
 
-      {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 mt-6">
-        
-        {/* Table Container (Card style) */}
+      <main className="max-w-4xl mx-auto px-4 mt-6 pb-12">
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-          
-          {/* Table Header (Desktop only) */}
+          {/* Header */}
           <div className="hidden md:flex bg-gray-50/50 text-xs font-semibold text-gray-400 uppercase tracking-wider py-3 px-4 border-b border-gray-100">
             <div className="w-16 text-center">Hạng</div>
             <div className="flex-1">Địa điểm</div>
@@ -269,11 +270,10 @@ export default function TrafficDashboard() {
             <div className="w-24 text-right pr-2">Trạng thái</div>
           </div>
 
-          {/* Table Body */}
+          {/* List */}
           <div className="divide-y divide-gray-50">
             {trafficData.map((item) => {
               const vehicleInfo = getVehicleIcon(item.composition.primary);
-
               return (
                 <div 
                   key={item.id} 
@@ -282,14 +282,11 @@ export default function TrafficDashboard() {
                 >
                   {/* Desktop Layout */}
                   <div className="hidden md:flex items-center">
-                    {/* Column 1: Rank */}
                     <div className="w-16 flex-shrink-0 text-center">
                       <span className="text-xl font-bold text-gray-400 group-hover:text-gray-600 transition-colors">
                         {item.rank}
                       </span>
                     </div>
-
-                    {/* Column 2: Location & Context */}
                     <div className="flex-1 min-w-0 pr-4">
                       <div className="flex items-baseline gap-2 mb-1">
                         <h3 className="text-base font-bold text-gray-800 truncate">
@@ -303,8 +300,6 @@ export default function TrafficDashboard() {
                         </div>
                       </div>
                     </div>
-
-                    {/* Column 3: Change Percentage */}
                     <div className="w-20 flex-shrink-0 text-center">
                       <div className={`text-sm font-bold ${
                         item.change_percent > 0 ? 'text-red-500' : 
@@ -316,8 +311,6 @@ export default function TrafficDashboard() {
                         {item.change_percent > 0 ? 'Tăng' : item.change_percent < 0 ? 'Giảm' : 'Ổn định'}
                       </div>
                     </div>
-
-                    {/* Column 4: Status Badge */}
                     <div className="flex-shrink-0 pl-2">
                       <StatusBadge data={item} />
                     </div>
@@ -325,12 +318,9 @@ export default function TrafficDashboard() {
 
                   {/* Mobile Layout */}
                   <div className="md:hidden">
-                    {/* Row 1: Rank + Location */}
                     <div className="flex items-start gap-3 mb-2">
                       <div className="w-8 flex-shrink-0 text-center pt-1">
-                        <span className="text-lg font-bold text-gray-400">
-                          {item.rank}
-                        </span>
+                        <span className="text-lg font-bold text-gray-400">{item.rank}</span>
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-sm font-bold text-gray-800 leading-tight mb-1">
@@ -342,11 +332,8 @@ export default function TrafficDashboard() {
                         </div>
                       </div>
                     </div>
-
-                    {/* Row 2: Xu hướng + Trạng thái */}
                     <div className="flex items-center justify-between pl-11">
                       <div className="flex items-center gap-4">
-                        {/* Xu hướng */}
                         <div className="flex items-center gap-2">
                           <span className="text-[10px] text-gray-500 font-medium">Xu hướng:</span>
                           <div className={`text-xs font-bold ${
@@ -357,13 +344,11 @@ export default function TrafficDashboard() {
                           </div>
                         </div>
                       </div>
-                      {/* Trạng thái */}
                       <div className="scale-90">
                         <StatusBadge data={item} />
                       </div>
                     </div>
                   </div>
-
                 </div>
               );
             })}
@@ -376,22 +361,21 @@ export default function TrafficDashboard() {
             <Info className="w-4 h-4 flex-shrink-0 mt-0.5 text-blue-600" />
             <div className="text-sm text-blue-800">
               <p className="font-medium mb-1">Về chỉ số giao thông</p>
-              <p className="text-blue-700 leading-relaxed">
-                Chỉ số tắc nghẽn được tính toán dựa trên dữ liệu từ hệ thống camera AI phân tích giao thông thời gian thực, 
+              <p className="text-blue-700 leading-relaxed mb-3">
+                <span className="font-semibold">Độ bão hòa (SI):</span> Được tính toán dựa trên dữ liệu từ hệ thống camera AI phân tích giao thông thời gian thực, 
                 kết hợp với thuật toán dự đoán bất thường để đánh giá mức độ tắc nghẽn tại các điểm quan trọng trong thành phố.
+              </p>
+              <p className="text-blue-700 leading-relaxed">
+                <span className="font-semibold">Xu hướng:</span> Phần trăm tăng hoặc giảm khả năng kẹt xe trong vòng 10 phút tới.
               </p>
             </div>
           </div>
         </div>
-
       </main>
 
-      {/* Copyright Footer */}
-      <footer className="mt-16 bg-slate-900 border-t border-slate-800">
+      <footer className="mt-auto bg-slate-900 border-t border-slate-800">
         <div className="max-w-4xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            
-            {/* Left: Brand & Copyright */}
             <div className="text-center md:text-left">
               <div className="flex items-center gap-2 justify-center md:justify-start mb-1">
                 <div className="relative flex h-3 w-3">
@@ -404,25 +388,11 @@ export default function TrafficDashboard() {
                 © 2025 - Cuộc thi Phần mềm Nguồn mở - OLP 2025
               </p>
             </div>
-
-            {/* Right: Socials & Links */}
             <div className="flex items-center gap-2">
-              <a 
-                href="https://www.vlu.edu.vn/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full"
-                title="Van Lang University"
-              >
+              <a href="https://www.vlu.edu.vn/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full" title="Van Lang University">
                 <Image src="/logo-van-lang.png" alt="VLU Logo" width={24} height={24} className="object-contain opacity-70 hover:opacity-100 transition-opacity" />
               </a>
-              <a 
-                href="https://github.com/H-Ngyen/DatapolisX" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full"
-                title="GitHub"
-              >
+              <a href="https://github.com/H-Ngyen/DatapolisX" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-full" title="GitHub">
                 <Github className="w-5 h-5" />
               </a>
             </div>
