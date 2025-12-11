@@ -159,7 +159,7 @@ export default function CameraDetailPage() {
       });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [trafficInfo, dailyStats]);
+  }, []);
 
   // Derived state for weather data and errors
   const weatherData = weatherResponse?.success ? weatherResponse.data : null;
