@@ -20,7 +20,7 @@
 
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import Image from "next/image";
 import { ArrowLeft, Home, Search, MapPin, Camera, Clock, Info, Wind, Droplets, Github } from "lucide-react";
 import { useParams } from "next/navigation";
@@ -135,7 +135,12 @@ export default function CameraDetailPage() {
   
   const camera = camInfo.data_filtered_final.find(cam => cam.CamId === camId);
   const weatherFetchedRef = React.useRef(false);
-  const trafficInfo = dashboardData?.data?.find(item => item.id === camId);
+  
+  // Stabilize trafficInfo với useMemo để tránh re-render loop
+  const trafficInfo = useMemo(
+    () => dashboardData?.data?.find(item => item.id === camId),
+    [dashboardData?.data, camId]
+  );
   
   // Real-time Clock State
   const [currentTime, setCurrentTime] = React.useState(new Date());
@@ -158,8 +163,7 @@ export default function CameraDetailPage() {
         daily_chart: dailyStats.data.chart_data
       });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [trafficInfo, dailyStats?.data, camera?.DisplayName, executeWeather]);
 
   // Derived state for weather data and errors
   const weatherData = weatherResponse?.success ? weatherResponse.data : null;
